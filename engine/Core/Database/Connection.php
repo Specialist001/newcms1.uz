@@ -8,6 +8,8 @@
 
 namespace Engine\Core\Database;
 
+use \PDO;
+
 class Connection
 {
     private $link;
@@ -24,7 +26,13 @@ class Connection
      * @return $this
      */
     private function connect(){
-        $config = require_once 'config.php';
+        $config = [
+            'host'      => 'localhost',
+            'db_name'   => 'test_pdo',
+            'username'  => 'root',
+            'password'  => '',
+            'charset'   => 'utf8'
+        ];
 
         $dsn = 'mysql:host='.$config['host'].';dbname='.$config['db_name'].';charset='.$config['charset'];
 

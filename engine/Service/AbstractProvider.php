@@ -8,7 +8,7 @@
 
 namespace Engine\Service;
 
-class AbstractProvider
+abstract class AbstractProvider
 {
     /**
      * @var \Engine\DI\DI;

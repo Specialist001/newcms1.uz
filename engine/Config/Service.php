@@ -7,5 +7,5 @@
  */
 
 return [
-    Engine\Service\Database::class
+    Engine\Service\Database\Provider::class
 ];
