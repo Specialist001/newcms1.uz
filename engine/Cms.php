@@ -19,7 +19,7 @@ class Cms
     public $router;
 
     /**
-     * Cms constructor.
+     * cms constructor.
      * @param $di
      */
     public function __construct($di)
@@ -29,7 +29,7 @@ class Cms
     }
 
     /**
-     * Run Cms
+     * Run cms
      */
     public function run(){
         //$db = $this->di->get('test2');
