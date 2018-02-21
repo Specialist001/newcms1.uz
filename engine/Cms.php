@@ -41,6 +41,7 @@ class Cms
         //print_r($this->di);
 
         print_r($routerDispatch);
+        //17:58   xato bo
         //print Common::getPathUrl();
     }
 
