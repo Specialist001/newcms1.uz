@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Bobur
- * Date: 12.02.2018
- * Time: 14:41
- */
 
 namespace Engine\Core\Database;
 

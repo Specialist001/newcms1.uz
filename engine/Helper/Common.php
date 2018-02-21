@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Bobur
- * Date: 21.02.2018
- * Time: 14:14
- */
 
 namespace Engine\Helper;
 
