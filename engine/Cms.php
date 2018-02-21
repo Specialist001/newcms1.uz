@@ -40,7 +40,7 @@ class Cms
         $routerDispatch = $this->router->dispatch(Common::getMethod(), Common::getPathUrl());
         //print_r($this->di);
 
-        //print_r($_SERVER);
+        print_r($routerDispatch);
         //print Common::getPathUrl();
     }
 
