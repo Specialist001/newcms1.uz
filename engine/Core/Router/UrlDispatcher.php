@@ -52,6 +52,10 @@ class UrlDispatcher
         return isset($this->routes[$method]) ? $this->routes[$method] : [];
     }
 
+    public function register($method, $pattern, $controller){
+        $this->routes[strtoupper($method)][$pattern] = $controller;
+    }
+
     public function dispatch($method, $uri){
         $routes = $this->routes(strtoupper($method));
 

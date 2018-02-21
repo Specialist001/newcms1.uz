@@ -32,7 +32,7 @@ class Common
     /**
      * @return bool|string
      */
-    function getPathUri(){
+    function getPathUrl(){
         $pathUrl = $_SERVER['REQUEST_URI'];
 
         if($position = strpos($pathUrl, '?')){
