@@ -8,7 +8,8 @@
 
 namespace Engine;
 
-use Engine\DI\DI;
+//use Engine\DI\DI;
+use Engine\Helper\Common;
 
 class Cms
 {
@@ -33,9 +34,13 @@ class Cms
      */
     public function run(){
         //$db = $this->di->get('test2');
+        //$this->router->add('home', '/', 'HomeController:index');
 
-        $this->router->add('home', '/', 'HomeController:index');
-        print_r($this->di);
+        //$routerDispatch = $this->router->dispatch('GET','');
+        //print_r($this->di);
+
+        //print_r($_SERVER);
+        echo Common::getMethod();
     }
 
 
