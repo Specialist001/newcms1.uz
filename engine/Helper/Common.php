@@ -29,5 +29,20 @@ class Common
         return $_SERVER['REQUEST_METHOD'];
     }
 
+    /**
+     * @return bool|string
+     */
+    function getPathUri(){
+        $pathUrl = $_SERVER['REQUEST_URI'];
+
+        if($position = strpos($pathUrl, '?')){
+            $pathUrl = substr($pathUrl, 0, $position);
+        }
+
+        return $pathUrl;
+    }
+
+
+
 }
 

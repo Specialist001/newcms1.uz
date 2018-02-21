@@ -40,7 +40,7 @@ class Cms
         //print_r($this->di);
 
         //print_r($_SERVER);
-        echo Common::getMethod();
+        print Common::getMethod();
     }
 
 
