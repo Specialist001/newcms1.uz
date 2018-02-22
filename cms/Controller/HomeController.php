@@ -8,8 +8,8 @@ class HomeController extends CmsController
         echo 'Index Page';
     }
 
-    public function news(){
-        echo 'News Page';
+    public function news($id){
+        echo $id;
     }
 
 }
