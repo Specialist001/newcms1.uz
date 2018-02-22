@@ -1,1 +1,1 @@
-Index Template
+Index Template <?= $name ?>
