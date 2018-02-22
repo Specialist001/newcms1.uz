@@ -1,9 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Bobur
- * Date: 12.02.2018
- * Time: 13:46
- */
 
+define('ROOT_DIR', __DIR__);
 require_once 'engine/bootstrap.php';
