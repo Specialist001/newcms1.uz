@@ -14,6 +14,10 @@ abstract class Controller
 
     protected $db;
 
+    /**
+     * Controller constructor.
+     * @param DI $di
+     */
     public function __construct(DI $di)
     {
         $this->di = $di;
