@@ -52,7 +52,18 @@ class UrlDispatcher
      * @param $controller
      */
     public function register($method, $pattern, $controller){
+        print_r($pattern);
+        echo '<br />';
         $this->routes[strtoupper($method)][$pattern] = $controller;
+    }
+
+    private function convertPattern($pattern){
+        if(strpos($pattern, '(') === false){
+            return $pattern;
+        }
+
+        return preg_replace_callback('#/()#');
+
     }
 
     /**
