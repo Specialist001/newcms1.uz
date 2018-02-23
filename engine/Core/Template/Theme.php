@@ -2,13 +2,12 @@
 
 namespace Engine\Core\Template;
 
-
 class Theme
 {
     const RULES_NAME_FILE = [
-        'header' => 'header-%s.php',
-        'footer' => 'footer-%s.php',
-        'sidebar' => 'sidebar-%s.php',
+        'header' => 'header-%s',
+        'footer' => 'footer-%s',
+        'sidebar' => 'sidebar-%s',
     ];
 
     /**
@@ -22,12 +21,13 @@ class Theme
      */
     public function header($name = null){
         $name = (string) $name;
+        $file = 'header';
 
         if($name !== ''){
-            $name = sprintf(self::RULES_NAME_FILE['header'], $name);
+            $file = sprintf(self::RULES_NAME_FILE['header'], $name);
         }
 
-        $this->loadTemplateFile($name);
+        $this->loadTemplateFile($file);
     }
 
     public function footer($name = ''){

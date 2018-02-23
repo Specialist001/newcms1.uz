@@ -2,11 +2,18 @@
 
 namespace Engine\Core\Template;
 
+use Engine\Core\Template\Theme;
 
 class View
 {
+    protected $theme;
+
+    /**
+     * View constructor.
+     */
     public function __construct()
     {
+        $this->theme = new Theme();
     }
 
     /**
