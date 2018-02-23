@@ -1,7 +1,7 @@
-Index Template <?= $name ?>
-
 <?php $this->theme->header(); ?>
-<?php //$this->theme->footer(); ?>
+Index Template <?= $name ?><br />
+
+<?php $this->theme->footer(); ?>
 <?php //$this->theme->sidebar(); ?>
 <?php //$this->theme->component('head'); ?>
 <?php //$this->theme->block('comments', ['comments' => $comments]); ?>

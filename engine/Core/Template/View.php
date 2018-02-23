@@ -6,6 +6,9 @@ use Engine\Core\Template\Theme;
 
 class View
 {
+    /**
+     * @var \Engine\Core\Template\Theme
+     */
     protected $theme;
 
     /**
@@ -30,6 +33,7 @@ class View
             );
         }
 
+        $this->theme->setData($vars);
         extract($vars);
 
         ob_start();
