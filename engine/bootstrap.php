@@ -21,6 +21,4 @@ try{
 }catch (\ErrorException $e){
     echo $e->getMessage();
 
-	//21:35 19.02.2018
-
 }

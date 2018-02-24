@@ -34,7 +34,8 @@ class Cms
             $routerDispatch = $this->router->dispatch(Common::getMethod(), Common::getPathUrl());
 
             if ($routerDispatch == null) {
-                $routerDispatch = new DispatchedRoute('ErrorController:page404');
+                //$routerDispatch = new DispatchedRoute('ErrorController:page404');
+                $routerDispatch = new DispatchedRoute('LoginController:form');
             }
 
             list($class, $action) = explode(':', $routerDispatch->getController(), 2);
