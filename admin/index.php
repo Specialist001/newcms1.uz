@@ -1,7 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Bobur
- * Date: 24.02.2018
- * Time: 10:51
- */
+
+define('ROOT_DIR', __DIR__);
+define('ENV', 'Admin');
+
+require_once '../engine/bootstrap.php';
