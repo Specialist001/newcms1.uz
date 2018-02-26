@@ -25,7 +25,8 @@ class View
      * @throws \Exception
      */
     public function render($template, $vars = []){
-        $templatePath = getTemplatePath($template, ENV);
+        //$templatePath = getTemplatePath($template, ENV);
+        $templatePath = ROOT_DIR . '/content/themes/default/' . $template . '.php';
 
         if(!is_file(@$templatePath)){
             throw new \InvalidArgumentException(
