@@ -1,2 +1,2 @@
 # newcms1.uz
-Prosta propa uchun
+Prosta proba uchun
