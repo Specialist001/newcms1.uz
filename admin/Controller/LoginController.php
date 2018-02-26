@@ -3,7 +3,7 @@
 namespace Admin\Controller;
 
 
-class LoginController extends AdminController
+class LoginController
 {
     public function form(){
         echo 'form';
