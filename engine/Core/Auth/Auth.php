@@ -3,11 +3,11 @@
 namespace Engine\Core\Auth;
 
 use Engine\Core\Cookie;
-use Engine\Helper\Cookie;
+//use Engine\Helper\Cookie;
 
 class Auth implements AuthInterface
 {
-    protected $authorized = false;
+    public $authorized = false;
     protected $user;
 
     /**
