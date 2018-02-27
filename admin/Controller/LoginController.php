@@ -34,7 +34,8 @@ class LoginController extends Controller
 
         $query = $this->db-query('
             SELECT * FROM `user` WHERE email=' . $params['email'] . '
-            ');
+            AND password=' . md5($params['password']) . '
+            LIMIT 1');
 
         //$this->auth->authorize('qwerty');
 
