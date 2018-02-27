@@ -27,7 +27,7 @@ class AdminController extends Controller
     }
 
     public function checkAuthorization(){
-        if(!$this->auth->authorized){
+        if(!$this->auth->authorized()){
             //redirect
             header('Location: /admin/login/', true, 301);
             exit;

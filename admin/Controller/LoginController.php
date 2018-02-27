@@ -4,9 +4,15 @@ namespace Admin\Controller;
 
 use Engine\Controller;
 use Engine\DI\DI;
+use Engine\Core\Auth\Auth;
 
 class LoginController extends Controller
 {
+    /**
+     * @var Auth
+     */
+    protected $auth;
+
     /**
      * LoginController constructor.
      * @param DI $di
@@ -14,15 +20,19 @@ class LoginController extends Controller
     public function __construct(DI $di)
     {
         parent::__construct($di);
+
+        $this->auth = new Auth();
     }
 
     public function form(){
-        //print_r($this->request->server['HTTP_HOST']);
+        print_r($_COOKIE);
         $this->view->render('login');
     }
 
     public function authAdmin(){
         $params = $this->request->post;
+
+        $this->auth->authorize('qwerty');
 
         print_r($params);
     }
