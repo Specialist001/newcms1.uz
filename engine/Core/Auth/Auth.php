@@ -2,7 +2,6 @@
 
 namespace Engine\Core\Auth;
 
-//use Engine\Core\Cookie;
 use Engine\Helper\Cookie;
 
 
