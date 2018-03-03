@@ -22,10 +22,16 @@ class LoginController extends Controller
         parent::__construct($di);
 
         $this->auth = new Auth();
+
+        if($this->auth->hashUser() != null){
+            //redirect
+            header('Location: /admin/', true, 301);
+            exit;
+//            $this->auth->authorize($this->auth->hashUser());
+        }
     }
 
     public function form(){
-        print_r($_COOKIE);
         $this->view->render('login');
     }
 
@@ -40,8 +46,8 @@ class LoginController extends Controller
         if(!empty($query)){
             $user = $query[0];
 
-            if($user['role'=='admin']){
-                $hash = md5($user['email'] . $user['password'] . $this->auth->salt());
+            if($user['role']=='admin'){
+                $hash = md5($user['id'] . $user['email'] . $user['password'] . $this->auth->salt());
 
                 $this->db->execute('
                 UPDATE user
@@ -50,18 +56,10 @@ class LoginController extends Controller
                 ');
 
                 $this->auth->authorize($hash);
+
+                header('Location: /admin/login/', true, 301);
+                exit;
             }
         }
-
-        return 1;
-
-        print_r($query);
-        exit;
-        //$this->auth->authorize('qwerty');
-
-        if($this->authorized()) {
-            print_r($params);
-        }
     }
-
 }

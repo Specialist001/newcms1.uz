@@ -22,16 +22,34 @@ class AdminController extends Controller
 
         $this->auth = new Auth();
 
-        $this->checkAuthorization();
+        //print_r($_COOKIE);
 
+        if($this->auth->hashUser() !== null){
+//          $this->auth->unAuthorize();
+            header('Location: /admin/login/');
+        }
+//        else{
+//            $this->checkAuthorization();
+//        }
     }
 
     public function checkAuthorization(){
-        if(!$this->auth->authorized()){
-            //redirect
-            header('Location: /admin/login/', true, 301);
-            exit;
-        }
+
+//        if($this->auth->hashUser() != null){
+//            $this->auth->authorize($this->auth->hashUser());
+//        }
+//
+//        if(!$this->auth->authorized()){
+//            //redirect
+//            header('Location: /admin/login/');
+//            exit;
+//        }
+    }
+
+    public function logOut(){
+        $this->auth->unAuthorize();
+        header('Location: /admin/login/');
+        exit;
     }
 
 }
