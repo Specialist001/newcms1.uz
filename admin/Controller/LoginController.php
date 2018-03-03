@@ -32,11 +32,31 @@ class LoginController extends Controller
     public function authAdmin(){
         $params = $this->request->post;
 
-        $query = $this->db-query('
-            SELECT * FROM `user` WHERE email=' . $params['email'] . '
-            AND password=' . md5($params['password']) . '
+        $query = $this->db->query('
+            SELECT * FROM `user` WHERE email="' . $params['email'] . '"
+            AND password="' . md5($params['password']) . '"
             LIMIT 1');
 
+        if(!empty($query)){
+            $user = $query[0];
+
+            if($user['role'=='admin']){
+                $hash = md5($user['email'] . $user['password'] . $this->auth->salt());
+
+                $this->db->execute('
+                UPDATE user
+                SET hash = "' . $hash . '"
+                WHERE id=' . $user['id'] . '
+                ');
+
+                $this->auth->authorize($hash);
+            }
+        }
+
+        return 1;
+
+        print_r($query);
+        exit;
         //$this->auth->authorize('qwerty');
 
         if($this->authorized()) {
