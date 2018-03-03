@@ -22,11 +22,9 @@ class AdminController extends Controller
 
         $this->auth = new Auth();
 
-        //print_r($_COOKIE);
-
-        if($this->auth->hashUser() !== null){
-//          $this->auth->unAuthorize();
+        if($this->auth->hashUser() == null){
             header('Location: /admin/login/');
+            exit;
         }
 //        else{
 //            $this->checkAuthorization();
@@ -46,7 +44,7 @@ class AdminController extends Controller
 //        }
     }
 
-    public function logOut(){
+    public function logout(){
         $this->auth->unAuthorize();
         header('Location: /admin/login/');
         exit;

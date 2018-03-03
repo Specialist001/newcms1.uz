@@ -42,13 +42,10 @@ class Connection
         return $sth->execute();
     }
 
-    /**
-     * @param $sql
-     * @return array
-     */
-    public function query($sql){
+    
+    public function query($sql, $values){
         $sth = $this->link->prepare($sql);
-        $sth->execute();
+        $sth->execute($values);
         $result = $sth->fetchAll(PDO::FETCH_ASSOC);
 
         if($result === false){

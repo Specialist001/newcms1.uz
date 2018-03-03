@@ -27,7 +27,6 @@ class LoginController extends Controller
             //redirect
             header('Location: /admin/', true, 301);
             exit;
-//            $this->auth->authorize($this->auth->hashUser());
         }
     }
 
