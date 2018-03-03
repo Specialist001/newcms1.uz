@@ -10,7 +10,7 @@ class QueryBuilder
      */
     protected $sql = [];
 
-    protected $values = [];
+    public $values = [];
 
     /**
      * @param string $fields

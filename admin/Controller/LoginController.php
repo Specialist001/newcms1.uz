@@ -5,6 +5,7 @@ namespace Admin\Controller;
 use Engine\Controller;
 use Engine\DI\DI;
 use Engine\Core\Auth\Auth;
+use Engine\Core\Database\QueryBuilder;
 
 class LoginController extends Controller
 {
@@ -36,11 +37,17 @@ class LoginController extends Controller
 
     public function authAdmin(){
         $params = $this->request->post;
+        $queryBuilder = new QueryBuilder();
 
-        $query = $this->db->query('
-            SELECT * FROM `user` WHERE email="' . $params['email'] . '"
-            AND password="' . md5($params['password']) . '"
-            LIMIT 1');
+        $sql = $queryBuilder
+            ->select()
+            ->from('user')
+            ->where('email', $params['email'])
+            ->where('password', md5($params['password']))
+            ->limit(1)
+            ->sql();
+
+        $query = $this->db->query($sql, $queryBuilder->values);
 
         if(!empty($query)){
             $user = $query[0];
@@ -48,11 +55,12 @@ class LoginController extends Controller
             if($user['role']=='admin'){
                 $hash = md5($user['id'] . $user['email'] . $user['password'] . $this->auth->salt());
 
-                $this->db->execute('
-                UPDATE user
-                SET hash = "' . $hash . '"
-                WHERE id=' . $user['id'] . '
-                ');
+                $sql = $queryBuilder
+                    ->update('user')
+                    ->set(['hash' => $hash])
+                    ->where('id', $user['id'])->sql();
+
+                $this->db->execute($sql, $queryBuilder->values);
 
                 $this->auth->authorize($hash);
 
