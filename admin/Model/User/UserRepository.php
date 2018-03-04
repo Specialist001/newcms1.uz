@@ -9,11 +9,21 @@ class UserRepository extends Model
     public function getUsers(){
         $sql = $this->queryBuilder->select()
             ->from('user')
-            ->orderBy('id', 'DESC ')
+            ->orderBy('id', 'DESC')
             ->sql();
 
         print_r($sql);
 
         return $this->db->query($sql);
+    }
+
+    public function test(){
+        $user = new User(2);
+        $user->setEmail('test@admin.com');
+        $user->setPassword(md5(rand(1, 10)));
+        $user->setRole('user');
+        $user->setHash('new');
+        $user->save();
+
     }
 }
