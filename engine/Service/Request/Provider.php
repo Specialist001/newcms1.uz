@@ -13,7 +13,7 @@ class Provider extends AbstractProvider
     /**
      * @return mixed
      */
-    function init()
+    public function init()
     {
         $request = new Request();
 
