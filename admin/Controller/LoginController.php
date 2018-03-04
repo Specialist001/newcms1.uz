@@ -26,7 +26,7 @@ class LoginController extends Controller
 
         if($this->auth->hashUser() != null){
             //redirect
-            header('Location: /admin/', true, 301);
+            header('Location: /admin/');
             exit;
         }
     }
@@ -68,5 +68,7 @@ class LoginController extends Controller
                 exit;
             }
         }
+
+        echo 'Incorret email or password';
     }
 }
