@@ -2,7 +2,7 @@
 
     <main>
         <div class="container">
-            <h3>Pages</h3>
+            <h3>Pages <a href="/admin/pages/create/">Creat Page</a> </h3>
             <table class="table">
                 <thead>
                 <tr>

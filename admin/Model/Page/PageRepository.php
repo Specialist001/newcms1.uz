@@ -8,7 +8,7 @@ class PageRepository extends Model
 {
     public function getPages(){
         $sql = $this->queryBuilder->select()
-            ->form('page')
+            ->from('page')
             ->orderBy('id','DESC')
             ->sql();
 
