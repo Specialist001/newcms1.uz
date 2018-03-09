@@ -18,4 +18,8 @@ class PageController extends AdminController
 
         $this->view->render('pages/create');
     }
+
+    public function add(){
+        print 111;
+    }
 }
