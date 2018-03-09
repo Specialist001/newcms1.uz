@@ -24,3 +24,5 @@ var page = {
 
     }
 };
+
+console.log(page);
