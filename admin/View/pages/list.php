@@ -12,11 +12,14 @@
                 </tr>
                 </thead>
                 <tbody>
+                </tbody>
+                <?php foreach ($pages as $page): ?>
                 <tr>
                     <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
+                    <td><?= $page['title'] ?></td>
+                    <td><?= $page['content'] ?></td>
                 </tr>
+                <?php endforeach; ?>
                 </tbody>
             </table>
         </div>

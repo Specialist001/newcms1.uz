@@ -2,7 +2,6 @@
 
 namespace Admin\Controller;
 
-
 class PageController extends AdminController
 {
     public function listing(){
@@ -20,6 +19,14 @@ class PageController extends AdminController
     }
 
     public function add(){
-        print 1112;
+        $params    = $this->request->post;
+        $pageModel = $this->load->model('Page');
+
+        //$isPageParam = ['title', 'content'];
+
+        if(isset($params['title'])){
+            $pageId = $pageModel->repository->createPage($params);
+            echo $pageId;
+        }
     }
 }

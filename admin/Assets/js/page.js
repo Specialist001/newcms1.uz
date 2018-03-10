@@ -24,4 +24,4 @@ var page = {
     }
 };
 
-//console.log(page);
+console.log(page);
