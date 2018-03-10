@@ -5,7 +5,7 @@ var page = {
         var formData = new FormData();
 
         formData.append('title', $('#formTitle').val());
-        formData.append('content', $('#formContent').val());
+        formData.append('content', $('.redactor-editor').html());
 
         $.ajax({
             url: '/admin/page/add/',
@@ -17,12 +17,11 @@ var page = {
             beforeSend: function(){
 
             },
-            success: function(){
-
+            success: function(result){
+                console.log(result);
             }
         });
-
     }
 };
 
-console.log(page);
+//console.log(page);

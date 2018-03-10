@@ -20,6 +20,6 @@ class PageController extends AdminController
     }
 
     public function add(){
-        print 111;
+        print 1112;
     }
 }
