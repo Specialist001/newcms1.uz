@@ -86,6 +86,10 @@ class Theme
     private function loadTemplateFile($nameFile, $data = []){
         $templateFfile = ROOT_DIR . '/content/themes/default/' . $nameFile . '.php';
 
+        if(ENV == 'Admin') {
+            $templateFfile = ROOT_DIR . '/View/' . $nameFile . '.php';
+        }
+
         if(is_file($templateFfile)){
             extract($data);
             require_once $templateFfile;

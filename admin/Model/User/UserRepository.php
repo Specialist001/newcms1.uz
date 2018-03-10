@@ -12,7 +12,7 @@ class UserRepository extends Model
             ->orderBy('id', 'DESC')
             ->sql();
 
-        print_r($sql);
+        //print_r($sql);
 
         return $this->db->query($sql);
     }
