@@ -44,4 +44,14 @@ class PageController extends AdminController
             echo $pageId;
         }
     }
+
+    public function update(){
+        $params    = $this->request->post;
+        $pageModel = $this->load->model('Page');
+
+        if(isset($params['title'])){
+            $pageId = $pageModel->repository->updatePage($params);
+            echo $pageId;
+        }
+    }
 }
