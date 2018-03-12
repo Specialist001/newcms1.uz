@@ -18,7 +18,8 @@ class Theme
     /**
      * @var array
      */
-    protected $data = [];
+    //protected $data = [];
+    public $data = [];
 
     /**
      * @param null $name
