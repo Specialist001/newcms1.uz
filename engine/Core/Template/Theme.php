@@ -19,7 +19,6 @@ class Theme
      * @var array
      */
     protected $data = [];
-    //public $data = [];
 
     /**
      * @param null $name
@@ -92,7 +91,7 @@ class Theme
         }
 
         if(is_file($templateFfile)){
-            extract($data);
+            extract(array_merge($data, $this->data));
             require_once $templateFfile;
         }
         else{

@@ -21,6 +21,12 @@ var page = {
                 console.log(result);
             }
         });
+    },
+
+    update: function () {
+        var formData = new FormData();
+
+        formData.append('page_id')
     }
 };
 
