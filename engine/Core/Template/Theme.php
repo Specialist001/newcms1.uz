@@ -91,7 +91,7 @@ class Theme
         }
 
         if(is_file($templateFfile)){
-            extract($data);
+            extract(array_merge($data, $this->data));
             require_once $templateFfile;
         }
         else{

@@ -2,7 +2,14 @@
 
     <main>
         <div class="container">
-            <h3>Pages <a href="/admin/pages/create/">Creat Page</a> </h3>
+            <div class="row">
+            <div class="col page-title">
+                <h3>
+                    Pages
+                    <a href="/admin/pages/create/">Create Page</a>
+                </h3>
+            </div>
+            </div>
             <table class="table">
                 <thead>
                 <tr>
@@ -12,11 +19,19 @@
                 </tr>
                 </thead>
                 <tbody>
+                <?php foreach ($pages as $page): ?>
                 <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
+                    <th scope="row">
+                        <?= $page['id'] ?>
+                    </th>
+                    <td>
+                        <a href="/admin/pages/edit/<?= $page['id'] ?>">
+                            <?= $page['title'] ?>
+                        </a>
+                    </td>
+                    <td><?= $page['date'] ?></td>
                 </tr>
+                <?php endforeach; ?>
                 </tbody>
             </table>
         </div>

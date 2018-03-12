@@ -13,6 +13,11 @@ class AdminController extends Controller
     protected $auth;
 
     /**
+     * @var array
+     */
+    public $data = [];
+
+    /**
      * AdminController constructor.
      * @param \Engine\DI\DI $di
      */
@@ -26,9 +31,6 @@ class AdminController extends Controller
             header('Location: /admin/login/');
             exit;
         }
-//        else{
-//            $this->checkAuthorization();
-//        }
     }
 
     public function checkAuthorization(){
