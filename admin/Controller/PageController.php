@@ -9,10 +9,10 @@ class PageController extends AdminController
     public function listing(){
         $pageModel = $this->load->model('Page');
 
-        $data['pages'] = $pageModel->repository->getPages();
-        //$this->data['pages'] = $pageModel->repository->getPages();
+        //$data['pages'] = $pageModel->repository->getPages();
+        $this->data['pages'] = $pageModel->repository->getPages();
 
-        $this->view->render('pages/list', $data);
+        $this->view->render('pages/list', $this->data);
     }
 
     public function create(){
@@ -25,6 +25,7 @@ class PageController extends AdminController
         $pageModel = $this->load->model('Page');
 
         $this->data['page'] = $pageModel->repository->getPageData($id);
+        //$data['page'] = $pageModel->repository->getPageData($id);
 
         $this->view->render('pages/edit', $this->data);
     }

@@ -13,7 +13,7 @@
                         <input type="hidden" name="page_id" id="formPageId" value="<?= $page['id'] ?>" />
                         <div class="form-group">
                             <label for="formTitle">Title</label>
-                            <input type="text" name="title" class="form-control" id="formTitle" />
+                            <input type="text" name="title" class="form-control" id="formTitle" value="<?= $page['title'] ?>" placeholder="Title page..." />
                         </div>
                         <div class="form-group">
                             <label for="formContent">Content</label>
