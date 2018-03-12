@@ -8,12 +8,13 @@ class PageController extends AdminController
 
     public function listing(){
         $pageModel = $this->load->model('Page');
+        print_r($this->di); exit;
 
-        $data['pages'] = $pageModel->repository->getPages();
-        //$this->data['pages'] = $pageModel->repository->getPages();
+        //$data['pages'] = $pageModel->repository->getPages();
+        $this->data['pages'] = $pageModel->repository->getPages();
 
-        $this->view->render('pages/list', $data);
-        //$this->view->render('pages/list', $this->data);
+        //$this->view->render('pages/list', $data);
+        $this->view->render('pages/list', $this->data);
     }
 
     public function create(){
