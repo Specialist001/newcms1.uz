@@ -1,6 +1,7 @@
 <?php
 namespace Engine;
 
+use Engine\Core\Config\Config;
 use Engine\Core\Router\DispatchedRoute;
 use Engine\DI\DI;
 use Engine\Helper\Common;

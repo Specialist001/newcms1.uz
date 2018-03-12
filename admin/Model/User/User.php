@@ -7,71 +7,135 @@ use Engine\Core\Database\ActiveRecord;
 class User
 {
     use ActiveRecord;
+
     /**
      * @var string
      */
     protected $table = 'user';
 
+    /**
+     * @var User id
+     */
     public $id;
 
+    /**
+     * @var User email
+     */
     public $email;
 
+    /**
+     * @var User password
+     */
     public $password;
 
+    /**
+     * @var User role
+     */
     public $role;
 
+    /**
+     * @var User hash
+     */
     public $hash;
 
+    /**
+     * @var User date_reg
+     */
     public $date_reg;
 
-    public function getId(){
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
         return $this->id;
     }
 
-    public function setId($id){
+    /**
+     * @param $id
+     */
+    public function setId($id)
+    {
         $this->id = $id;
     }
 
-    public function getEmail(){
+    /**
+     * @return string
+     */
+    public function getEmail()
+    {
         return $this->email;
     }
 
-    public function setEmail($email){
+    /**
+     * @param User $email
+     */
+    public function setEmail($email)
+    {
         $this->email = $email;
     }
 
-    public function getPassword(){
+    /**
+     * @return string
+     */
+    public function getPassword()
+    {
         return $this->password;
     }
 
-    public function setPassword($password){
+    /**
+     * @param User $password
+     */
+    public function setPassword($password)
+    {
         $this->password = $password;
     }
 
-    public function getRole(){
+    /**
+     * @return string
+     */
+    public function getRole()
+    {
         return $this->role;
     }
 
-    public function setRole($role){
+    /**
+     * @param User $role
+     */
+    public function setRole($role)
+    {
         $this->role = $role;
     }
 
-    public function getHash(){
+    /**
+     * @return string
+     */
+    public function getHash()
+    {
         return $this->hash;
     }
 
-    public function setHash($hash){
+    /**
+     * @param User $hash
+     */
+    public function setHash($hash)
+    {
         $this->hash = $hash;
     }
 
-    public function getDateReg(){
+    /**
+     * @return mixed
+     */
+    public function getDateReg()
+    {
         return $this->date_reg;
     }
 
-    public function setDateReg($date_reg){
+    /**
+     * @param mixed $date_reg
+     */
+    public function setDateReg($date_reg)
+    {
         $this->date_reg = $date_reg;
     }
-
-
-
 }
