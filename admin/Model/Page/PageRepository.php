@@ -6,7 +6,8 @@ use Engine\Model;
 
 class PageRepository extends Model
 {
-    public function getPages(){
+    public function getPages()
+    {
         $sql = $this->queryBuilder->select()
             ->from('page')
             ->orderBy('id','DESC')

@@ -1,5 +1,4 @@
 <?php
-
 namespace Engine;
 
 use Engine\DI\DI;
@@ -11,9 +10,15 @@ class Load
 
     public $di;
 
+    /**
+     * Load constructor.
+     * @param DI $di
+     */
     public function __construct(DI $di)
     {
         $this->di = $di;
+
+        return $this;
     }
 
     /**
@@ -24,7 +29,6 @@ class Load
     public function model($modelName, $modelDir = false)
     {
         $modelName  = ucfirst($modelName);
-        $model      = new \stdClass();
         $modelDir   = $modelDir ? $modelDir : $modelName;
 
         $namespaceModel = sprintf(
@@ -35,13 +39,13 @@ class Load
         $isClassModel = class_exists($namespaceModel);
 
         if($isClassModel) {
-            $this->di->push('model', [
-                'key'   => $modelName,
-                'value' => new $namespaceModel($this->di)
-            ]);
+            //Set to DI
+            $modelRegistry = $this->di->get('model') ?: new \stdClass();
+            $modelRegistry->{lcfirst($modelName)} = new $namespaceModel($this->di);
+
+            $this->di->set('model', $modelRegistry);
         }
 
         return $isClassModel;
     }
-
 }
