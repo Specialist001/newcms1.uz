@@ -17,12 +17,7 @@ class Provider extends AbstractProvider
      */
     public function init()
     {
-        // TODO: Implement init() method.
-        //It's for capture P2P
-        //and for capture GitHub
-        //it's from UTM
-
-        $view = new View();
+        $view = new View($this->di);
 
         $this->di->set($this->serviceName, $view);
     }

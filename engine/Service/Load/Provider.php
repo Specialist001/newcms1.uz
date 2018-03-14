@@ -18,5 +18,7 @@ class Provider extends AbstractProvider
         $load = new Load($this->di);
 
         $this->di->set($this->serviceName, $load);
+
+        return $this;
     }
 }

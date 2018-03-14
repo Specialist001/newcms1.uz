@@ -6,7 +6,7 @@
             <div class="col page-title">
                 <h3>
                     Pages
-                    <a href="/admin/pages/create/">Create Page</a>
+                    <a href="/admin/posts/create/">Create Post</a>
                 </h3>
             </div>
             </div>
@@ -19,17 +19,17 @@
                 </tr>
                 </thead>
                 <tbody>
-                <?php foreach ($pages as $page): ?>
+                <?php foreach ($posts as $post): ?>
                 <tr>
                     <th scope="row">
-                        <?= $page['id'] ?>
+                        <?= $post->id ?>
                     </th>
                     <td>
-                        <a href="/admin/pages/edit/<?= $page['id'] ?>">
-                            <?= $page['title'] ?>
+                        <a href="/admin/posts/edit/<?= $post->id ?>">
+                            <?= $post->title ?>
                         </a>
                     </td>
-                    <td><?= $page['date'] ?></td>
+                    <td><?= $post->date ?></td>
                 </tr>
                 <?php endforeach; ?>
                 </tbody>

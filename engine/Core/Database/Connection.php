@@ -20,10 +20,9 @@ class Connection
     /**
      * @return $this
      */
-    private function connect(){
+    private function connect()
+    {
         $config = Config::file('database');
-
-        //print_r($config);
 
         $dsn = 'mysql:host='.$config['host'].';dbname='.$config['db_name'].';charset='.$config['charset'];
 
@@ -36,33 +35,37 @@ class Connection
      * @param $sql
      * @param array $values
      * @return mixed
+     * @return array
      */
-    public function execute($sql, $values = []){
+    public function execute($sql, $values = [])
+    {
         $sth = $this->link->prepare($sql);
 
         return $sth->execute($values);
     }
-
 
     /**
      * @param $sql
      * @param array $values
      * @return array
      */
-    public function query($sql, $values = []){
+    public function query($sql, $values = [], $statement = PDO::FETCH_OBJ)
+    {
         $sth = $this->link->prepare($sql);
 
         $sth->execute($values);
 
-        $result = $sth->fetchAll(PDO::FETCH_ASSOC);
+        $result = $sth->fetchAll($statement);
 
         if($result === false){
             return [];
         }
+
         return $result;
     }
 
-    public function lastInsertId(){
+    public function lastInsertId()
+    {
         return $this->link->lastInsertId();
     }
 }

@@ -23,24 +23,27 @@ trait ActiveRecord
         }
     }
 
-    public function getTable(){
+    public function getTable()
+    {
         return $this->table;
     }
 
-    public function findOne(){
+    public function findOne()
+    {
         $find = $this->db->query(
             $this->queryBuilder
             ->select()
             ->from($this->getTable())
             ->where('id', $this->id)
             ->sql(),
-        $this->queryBuilder->values
+            $this->queryBuilder->values
         );
 
         return isset($find[0]) ? $find[0] : null;
     }
 
-    public function save(){
+    public function save()
+    {
         $properties = $this->getIssetProperties();
 
         try{
@@ -67,7 +70,8 @@ trait ActiveRecord
         }
     }
 
-    private function getIssetProperties(){
+    private function getIssetProperties()
+    {
         $properties = [];
 
         foreach ($this->getProperties() as $key => $property){
@@ -79,7 +83,8 @@ trait ActiveRecord
         return $properties;
     }
 
-    private function getProperties(){
+    private function getProperties()
+    {
         $reflection = new ReflectionClass($this);
         $properties = $reflection->getProperties(ReflectionProperty::IS_PUBLIC);
 

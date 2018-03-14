@@ -3,9 +3,12 @@
 namespace Engine\Core\Template;
 
 use Engine\Core\Template\Theme;
+use Engine\DI\DI;
 
 class View
 {
+    public $di;
+
     /**
      * @var \Engine\Core\Template\Theme
      */
@@ -14,8 +17,9 @@ class View
     /**
      * View constructor.
      */
-    public function __construct()
+    public function __construct(DI $di)
     {
+        $this->di    = $di;
         $this->theme = new Theme();
     }
 
@@ -24,9 +28,9 @@ class View
      * @param array $vars
      * @throws \Exception
      */
-    public function render($template, $vars = []){
+    public function render($template, $vars = [])
+    {
         $templatePath = $this->getTemplatePath($template, ENV);
-        //$templatePath = ROOT_DIR . '/content/themes/default/' . $template . '.php';
 
         if(!is_file(@$templatePath)){
             throw new \InvalidArgumentException(
@@ -34,6 +38,7 @@ class View
             );
         }
 
+        $vars['lang'] = $this->di->get('language');
         $this->theme->setData($vars);
         extract($vars);
 
@@ -55,18 +60,8 @@ class View
      * @param null $env
      * @return string
      */
-    private function getTemplatePath($template, $env = null){
-        /*switch ($env){
-            case 'Admin':
-                return ROOT_DIR . '/View/' . $template . '.php';
-                break;
-            case 'Cms':
-                return ROOT_DIR . '/content/themes/default/' . $template . '.php';
-                break;
-            default:
-                return ROOT_DIR . '/View/' . $template . '.php';
-        }*/
-
+    private function getTemplatePath($template, $env = null)
+    {
         if($env == 'Cms'){
             return ROOT_DIR . '/content/themes/default/' . $template . '.php';
         }

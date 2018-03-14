@@ -31,9 +31,13 @@ class AdminController extends Controller
             header('Location: /admin/login/');
             exit;
         }
+
+        //Load global language
+        $this->load->language('dashboard/menu');
     }
 
-    public function checkAuthorization(){
+    public function checkAuthorization()
+    {
 
 //        if($this->auth->hashUser() != null){
 //            $this->auth->authorize($this->auth->hashUser());
@@ -46,7 +50,8 @@ class AdminController extends Controller
 //        }
     }
 
-    public function logout(){
+    public function logout()
+    {
         $this->auth->unAuthorize();
         header('Location: /admin/login/');
         exit;

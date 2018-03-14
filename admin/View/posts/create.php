@@ -4,15 +4,15 @@
         <div class="container">
             <div class="row">
                 <div class="col page-title">
-                    <h3>Create page</h3>
+                    <h3>Create post</h3>
                 </div>
             </div>
             <div class="row">
                 <div class="col-9">
-                    <form id="formPage">
+                    <form id="formPost">
                         <div class="form-group">
                             <label for="formTitle">Title</label>
-                            <input type="text" name="title" class="form-control" id="formTitle" placeholder="Title page...">
+                            <input type="text" name="title" class="form-control" id="formTitle" placeholder="Title post...">
                         </div>
                         <div class="form-group">
                             <label for="formContent">Content</label>
