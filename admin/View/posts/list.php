@@ -5,7 +5,7 @@
             <div class="row">
             <div class="col page-title">
                 <h3>
-                    Pages
+                    Posts
                     <a href="/admin/posts/create/">Create Post</a>
                 </h3>
             </div>
@@ -19,7 +19,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                <?php foreach ($posts as $post): ?>
+                <?php foreach($posts as $post): ?>
                 <tr>
                     <th scope="row">
                         <?= $post->id ?>

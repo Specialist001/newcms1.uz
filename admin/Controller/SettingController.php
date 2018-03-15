@@ -2,8 +2,7 @@
 
 namespace Admin\Controller;
 
-
-class SettingController
+class SettingController extends AdminController
 {
-
+    
 }

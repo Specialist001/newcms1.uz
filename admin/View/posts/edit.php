@@ -9,11 +9,11 @@
             </div>
             <div class="row">
                 <div class="col-9">
-                    <form action="" id="formPost">
+                    <form id="formPage">
                         <input type="hidden" name="post_id" id="formPostId" value="<?= $post->id ?>" />
                         <div class="form-group">
                             <label for="formTitle">Title</label>
-                            <input type="text" name="title" class="form-control" id="formTitle" value="<?= $post->title ?>" placeholder="Title page..." />
+                            <input type="text" name="title" class="form-control" id="formTitle" value="<?= $post->title ?>" placeholder="Title post...">
                         </div>
                         <div class="form-group">
                             <label for="formContent">Content</label>

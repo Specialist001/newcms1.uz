@@ -16,7 +16,8 @@ class PageRepository extends Model
         return $this->db->query($sql);
     }
 
-    public function getPageData($id){
+    public function getPageData($id)
+    {
         $page = new Page($id);
         return $page->findOne();
     }
@@ -25,7 +26,8 @@ class PageRepository extends Model
      * @param $params
      * @return mixed
      */
-    public function createPage($params){
+    public function createPage($params)
+    {
         $page = new Page;
         $page->setTitle($params['title']);
         $page->setContent($params['content']);
@@ -34,7 +36,8 @@ class PageRepository extends Model
         return $pageId;
     }
 
-    public function updatePage($params){
+    public function updatePage($params)
+    {
         if(isset($params['page_id'])) {
             $page = new Page($params['page_id']);
             $page->setTitle($params['title']);

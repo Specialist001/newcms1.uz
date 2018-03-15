@@ -24,18 +24,20 @@ class LoginController extends Controller
 
         $this->auth = new Auth();
 
-        if($this->auth->hashUser() != null){
+        if($this->auth->hashUser() !== null){
             //redirect
             header('Location: /admin/');
             exit;
         }
     }
 
-    public function form(){
+    public function form()
+    {
         $this->view->render('login');
     }
 
-    public function authAdmin(){
+    public function authAdmin()
+    {
         $params = $this->request->post;
         $queryBuilder = new QueryBuilder();
 
@@ -52,7 +54,7 @@ class LoginController extends Controller
         if(!empty($query)){
             $user = $query[0];
 
-            if($user['role']=='admin'){
+            if($user['role'] == 'admin'){
                 $hash = md5($user['id'] . $user['email'] . $user['password'] . $this->auth->salt());
 
                 $sql = $queryBuilder
@@ -64,11 +66,11 @@ class LoginController extends Controller
 
                 $this->auth->authorize($hash);
 
-                header('Location: /admin/login/', true, 301);
+                header('Location: /admin/login/');
                 exit;
             }
         }
 
-        echo 'Incorret email or password';
+        echo 'Incorrect email or password';
     }
 }

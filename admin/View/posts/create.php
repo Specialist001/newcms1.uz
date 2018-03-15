@@ -9,7 +9,7 @@
             </div>
             <div class="row">
                 <div class="col-9">
-                    <form id="formPost">
+                    <form id="formPage">
                         <div class="form-group">
                             <label for="formTitle">Title</label>
                             <input type="text" name="title" class="form-control" id="formTitle" placeholder="Title post...">

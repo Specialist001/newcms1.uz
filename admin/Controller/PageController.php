@@ -41,10 +41,10 @@ class PageController extends AdminController
 
     public function update()
     {
-        $params    = $this->request->post;
         $this->load->model('Page');
+        $params = $this->request->post;
 
-        if(isset($params['title'])){
+        if (isset($params['title'])) {
             $pageId = $this->model->page->updatePage($params);
             echo $pageId;
         }

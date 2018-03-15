@@ -34,19 +34,19 @@ class PostController extends AdminController
         $params = $this->request->post;
 
         if(isset($params['title'])){
-            $pageId = $this->model->post->createPost($params);
-            echo $pageId;
+            $postId = $this->model->post->createPost($params);
+            echo $postId;
         }
     }
 
     public function update()
     {
-        $params    = $this->request->post;
         $this->load->model('Post');
+        $params = $this->request->post;
 
         if(isset($params['title'])){
-            $pageId = $this->model->post->updatePost($params);
-            echo $pageId;
+            $postId = $this->model->post->updatePost($params);
+            echo $postId;
         }
     }
 }
