@@ -11,9 +11,9 @@ class Setting
     protected $table = 'setting';
 
     public $id;
-    public $title;
-    public $content;
-    public $date;
+    public $name;
+    public $key_field;
+    public $value;
 
     /**
      * @return mixed
@@ -34,49 +34,33 @@ class Setting
     /**
      * @return mixed
      */
-    public function getTitle()
+    public function getValue()
     {
-        return $this->title;
+        return $this->value;
     }
 
     /**
-     * @param mixed $title
+     * @param mixed $value
      */
-    public function setTitle($title)
+    public function setValue($value)
     {
-        $this->title = $title;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getContent()
-    {
-        return $this->content;
-    }
-
-    /**
-     * @param mixed $content
-     */
-    public function setContent($content)
-    {
-        $this->content = $content;
+        $this->value = $value;
     }
 
     /**
      * @return mixed
      */
-    public function getDate()
+    public function getKeyField()
     {
-        return $this->date;
+        return $this->key_field;
     }
 
     /**
-     * @param mixed $date
+     * @param mixed $key_field
      */
-    public function setDate($date)
+    public function setKeyField($key_field)
     {
-        $this->date = $date;
+        $this->key_field = $key_field;
     }
 
 }

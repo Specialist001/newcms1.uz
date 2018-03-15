@@ -980,55 +980,68 @@
       <DataType>varchar(255)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="241" parent="227" name="value">
+    <column id="241" parent="227" name="key_field">
       <Position>3</Position>
+      <DataType>varchar(100)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="242" parent="227" name="value">
+      <Position>4</Position>
       <DataType>varchar(255)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="242" parent="227" name="PRIMARY">
+    <index id="243" parent="227" name="setting_key_uindex">
+      <ColNames>key_field</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="244" parent="227" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="243" parent="228" name="id">
+    <key id="245" parent="227" name="setting_key_uindex">
+      <ColNames>key_field</ColNames>
+      <UnderlyingIndexName>setting_key_uindex</UnderlyingIndexName>
+    </key>
+    <column id="246" parent="228" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="244" parent="228" name="email">
+    <column id="247" parent="228" name="email">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="245" parent="228" name="password">
+    <column id="248" parent="228" name="password">
       <Position>3</Position>
       <DataType>varchar(32)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="246" parent="228" name="role">
+    <column id="249" parent="228" name="role">
       <Position>4</Position>
       <DataType>enum(&apos;admin&apos;, &apos;moderator&apos;, &apos;user&apos;, &apos;&apos;)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="247" parent="228" name="hash">
+    <column id="250" parent="228" name="hash">
       <Position>5</Position>
       <DataType>varchar(32)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="248" parent="228" name="date_reg">
+    <column id="251" parent="228" name="date_reg">
       <Position>6</Position>
       <DataType>datetime|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="249" parent="228" name="PRIMARY">
+    <key id="252" parent="228" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
