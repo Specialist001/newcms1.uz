@@ -13,18 +13,19 @@ class Theme
     /**
      * @type string
      */
-    public $url = '';
+    protected static $url = '';
 
     /**
      * @var array
      */
-    protected $data = [];
+    protected static $data = [];
 
     /**
      * @param null $name
      * @throws \Exception
      */
-    public function header($name = null){
+    public static function header($name = null)
+    {
         $name = (string) $name;
         $file = 'header';
 
@@ -39,7 +40,8 @@ class Theme
      * @param string $name
      * @throws \Exception
      */
-    public function footer($name = ''){
+    public function footer($name = '')
+    {
         $name = (string) $name;
         $file = 'footer';
 
@@ -54,7 +56,8 @@ class Theme
      * @param string $name
      * @throws \Exception
      */
-    public function sidebar($name = ''){
+    public function sidebar($name = '')
+    {
         $name = (string) $name;
         $file = 'sidebar';
 
@@ -70,7 +73,8 @@ class Theme
      * @param array $data
      * @throws \Exception
      */
-    public function block($name = '', $data = []){
+    public function block($name = '', $data = [])
+    {
         $name = (string) $name;
 
         if($name !== ''){
@@ -83,7 +87,8 @@ class Theme
      * @param array $data
      * @throws \Exception
      */
-    private function loadTemplateFile($nameFile, $data = []){
+    private function loadTemplateFile($nameFile, $data = [])
+    {
         $templateFfile = ROOT_DIR . '/content/themes/default/' . $nameFile . '.php';
 
         if(ENV == 'Admin') {
