@@ -13,4 +13,14 @@ class SettingController extends AdminController
 
         $this->view->render('setting/general', $this->data);
     }
+
+    public function updateSetting()
+    {
+        $this->load->model('Setting');
+
+        $params = $this->request->post;
+        $update = $this->model->setting->update($params);
+
+        echo $update;
+    }
 }

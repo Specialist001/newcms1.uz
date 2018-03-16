@@ -15,4 +15,19 @@ class SettingRepository extends Model
 
         return $this->db->query($sql);
     }
+
+    public function update(array $params)
+    {
+        if (!empty($params)) {
+            foreach ($params as $key => $value) {
+                $sql = $this->queryBuilder
+                    ->update('setting')
+                    ->set([$key => $value])
+                    ->where($key, $key)
+                    ->sql();
+                print_r($sql);
+            }
+        }
+
+    }
 }

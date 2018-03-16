@@ -26,4 +26,7 @@ $this->router->add('post-edit', '/admin/posts/edit/(id:int)', 'PostController:ed
 $this->router->add('post-add', '/admin/post/add/', 'PostController:add', 'POST');
 $this->router->add('post-update', '/admin/post/update/', 'PostController:update', 'POST');
 
+//GET
 $this->router->add('settings-general', '/admin/settings/general/', 'SettingController:general');
+//POST
+$this->router->add('settings-update', '/admin/settings/update/', 'SettingController:updateSetting', 'POST');
