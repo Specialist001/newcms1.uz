@@ -9,7 +9,7 @@
         </div>
         <div class="row">
             <div class="col">
-                <form>
+                <form id="settingForm">
                     <?php foreach($settings as $setting):?>
                         <?php if($setting->key_field == 'language'): ?>
                             <div class="form-group row">
@@ -32,12 +32,12 @@
                                     <?= $setting->name ?>
                                 </label>
                                 <div class="col-10">
-                                    <input class="form-control" type="text" name="<?= $setting->key_field ?>" id="formNameSite">
+                                    <input class="form-control" type="text" name="<?= $setting->key_field ?>" value="<?= $setting->value ?>" id="formNameSite">
                                 </div>
                             </div>
                         <?php endif; ?>
                     <?php endforeach; ?>
-                    <button type="submit" class="btn btn-primary">
+                    <button type="submit" class="btn btn-primary" onclick="setting.update(); return false;">
                         Save changes
                     </button>
                 </form>

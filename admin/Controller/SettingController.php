@@ -19,8 +19,8 @@ class SettingController extends AdminController
         $this->load->model('Setting');
 
         $params = $this->request->post;
-        $update = $this->model->setting->update($params);
+        $this->model->setting->update($params);
 
-        echo $update;
+        //echo $update;
     }
 }
