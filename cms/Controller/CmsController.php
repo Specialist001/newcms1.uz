@@ -14,8 +14,4 @@ class CmsController extends Controller
     {
         parent::__construct($di);
     }
-
-    public function header(){
-
-    }
 }
