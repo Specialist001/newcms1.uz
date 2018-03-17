@@ -5,6 +5,7 @@ require_once __DIR__ . '/Function.php';
 
 class_alias('Engine\\Core\\Template\\Asset', 'Asset');
 class_alias('Engine\\Core\\Template\\Theme', 'Theme');
+class_alias('Engine\\Core\\Template\\Setting', 'Setting');
 
 use Engine\Cms;
 use Engine\DI\DI;

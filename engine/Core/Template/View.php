@@ -14,13 +14,16 @@ class View
      */
     protected $theme;
 
+    protected $setting;
+
     /**
      * View constructor.
      */
     public function __construct(DI $di)
     {
-        $this->di    = $di;
-        $this->theme = new Theme();
+        $this->di      = $di;
+        $this->theme   = new Theme();
+        $this->setting = new Setting($di);
     }
 
     /**
@@ -30,12 +33,10 @@ class View
      */
     public function render($template, $data = [])
     {
-        //include_once $this->getThemePath() . '/functions.php';
-       //17-03  17:41 
        $functions = Theme::getThemePath() . '/functions.php';
         if (file_exists($functions)) {
             include_once $functions;
-        } //end
+        }
 
         $templatePath = $this->getTemplatePath($template, ENV);
 
