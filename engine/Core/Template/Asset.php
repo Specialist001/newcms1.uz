@@ -3,6 +3,9 @@
 namespace Engine\Core\Template;
 
 
+/**
+ * @property array container
+ */
 class Asset
 {
     const EXT_JS     = '.js';
@@ -12,40 +15,42 @@ class Asset
     const JS_SCRIPT_MASK = '<script src="%s" type="text/javascript"></script>';
     const CSS_LINK_MASK  = '<link rel="stylesheet" href="%s">';
 
-    public $container = [];
+    public static $container = [];
 
-    public function css($link)
+    public static function css($link)
     {
-        $file = $link . self::EXT_CSS;
+        $file = Theme::getThemePath(). DS . $link . self::EXT_CSS;
+
         if (is_file($file)) {
-            $this->container['css'][] = [
-                'file' => $file
+            self::$container['css'][] = [
+                'file' => Theme::getUrl() . '/' . $link . self::EXT_CSS
             ];
         }
     }
 
-    public function js($link)
+    public static function js($link)
     {
-        $file = $link .self::EXT_JS;
+        $file = Theme::getThemePath(). DS . $link . self::EXT_JS;
+
         if (is_file($file)) {
-            $this->container['js'][] = [
-                'file' => $file
+            self::$container['js'][] = [
+                'file' => Theme::getUrl() . '/' . $link . self::EXT_JS
             ];
         }
     }
 
-    public function render($extension)
+    public static function render($extension)
     {
-        $listAssets = isset($this->container[$extension]) ? $this->container[$extension] : false;
+        $listAssets = isset(self::$container[$extension]) ? self::$container[$extension] : false;
 
         if ($listAssets) {
             $renderMethod = 'render' .ucfirst($extension);
 
-            $this->{$renderMethod}($listAssets);
+            self::$renderMethod($listAssets);
         }
     }
 
-    public function renderJs($list)
+    public static function renderJs($list)
     {
         foreach ($list as $item) {
             echo sprintf(
@@ -55,7 +60,7 @@ class Asset
         }
     }
 
-    public function renderCss($list)
+    public static function renderCss($list)
     {
         foreach ($list as $item) {
             echo sprintf(
@@ -65,7 +70,4 @@ class Asset
         }
     }
 
-    public function __construct()
-    {
-    }
 }
