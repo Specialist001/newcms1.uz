@@ -62,7 +62,7 @@ class Config
             } else {
                 throw new \Exception(
                     sprintf(
-                        'Config file <strong>%s</strong> is not a valid array.',
+                        'Config file <b> %s </b> is not a valid array.',
                         $path
                     )
                 );
@@ -70,7 +70,7 @@ class Config
         } else {
             throw new \Exception(
                 sprintf(
-                    'Cannot load config from file, file <strong>%s</strong> does not exist.',
+                    'Cannot load config from file, file %s does not exist.',
                     $path
                 )
             );

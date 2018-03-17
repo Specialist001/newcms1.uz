@@ -2,7 +2,7 @@
 
 namespace Engine\Core\Template;
 
-use Engine\Core\Template\Theme;
+//use Engine\Core\Template\Theme;
 use Engine\DI\DI;
 
 class View
@@ -30,6 +30,7 @@ class View
      */
     public function render($template, $data = [])
     {
+
         $templatePath = $this->getTemplatePath($template, ENV);
 
         if(!is_file($templatePath)){
@@ -63,7 +64,7 @@ class View
      */
     private function getTemplatePath($template, $env = null)
     {
-        if($env == 'Cms'){
+        if($env === 'Cms'){
             return ROOT_DIR . '/content/themes/default/' . $template . '.php';
         }
 
