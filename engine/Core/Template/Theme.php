@@ -2,6 +2,8 @@
 
 namespace Engine\Core\Template;
 
+use Engine\Core\Config\Config;
+
 class Theme
 {
     /**
@@ -13,6 +15,8 @@ class Theme
         'sidebar' => 'sidebar-%s',
     ];
 
+    const URL_THEME_MASK = '/content/themes/%s';
+
     /**
      * Url current theme
      * @type string
@@ -23,6 +27,13 @@ class Theme
      * @var array
      */
     protected static $data = [];
+
+    public static function getUrl()
+    {
+        $currentTheme = Config::item('defaultTheme');
+
+        return sprintf(self::URL_THEME_MASK, $currentTheme);
+    }
 
     /**
      * @param null $name
