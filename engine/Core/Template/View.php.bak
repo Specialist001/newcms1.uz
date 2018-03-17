@@ -30,16 +30,10 @@ class View
      */
     public function render($template, $data = [])
     {
-        //include_once $this->getThemePath() . '/functions.php';
-       //17-03  17:41 
-       $functions = Theme::getThemePath() . '/functions.php';
-        if (file_exists($functions)) {
-            include_once $functions;
-        } //end
-
+        include_once $this->getThemePath() . '/functions.php';
         $templatePath = $this->getTemplatePath($template, ENV);
 
-        if(!is_file($templatePath)) {
+        if(!is_file($templatePath)){
             throw new \InvalidArgumentException(
                 sprintf('Template "%s" not found in "%s" ', $template, $templatePath)
             );
@@ -77,9 +71,9 @@ class View
         return path('view') . '/' . $template . '.php';
     }
 
-    /*private function getThemePath()
+    private function getThemePath()
     {
         return ROOT_DIR . '/content/themes/default';
-    }*/
+    }
 
 }

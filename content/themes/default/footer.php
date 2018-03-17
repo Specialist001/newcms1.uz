@@ -35,9 +35,7 @@
     </div>
 </footer>
 
-<?php use Engine\Core\Template\Asset;
-
-Asset::render('js'); ?>
+<?php Asset::render('js'); ?>
 
 </body>
 

@@ -17,9 +17,12 @@ class Asset
 
     public static $container = [];
 
+    /**
+     * @param $link
+     */
     public static function css($link)
     {
-        $file = Theme::getThemePath(). DS . $link . self::EXT_CSS;
+        $file = Theme::getThemePath() . DS . $link . self::EXT_CSS;
 
         if (is_file($file)) {
             self::$container['css'][] = [
@@ -30,7 +33,7 @@ class Asset
 
     public static function js($link)
     {
-        $file = Theme::getThemePath(). DS . $link . self::EXT_JS;
+        $file = Theme::getThemePath() . DS . $link . self::EXT_JS;
 
         if (is_file($file)) {
             self::$container['js'][] = [
@@ -44,7 +47,7 @@ class Asset
         $listAssets = isset(self::$container[$extension]) ? self::$container[$extension] : false;
 
         if ($listAssets) {
-            $renderMethod = 'render' .ucfirst($extension);
+            $renderMethod = 'render' . ucfirst($extension);
 
             self::$renderMethod($listAssets);
         }

@@ -15,7 +15,7 @@ class Theme
         'sidebar' => 'sidebar-%s',
     ];
 
-    const URL_THEME_MASK = '/content/themes/%s';
+    const URL_THEME_MASK = '%s/content/themes/%s';
 
     /**
      * Url current theme
@@ -34,15 +34,17 @@ class Theme
 
     public function __construct()
     {
-        $this->theme = $this;
         $this->asset = new Asset();
+        $this->theme = $this;
     }
+    
 
     public static function getUrl()
     {
         $currentTheme = Config::item('defaultTheme', 'main');
+        $baseUrl      = Config::item('baseUrl', 'main');
 
-        return sprintf(self::URL_THEME_MASK, $currentTheme);
+        return sprintf(self::URL_THEME_MASK, $baseUrl, $currentTheme);
     }
 
     /**
@@ -115,5 +117,10 @@ class Theme
     public static function setData($data)
     {
         static::$data = $data;
+    }
+
+    public static function getThemePath()
+    {
+        return ROOT_DIR . '/content/themes/default';
     }
 }
