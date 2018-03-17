@@ -28,9 +28,19 @@ class Theme
      */
     protected static $data = [];
 
+    public $asset;
+
+    public $theme;
+
+    public function __construct()
+    {
+        $this->theme = $this;
+        $this->asset = new Asset();
+    }
+
     public static function getUrl()
     {
-        $currentTheme = Config::item('defaultTheme');
+        $currentTheme = Config::item('defaultTheme', 'main');
 
         return sprintf(self::URL_THEME_MASK, $currentTheme);
     }

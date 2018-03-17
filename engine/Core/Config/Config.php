@@ -5,12 +5,12 @@ namespace Engine\Core\Config;
 class Config
 {
 
+
     /**
-     * Retrieves a config item.
-     *
-     * @param  string  $key
-     * @param  string  $group
+     * @param $key
+     * @param string $group
      * @return mixed
+     * @throws \Exception
      */
     public static function item($key, $group = 'main')
     {
@@ -44,6 +44,7 @@ class Config
     public static function file($group = 'main')
     {
         $path = path('config') . DS . $group . '.php';
+        //$path = $_SERVER['DOCUMENT_ROOT'] . '/' . mb_strtolower(ENV). '/Config/'. $group . '.php';
 
         // Check that the file exists before we attempt to load it.
         if (file_exists($path)) {
