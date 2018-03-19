@@ -3,7 +3,7 @@
 namespace Engine\Core\Template;
 
 use Engine\DI\DI;
-use Cms\Model\Menu\MenuItemRepository;
+use Cms\Model\MenuItem\MenuItemRepository;
 
 
 class Menu

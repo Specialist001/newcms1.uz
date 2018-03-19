@@ -2,6 +2,8 @@
 
 namespace Admin\Controller;
 
+use Engine\Core\Template\Theme;
+
 class SettingController extends AdminController
 {
     public function general()
