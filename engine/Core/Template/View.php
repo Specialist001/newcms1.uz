@@ -16,6 +16,8 @@ class View
 
     protected $setting;
 
+    protected $menu;
+
     /**
      * View constructor.
      */
@@ -24,6 +26,7 @@ class View
         $this->di      = $di;
         $this->theme   = new Theme();
         $this->setting = new Setting($di);
+        $this->menu    = new Menu($di);
     }
 
     /**
