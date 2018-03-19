@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Мар 15 2018 г., 20:48
--- Версия сервера: 5.6.37
--- Версия PHP: 7.0.21
+-- Время создания: Мар 19 2018 г., 12:49
+-- Версия сервера: 5.6.37-log
+-- Версия PHP: 5.6.31
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,6 +25,43 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Структура таблицы `menu`
+--
+
+CREATE TABLE `menu` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `menu_item`
+--
+
+CREATE TABLE `menu_item` (
+  `id` int(11) NOT NULL,
+  `menu_id` int(11) NOT NULL DEFAULT '0',
+  `name` varchar(255) NOT NULL,
+  `parent` tinyint(1) NOT NULL DEFAULT '0',
+  `position` int(5) NOT NULL,
+  `link` varchar(255) NOT NULL DEFAULT '#'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `menu_item`
+--
+
+INSERT INTO `menu_item` (`id`, `menu_id`, `name`, `parent`, `position`, `link`) VALUES
+(1, 0, 'Home', 0, 0, '#'),
+(2, 0, 'About', 0, 0, '#'),
+(3, 0, 'Sample Post', 0, 0, '#'),
+(4, 0, 'Contact', 0, 0, '#'),
+(5, 0, 'Admin', 0, 0, '/admin/');
+
+-- --------------------------------------------------------
+
+--
 -- Структура таблицы `page`
 --
 
@@ -40,16 +77,11 @@ CREATE TABLE `page` (
 --
 
 INSERT INTO `page` (`id`, `title`, `content`, `date`) VALUES
-(1, 'Lorem 1', '<p>Lorem ipsum,​</p>', '2018-03-12 18:47:05'),
-(2, 'Lorem 2_new', '<ul><li>​ dasa sd<br></li><li>asdasd asd</li><li>&nbsp;asd&nbsp;</li><li>asd a sda sda s 123</li><li>123</li><li>123</li></ul><p>1231</p><p>23​</p>', '2018-03-12 18:48:32'),
-(3, 'Lorem 3_1', '<p>&nbsp;hdsfhsd fuhsd fsd&nbsp;</p><p>fsd f</p><p><br></p><p>sd f</p><p>sd f​</p>', '2018-03-12 18:50:16'),
-(4, 'Test New it\'s 4', '<p style=\"margin-left: 60px;\">​a sdasdas das dasd ad ssa das d</p>', '2018-03-12 18:51:14'),
-(5, 'Test Page ID5', '<p>​assa ad asdsda&nbsp;</p>', '2018-03-14 17:29:56'),
-(6, '​Test page id6', '<p>6 6 6 6 6 6&nbsp;</p>', '2018-03-14 17:34:36'),
-(7, '​Test page id7 and', '<p>7 7 7 77&nbsp;</p>', '2018-03-14 17:35:47'),
-(8, '8', '<p>​8</p>', '2018-03-14 17:37:42'),
-(9, '9', '<p>​</p>', '2018-03-14 18:53:35'),
-(10, '10', '<p>10​ 10</p>', '2018-03-15 13:14:24');
+(1, 'Lorem ipsum', '<p>Dolor sit amet​</p>', '2018-03-10 13:36:22'),
+(2, 'Lorem ipsum', '<p>Dolor sit amet​ 2</p>', '2018-03-10 13:38:15'),
+(3, 'Lorem ipsum', '<ul><li>​<span>Dolor sit amet</span><span>​ 3</span><br></li><li>Dolor sit amet​ 3<span class=\"redactor-invisible-space\">​</span><br></li><li>Dolor sit amet​ 3<br></li></ul>', '2018-03-10 13:39:07'),
+(4, 'fatal', '<p>a sjdhajskdh ajdks h​</p>', '2018-03-12 07:10:51'),
+(5, 'Ferrum', '<p>1 2 3 4 5​</p>', '2018-03-12 08:47:52');
 
 -- --------------------------------------------------------
 
@@ -69,9 +101,9 @@ CREATE TABLE `post` (
 --
 
 INSERT INTO `post` (`id`, `title`, `content`, `date`) VALUES
-(1, '1 -', '<p>​ 1 1 1 1&nbsp;</p>', '2018-03-15 13:31:02'),
-(2, '2', '<p>​2 2 2</p>', '2018-03-15 13:32:21'),
-(3, '3', '<p>​3 3 3</p>', '2018-03-15 13:33:34');
+(1, '1 -', '<p>​ 1 1 1 1&nbsp;</p>', '2018-03-15 09:31:02'),
+(2, '2', '<p>​2 2 2</p>', '2018-03-15 09:32:21'),
+(3, '3', '<p>​3 3 3</p>', '2018-03-15 09:33:34');
 
 -- --------------------------------------------------------
 
@@ -91,8 +123,8 @@ CREATE TABLE `setting` (
 --
 
 INSERT INTO `setting` (`id`, `name`, `key_field`, `value`) VALUES
-(1, 'Name Site', 'name_site', 'CMS'),
-(2, 'Description', 'description', 'Example description'),
+(1, 'Name Site', 'name_site', 'nCms'),
+(2, 'Description', 'description', 'Example new CMS'),
 (3, 'Admin email', 'admin_email', 'admin@admin.com'),
 (4, 'Language', 'language', 'english');
 
@@ -116,12 +148,27 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `email`, `password`, `role`, `hash`, `date_reg`) VALUES
-(1, 'admin@admin.com', 'b59c67bf196a4758191e42f76670ceba', 'admin', '74285a144e65ed7ef8851e75f27c1dd7', '2018-02-27 17:43:04'),
-(2, 'test@admin.com', 'e4da3b7fbbce2345d7772b0674a318d5', 'user', 'new', '2018-03-12 23:46:45');
+(1, 'admin@admin.com', 'b59c67bf196a4758191e42f76670ceba', 'admin', '446efc0611128088a456718bd41bab11', '2018-02-27 17:43:04'),
+(2, 'test@admin.com', '45c48cce2e2d7fbdea1afc51c7c6ad26', 'user', 'new', '2018-03-12 11:10:33'),
+(3, 'test@admin.com', 'c9f0f895fb98ab9159f51fd0297e236d', 'user', 'new', '2018-03-12 12:49:10'),
+(4, 'test@admin.com', 'c81e728d9d4c2f636f067f89cc14862c', 'user', 'new', '2018-03-12 15:37:40'),
+(5, 'test@admin.com', '1679091c5a880faf6fb5e6087eb1b2dc', 'user', 'new', '2018-03-12 15:54:13');
 
 --
 -- Индексы сохранённых таблиц
 --
+
+--
+-- Индексы таблицы `menu`
+--
+ALTER TABLE `menu`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `menu_item`
+--
+ALTER TABLE `menu_item`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Индексы таблицы `page`
@@ -136,13 +183,6 @@ ALTER TABLE `post`
   ADD PRIMARY KEY (`id`);
 
 --
--- Индексы таблицы `setting`
---
-ALTER TABLE `setting`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `setting_key_uindex` (`key_field`);
-
---
 -- Индексы таблицы `user`
 --
 ALTER TABLE `user`
@@ -153,25 +193,30 @@ ALTER TABLE `user`
 --
 
 --
+-- AUTO_INCREMENT для таблицы `menu`
+--
+ALTER TABLE `menu`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT для таблицы `menu_item`
+--
+ALTER TABLE `menu_item`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+--
 -- AUTO_INCREMENT для таблицы `page`
 --
 ALTER TABLE `page`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT для таблицы `post`
 --
 ALTER TABLE `post`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
--- AUTO_INCREMENT для таблицы `setting`
---
-ALTER TABLE `setting`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
---
 -- AUTO_INCREMENT для таблицы `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;COMMIT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
