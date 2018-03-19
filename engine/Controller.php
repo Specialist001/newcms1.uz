@@ -35,7 +35,6 @@ abstract class Controller
         $this->config  = $this->di->get('config');
         $this->request = $this->di->get('request');
         $this->load    = $this->di->get('load');
-        //$this->model   = $this->di->get('model');
 
         $this->initVars();
     }

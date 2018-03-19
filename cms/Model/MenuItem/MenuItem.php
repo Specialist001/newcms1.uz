@@ -8,9 +8,11 @@ class MenuItem
 {
     use ActiveRecord;
 
-    protected $table = 'menu';
+    protected $table = 'menu_item';
 
     public $id;
+
+    public $menu_id;
 
     public $name;
 
@@ -34,6 +36,22 @@ class MenuItem
     public function setId($id)
     {
         $this->id = $id;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getMenuId()
+    {
+        return $this->menu_id;
+    }
+
+    /**
+     * @param mixed $menu_id
+     */
+    public function setMenuId($menu_id)
+    {
+        $this->menu_id = $menu_id;
     }
 
     /**
@@ -99,6 +117,4 @@ class MenuItem
     {
         $this->link = $link;
     }
-
-
 }
