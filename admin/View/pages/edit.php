@@ -9,7 +9,7 @@
             </div>
             <div class="row">
                 <div class="col-9">
-                    <form action="" id="formPage">
+                    <form id="formPage">
                         <input type="hidden" name="page_id" id="formPageId" value="<?= $page->id ?>" />
                         <div class="form-group">
                             <label for="formTitle">Title</label>

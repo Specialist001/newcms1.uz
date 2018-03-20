@@ -26,7 +26,8 @@ class Load
     /**
      * @param $modelName
      * @param bool $modelDir
-     * @return \stdClass
+     * @param bool $env
+     * @return bool
      */
     public function model($modelName, $modelDir = false, $env = false)
     {
@@ -36,7 +37,7 @@ class Load
 
         $namespaceModel = sprintf(
             self::MASK_MODEL_REPOSITORY,
-            ENV, $modelDir, $modelName
+            $env, $modelDir, $modelName
         );
 
         $isClassModel = class_exists($namespaceModel);
