@@ -31,7 +31,13 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <a class="navbar-brand" href="#">Admin CMS</a>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <?php foreach (Customize::getInstance()->getAdminMenuItems() as $key => $item): ?>
+                <a class="item" href="<?= $item['urlPath'] ?>">
+                    <i class="<?= $item['classIcon'] ?>"></i>
+                    <?= $lang->dashboardMenu[$key] ?>
+                </a>
+            <?php endforeach; ?>
+    <!--        <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
                         <a class="nav-link" href="/admin/">
@@ -58,7 +64,7 @@
                         </a>
                     </li>
                 </ul>
-            </div>
+            </div>  -->
 
             <div class="right-toolbar">
                 <a href="/admin/logout/">
