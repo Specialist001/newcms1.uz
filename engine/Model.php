@@ -12,6 +12,9 @@ abstract class Model
      */
     protected $di;
 
+    /**
+     * @var mixed
+     */
     protected $db;
 
     protected $config;
