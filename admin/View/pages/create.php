@@ -1,29 +1,31 @@
 <?php $this->theme->header(); ?>
 
     <main>
-        <div class="container">
-            <div class="row">
+        <div class="ui container">
+            <div class="ui grid">
+                <div class="sixteen wide column">
                 <div class="col page-title">
-                    <h3>Create page</h3>
+                    <h2 class="ui header">Create page</h2>
+                </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-9">
-                    <form id="formPage">
-                        <div class="form-group">
+            <div class="ui grid">
+                <div class="twelve wide column">
+                    <form id="formPage" class="ui form">
+                        <div class="field">
                             <label for="formTitle">Title</label>
                             <input type="text" name="title" class="form-control" id="formTitle" placeholder="Title page...">
                         </div>
-                        <div class="form-group">
+                        <div class="field">
                             <label for="formContent">Content</label>
                             <textarea name="content" id="redactor" class="form-control" id="formContent"></textarea>
                         </div>
                     </form>
                 </div>
-                <div class="col-3">
+                <div class="four wide column">
                     <div>
                         <p>Publish this page</p>
-                        <button type="submit" class="btn btn-primary" onclick="page.add()">
+                        <button type="submit" class="ui primary button" onclick="page.add()">
                             Publish
                         </button>
                     </div>
