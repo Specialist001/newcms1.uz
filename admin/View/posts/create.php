@@ -3,7 +3,7 @@
     <main>
         <div class="ui container">
             <div class="ui grid">
-                <div class="sixteen wide column"
+                <div class="sixteen wide column">
                     <div class="col page-title">
                         <h2 class="ui header">Create post</h2>
                     </div>

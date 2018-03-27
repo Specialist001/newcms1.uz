@@ -4,9 +4,9 @@
         <div class="ui container">
             <div class="ui grid">
                 <div class="sixteen wide column">
-                <div class="col page-title">
-                    <h2 class="ui header">Create page</h2>
-                </div>
+                    <div class="col page-title">
+                        <h2 class="ui header">Create page</h2>
+                    </div>
                 </div>
             </div>
             <div class="ui grid">
