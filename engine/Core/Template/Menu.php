@@ -2,9 +2,9 @@
 
 namespace Engine\Core\Template;
 
-use Cms\Model\Menu\MenuRepository;
-use Engine\DI\DI;
 use Cms\Model\MenuItem\MenuItemRepository;
+use Engine\DI\DI;
+use Cms\Model\Menu\MenuRepository;
 
 
 class Menu
@@ -27,9 +27,9 @@ class Menu
 
     }
 
-    public static function getItems()
+    public static function getItems($menuId)
     {
-        return self::$menuRepository->getList();
-        //return self::$menuItemRepository->getItems();
+        //return self::$menuRepository->getList();
+        return self::$menuItemRepository->getItems($menuId);
     }
 }
