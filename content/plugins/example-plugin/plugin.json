@@ -1,0 +1,9 @@
+{
+  "name": "Example Plugin in nCMS",
+  "description": "Example Plugin in nCMS",
+  "version": "1.0",
+  "author": "Bob",
+  "options": {
+  "responseFile": "ExamplePlugin"
+  }
+}

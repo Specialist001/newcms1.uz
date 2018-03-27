@@ -12,7 +12,8 @@
             "Engine\\": "engine",
             "Cms\\": "cms",
             "Admin\\": "admin",
-            "Engine\\DI\\": "engine/DI"
+            "Engine\\DI\\": "engine/DI",
+            "Plugins\\": "content/plugins"
         }
     }
 }

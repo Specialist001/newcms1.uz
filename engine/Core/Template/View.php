@@ -49,7 +49,7 @@ class View
             );
         }
 
-        $data['lang'] = $this->di->get('language');
+        //$data['lang'] = $this->di->get('language');
 
         $this->theme->setData($data);
 

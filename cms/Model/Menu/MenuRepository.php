@@ -25,7 +25,7 @@ class MenuRepository extends Model
             $this->queryBuilder
                 ->select()
                 ->from('menu')
-                ->orderBy('id', 'DESC')
+                //->orderBy('id', 'DESC')
                 ->sql()
         );
 
