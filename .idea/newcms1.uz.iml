@@ -7,6 +7,7 @@
       <sourceFolder url="file://$MODULE_DIR$/content/plugins" isTestSource="false" packagePrefix="Plugins\" />
       <sourceFolder url="file://$MODULE_DIR$/engine" isTestSource="false" packagePrefix="Engine\" />
       <sourceFolder url="file://$MODULE_DIR$/engine/DI" isTestSource="false" packagePrefix="Engine\DI\" />
+      <sourceFolder url="file://$MODULE_DIR$/content" isTestSource="false" packagePrefix="Content\" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
     </content>
     <orderEntry type="inheritedJdk" />

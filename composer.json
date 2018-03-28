@@ -13,7 +13,8 @@
             "Cms\\": "cms",
             "Admin\\": "admin",
             "Engine\\DI\\": "engine/DI",
-            "Plugins\\": "content/plugins"
+            "Plugins\\": "content/plugins",
+            "Content\\": "content"
         }
     }
 }

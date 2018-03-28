@@ -1,11 +1,7 @@
 <div class="ui secondary pointing menu">
-    <a class="active item" href="/admin/settings/general/">
-        General
+    <?php foreach (Customize::getInstance()->getAdminSettingItems() as $key => $item): ?>
+    <a class="item<?php if(\Engine\Helper\Common::isLinkActivate($key)) echo ' active'; ?>" href="<?= $item['urlPath'] ?>">
+        <?= $item['title'] ?>
     </a>
-    <a class="item" href="#">
-        Themes
-    </a>
-    <a class="item" href="/admin/settings/appearance/menus/">
-        Menus
-    </a>
+    <?php endforeach; ?>
 </div>

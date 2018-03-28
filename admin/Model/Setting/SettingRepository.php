@@ -46,4 +46,15 @@ class SettingRepository extends Model
             }
         }
     }
+
+    public function updateActiveTheme($theme)
+    {
+        $sql = $this->queryBuilder
+            ->update('setting')
+            ->set(['value' => $theme])
+            ->where('key_field', 'active_theme')
+            ->sql();
+
+        $this->db->execute($sql, $this->queryBuilder->values);
+    }
 }

@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Plugins\\' => array($baseDir . '/content/plugins'),
     'Engine\\DI\\' => array($baseDir . '/engine/DI'),
     'Engine\\' => array($baseDir . '/engine'),
     'Cms\\' => array($baseDir . '/cms'),
