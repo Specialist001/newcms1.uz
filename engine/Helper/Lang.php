@@ -14,5 +14,6 @@ class Lang
         $language = HelperDI::get()->get('language');
 
         echo $language->{$section}[$key];
+        echo isset($language->{$section}[$key]) ? $language->{$section}[$key] : '';
     }
 }

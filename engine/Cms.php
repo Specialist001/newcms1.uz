@@ -1,9 +1,8 @@
 <?php
 namespace Engine;
 
-use Engine\Core\Config\Config;
 use Engine\Core\Router\DispatchedRoute;
-//use Engine\DI\DI;
+use Engine\DI\DI;
 use Engine\Helper\Common;
 
 class Cms
@@ -45,7 +44,7 @@ class Cms
             $parameters = $routerDispatch->getParameters();
 
             call_user_func_array([new $controller($this->di), $action], $parameters);
-        }catch (\Exception $e){
+        } catch (\Exception $e){
             echo $e->getMessage();
             exit;
         }

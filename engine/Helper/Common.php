@@ -9,7 +9,7 @@ class Common
      * @return bool
      */
     static function isPost(){
-        if($_SERVER['REQUEST_METHOD'] == 'POST'){
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             return true;
         }
 
@@ -29,14 +29,28 @@ class Common
     static function getPathUrl(){
         $pathUrl = $_SERVER['REQUEST_URI'];
 
-        if($position = strpos($pathUrl, '?')){
+        if ($position = strpos($pathUrl, '?')) {
             $pathUrl = substr($pathUrl, 0, $position);
         }
 
         return $pathUrl;
     }
 
+    function searchMatchString($string, $find) {
+        if (strripos($string, $find) != false) {
+            return true;
+        }
 
+        return false;
+    }
 
+    static function isLinkActive($key)
+    {
+        if (self::searchMatchString($_SERVER['REQUEST_URI'], $key)) {
+            return true;
+        }
+
+        return false;
+    }
 }
 

@@ -9,7 +9,8 @@ class Cookie
      * @param $value
      * @param int $time
      */
-    public static function set($key, $value, $time = 31536000){
+    public static function set($key, $value, $time = 31536000)
+    {
         setcookie($key, $value, time() + $time, '/');
     }
 
@@ -17,7 +18,8 @@ class Cookie
      * @param $key
      * @return null
      */
-    public static function get($key){
+    public static function get($key)
+    {
         if(isset($_COOKIE[$key]) ){
             return $_COOKIE[$key];
         }
@@ -27,11 +29,11 @@ class Cookie
     /**
      * @param $key
      */
-    public static function delete($key){
+    public static function delete($key)
+    {
         if(isset($_COOKIE[$key]) ){
             self::set($key, '', -3600);
             unset($_COOKIE[$key]);
         }
     }
-
 }
