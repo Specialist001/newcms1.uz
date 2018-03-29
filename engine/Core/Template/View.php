@@ -75,7 +75,12 @@ class View
     private function getTemplatePath($template, $env = null)
     {
         if($env === 'Cms'){
-            $theme \Setting::get('active_theme');
+            $theme = \Setting::get('active_theme');
+
+            if ($theme == '') {
+                $theme = \Engine\Core\Config\Config::item('defaultTheme');
+            }
+
             return ROOT_DIR . '/content/themes/' . $theme . '/' . $template . '.php';
         }
 
