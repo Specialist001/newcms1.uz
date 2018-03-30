@@ -80,3 +80,26 @@ function getThemes()
 
     return $themes;
 }
+
+function getPlugins()
+{
+    global $di;
+
+    $pluginsPath = path_content('plugins');
+    $list        = scandir($pluginsPath);
+    $plugins     = [];
+
+    if (!empty($list)) {
+        unset($list[0]);
+        unset($list[1]);
+
+        foreach ($list as $namePlugin) {
+            $namespace = '\\Plugin\\' . $namePlugin . '\\Plugin';
+
+            if (class_exists($namespace)) {
+                $plugin = new $namespace($di);
+                $plugins
+            }
+        }
+    }
+}
