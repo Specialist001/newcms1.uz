@@ -51,7 +51,7 @@ class Plugin
     /**
      * @return mixed
      */
-    public function getisActive()
+    public function getIsActive()
     {
         return $this->is_active;
     }

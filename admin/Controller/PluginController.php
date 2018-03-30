@@ -23,6 +23,21 @@ class PluginController extends AdminController
 
     public function ajaxInstall()
     {
+        $directory = $this->getRequest()->post('directory');
 
+        if ($directory !== null) {
+            $this->getPlugin()->install($directory);
+        }
+    }
+
+    public function ajaxActivate()
+    {
+        $pluginId = $this->getRequest()->post('id');
+
+        $active = $this->getRequest()->post('active');
+
+        if ($pluginId !== null) {
+            $this->getPlugin()->activate($pluginId, $active);
+        }
     }
 }

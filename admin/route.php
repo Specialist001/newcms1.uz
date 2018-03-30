@@ -26,9 +26,6 @@ $this->router->add('post-edit', '/admin/posts/edit/(id:int)', 'PostController:ed
 $this->router->add('post-add', '/admin/post/add/', 'PostController:add', 'POST');
 $this->router->add('post-update', '/admin/post/update/', 'PostController:update', 'POST');
 
-$this->router->add('plugins', '/admin/plugins/', 'PluginController:listPlugins');
-
-
 //GET
 $this->router->add('settings-general', '/admin/settings/general/', 'SettingController:general');
 $this->router->add('settings-menus', '/admin/settings/appearance/menus/', 'SettingController:menus');
@@ -41,3 +38,9 @@ $this->router->add('setting-sort-menu-item', '/admin/setting/ajaxMenuSortItems/'
 $this->router->add('setting-remove-menu-item', '/admin/setting/ajaxMenuRemoveItem/', 'SettingController:ajaxMenuRemoveItem', 'POST');
 $this->router->add('setting-update-menu-item', '/admin/setting/ajaxMenuUpdateItem/', 'SettingController:ajaxMenuUpdateItem', 'POST');
 $this->router->add('setting-update-theme', '/admin/setting/activateTheme/', 'SettingController:activateTheme', 'POST');
+
+// Plugins Routes (GET)
+$this->router->add('plugins', '/admin/plugins/', 'PluginController:listPlugins');
+// Plugins Routes (POST)
+$this->router->add('install-plugin', '/admin/plugins/ajaxInstall/', 'PluginController:ajaxInstall', 'POST');
+$this->router->add('activate-plugin', '/admin/plugins/ajaxActivate/', 'PluginController:ajaxActivate', 'POST');
