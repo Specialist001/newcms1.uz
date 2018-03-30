@@ -15,6 +15,10 @@
             "Engine\\DI\\": "engine/DI",
             "Plugins\\": "content/plugins",
             "Content\\": "content"
-        }
+        },
+        "files": [
+            "engine/defines.php",
+            "engine/function.php"
+        ]
     }
 }

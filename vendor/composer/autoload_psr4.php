@@ -9,6 +9,7 @@ return array(
     'Plugins\\' => array($baseDir . '/content/plugins'),
     'Engine\\DI\\' => array($baseDir . '/engine/DI'),
     'Engine\\' => array($baseDir . '/engine'),
+    'Content\\' => array($baseDir . '/content'),
     'Cms\\' => array($baseDir . '/cms'),
     'Admin\\' => array($baseDir . '/admin'),
 );

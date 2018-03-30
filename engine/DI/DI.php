@@ -11,6 +11,14 @@ class DI
 
     /**
      * @param $key
+     * @return mixed
+     */
+    public function get($key){
+        return $this->has($key) ? $this->container[$key] : null;
+    }
+
+    /**
+     * @param $key
      * @param $value
      * @return $this
      */
@@ -20,20 +28,13 @@ class DI
         return $this;
     }
 
-    /**
-     * @param $key
-     * @return mixed
-     */
-    public function get($key){
-        return $this->has($key);
-    }
 
     /**
      * @param $key
      * @return bool
      */
     public function has($key){
-        return isset($this->container[$key]) ? $this->container[$key] : null;
+        return isset($this->container[$key]);
     }
 
     public function push($key, $element = [])

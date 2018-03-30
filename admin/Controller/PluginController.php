@@ -17,7 +17,7 @@ class PluginController extends AdminController
         }
 
         $this->data['plugins'] = $plugins;
-        
+
         $this->view->render('plugins/list', $this->data);
     }
 }
