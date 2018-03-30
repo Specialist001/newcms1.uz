@@ -20,4 +20,9 @@ class PluginController extends AdminController
 
         $this->view->render('plugins/list', $this->data);
     }
+
+    public function ajaxInstall()
+    {
+
+    }
 }

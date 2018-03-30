@@ -13,8 +13,7 @@
             "Cms\\": "cms",
             "Admin\\": "admin",
             "Engine\\DI\\": "engine/DI",
-            "Plugins\\": "content/plugins",
-            "Content\\": "content"
+            "Plugin\\": "content/plugins"
         },
         "files": [
             "engine/defines.php",

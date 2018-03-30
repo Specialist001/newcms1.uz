@@ -25,6 +25,23 @@ $pathMask = ROOT_DIR . DS . '%s';
     }
 }
 
+function path_content($section = '')
+{
+    $pathmask = $_SERVER['DOCUMENT_ROOT'] . DS . 'content' . DS . '%s';
+
+    switch (strtolower($section))
+    {
+        case 'themes':
+            return sprintf($pathmask, 'themes');
+        case 'plugins':
+            return sprintf($pathmask, 'plugins');
+        case 'uploads':
+            return sprintf($pathmask, 'uploads');
+        default:
+            return $_SERVER['DOCUMENT_ROOT'] .DS . 'content';
+    }
+}
+
 function languages()
 {
     $directory = path('language');
@@ -98,7 +115,7 @@ function getPlugins()
 
             if (class_exists($namespace)) {
                 $plugin = new $namespace($di);
-                $plugins
+                $plugins[$namePlugin] = $plugin->details();
             }
         }
     }
