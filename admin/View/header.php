@@ -41,7 +41,7 @@
             <?php foreach (Customize::getInstance()->getAdminMenuItems() as $key => $item): ?>
                 <a class="item" href="<?= $item['urlPath'] ?>">
                     <i class="<?= $item['classIcon'] ?>"></i>
-                  <!--  <?= $lang->dashboardMenu[$key] ?>  -->
+                <!--    <?= $lang->dashboardMenu[$key] ?>  -->
                     <?php Lang::_e('dashboardMenu', $key) ?>
                 </a>
             <?php endforeach; ?>

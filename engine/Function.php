@@ -63,7 +63,7 @@ function getThemes()
 
         foreach ($list as $dir) {
             $pathThemeDir = $themesPath . '/' . $dir;
-            $pathConfig   = $pathThemeDir . 'theme.json';
+            $pathConfig   = $pathThemeDir . '/theme.json';
             $pathScreen   = $baseUrl . '/content/themes/' . $dir . '/screen.jpg';
 
             if (is_dir($pathThemeDir) && is_file($pathConfig)) {

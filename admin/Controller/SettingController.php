@@ -32,7 +32,7 @@ class SettingController extends AdminController
 
     public function themes()
     {
-        //$this->data['activeTheme'] = '';
+        $this->data['activeTheme'] = '';
         $this->data['themes'] = getThemes();
         $this->data['activeTheme'] = \Setting::get('active_theme');
 
