@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Мар 19 2018 г., 12:49
+-- Время создания: Апр 07 2018 г., 15:29
 -- Версия сервера: 5.6.37-log
--- Версия PHP: 5.6.31
+-- Версия PHP: 7.0.21
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -33,6 +33,16 @@ CREATE TABLE `menu` (
   `name` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Дамп данных таблицы `menu`
+--
+
+INSERT INTO `menu` (`id`, `name`) VALUES
+(1, 'Home'),
+(2, 'Pages'),
+(3, 'Posts'),
+(4, 'Admin');
+
 -- --------------------------------------------------------
 
 --
@@ -57,7 +67,10 @@ INSERT INTO `menu_item` (`id`, `menu_id`, `name`, `parent`, `position`, `link`) 
 (2, 0, 'About', 0, 0, '#'),
 (3, 0, 'Sample Post', 0, 0, '#'),
 (4, 0, 'Contact', 0, 0, '#'),
-(5, 0, 'Admin', 0, 0, '/admin/');
+(5, 4, 'Admin', 0, 0, '/admin/'),
+(6, 4, 'New item 1', 0, 1, '#'),
+(7, 4, 'New item 2', 0, 2, '#'),
+(8, 3, 'New item', 0, 0, '#');
 
 -- --------------------------------------------------------
 
@@ -69,6 +82,7 @@ CREATE TABLE `page` (
   `id` int(11) NOT NULL,
   `title` varchar(255) NOT NULL,
   `content` text NOT NULL,
+  `status` varchar(55) NOT NULL DEFAULT 'publish',
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -76,12 +90,24 @@ CREATE TABLE `page` (
 -- Дамп данных таблицы `page`
 --
 
-INSERT INTO `page` (`id`, `title`, `content`, `date`) VALUES
-(1, 'Lorem ipsum', '<p>Dolor sit amet​</p>', '2018-03-10 13:36:22'),
-(2, 'Lorem ipsum', '<p>Dolor sit amet​ 2</p>', '2018-03-10 13:38:15'),
-(3, 'Lorem ipsum', '<ul><li>​<span>Dolor sit amet</span><span>​ 3</span><br></li><li>Dolor sit amet​ 3<span class=\"redactor-invisible-space\">​</span><br></li><li>Dolor sit amet​ 3<br></li></ul>', '2018-03-10 13:39:07'),
-(4, 'fatal', '<p>a sjdhajskdh ajdks h​</p>', '2018-03-12 07:10:51'),
-(5, 'Ferrum', '<p>1 2 3 4 5​</p>', '2018-03-12 08:47:52');
+INSERT INTO `page` (`id`, `title`, `content`, `status`, `date`) VALUES
+(1, 'Lorem ipsum', '<p>Dolor sit amet​</p>', 'publish', '2018-03-10 13:36:22'),
+(2, 'Lorem ipsum', '<p>Dolor sit amet​ 2</p>', 'publish', '2018-03-10 13:38:15'),
+(3, 'Lorem ipsum', '<ul><li>​<span>Dolor sit amet</span><span>​ 3</span><br></li><li>Dolor sit amet​ 3<span class=\"redactor-invisible-space\">​</span><br></li><li>Dolor sit amet​ 3<br></li></ul>', 'publish', '2018-03-10 13:39:07'),
+(4, 'fatal', '<p>a sjdhajskdh ajdks h​</p>', 'publish', '2018-03-12 07:10:51'),
+(5, 'Ferrum', '<p>1 2 3 4 5​</p>', 'publish', '2018-03-12 08:47:52');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `plugin`
+--
+
+CREATE TABLE `plugin` (
+  `id` int(11) NOT NULL,
+  `directory` varchar(255) NOT NULL,
+  `is_active` tinyint(1) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -93,6 +119,7 @@ CREATE TABLE `post` (
   `id` int(11) NOT NULL,
   `title` varchar(255) NOT NULL,
   `content` text NOT NULL,
+  `status` varchar(55) NOT NULL DEFAULT 'publish',
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -100,10 +127,10 @@ CREATE TABLE `post` (
 -- Дамп данных таблицы `post`
 --
 
-INSERT INTO `post` (`id`, `title`, `content`, `date`) VALUES
-(1, '1 -', '<p>​ 1 1 1 1&nbsp;</p>', '2018-03-15 09:31:02'),
-(2, '2', '<p>​2 2 2</p>', '2018-03-15 09:32:21'),
-(3, '3', '<p>​3 3 3</p>', '2018-03-15 09:33:34');
+INSERT INTO `post` (`id`, `title`, `content`, `status`, `date`) VALUES
+(1, '1 -', '<p>​ 1 1 1 1&nbsp;</p>', 'publish', '2018-03-15 09:31:02'),
+(2, '2', '<p>​2 2 2</p>', 'publish', '2018-03-15 09:32:21'),
+(3, '3', '<p>​3 3 3</p>', 'publish', '2018-03-15 09:33:34');
 
 -- --------------------------------------------------------
 
@@ -115,18 +142,20 @@ CREATE TABLE `setting` (
   `id` int(11) NOT NULL,
   `name` varchar(255) DEFAULT NULL,
   `key_field` varchar(100) DEFAULT NULL,
-  `value` varchar(255) DEFAULT NULL
+  `value` varchar(255) DEFAULT NULL,
+  `section` varchar(155) NOT NULL DEFAULT 'general'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `setting`
 --
 
-INSERT INTO `setting` (`id`, `name`, `key_field`, `value`) VALUES
-(1, 'Name Site', 'name_site', 'nCms'),
-(2, 'Description', 'description', 'Example new CMS'),
-(3, 'Admin email', 'admin_email', 'admin@admin.com'),
-(4, 'Language', 'language', 'english');
+INSERT INTO `setting` (`id`, `name`, `key_field`, `value`, `section`) VALUES
+(1, 'Name Site', 'name_site', 'nCms', 'general'),
+(2, 'Description', 'description', 'Example new CMS', 'general'),
+(3, 'Admin email', 'admin_email', 'admin@admin.com', 'general'),
+(4, 'Language', 'language', 'english', 'general'),
+(5, 'Active theme', 'active_theme', 'default', 'theme');
 
 -- --------------------------------------------------------
 
@@ -148,11 +177,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `email`, `password`, `role`, `hash`, `date_reg`) VALUES
-(1, 'admin@admin.com', 'b59c67bf196a4758191e42f76670ceba', 'admin', '446efc0611128088a456718bd41bab11', '2018-02-27 17:43:04'),
-(2, 'test@admin.com', '45c48cce2e2d7fbdea1afc51c7c6ad26', 'user', 'new', '2018-03-12 11:10:33'),
-(3, 'test@admin.com', 'c9f0f895fb98ab9159f51fd0297e236d', 'user', 'new', '2018-03-12 12:49:10'),
-(4, 'test@admin.com', 'c81e728d9d4c2f636f067f89cc14862c', 'user', 'new', '2018-03-12 15:37:40'),
-(5, 'test@admin.com', '1679091c5a880faf6fb5e6087eb1b2dc', 'user', 'new', '2018-03-12 15:54:13');
+(1, 'admin@admin.com', 'b59c67bf196a4758191e42f76670ceba', 'admin', '39e39597da8d38666ece5a2eced00b72', '2018-02-27 17:43:04');
 
 --
 -- Индексы сохранённых таблиц
@@ -183,6 +208,12 @@ ALTER TABLE `post`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Индексы таблицы `setting`
+--
+ALTER TABLE `setting`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Индексы таблицы `user`
 --
 ALTER TABLE `user`
@@ -196,12 +227,12 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT для таблицы `menu`
 --
 ALTER TABLE `menu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT для таблицы `menu_item`
 --
 ALTER TABLE `menu_item`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT для таблицы `page`
 --
@@ -216,7 +247,7 @@ ALTER TABLE `post`
 -- AUTO_INCREMENT для таблицы `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;COMMIT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
