@@ -1,5 +1,4 @@
 <?php
-
 namespace Admin\Controller;
 
 class PageController extends AdminController
@@ -22,6 +21,7 @@ class PageController extends AdminController
     {
         $this->load->model('Page');
 
+        $this->data['baseUrl'] = \Engine\Core\Config\Config::item('baseUrl');
         $this->data['page'] = $this->model->page->getPageData($id);
 
         $this->view->render('pages/edit', $this->data);

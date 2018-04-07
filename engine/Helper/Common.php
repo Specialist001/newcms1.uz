@@ -36,7 +36,7 @@ class Common
         return $pathUrl;
     }
 
-    function searchMatchString($string, $find)
+    static function searchMatchString($string, $find)
     {
         if (strripos($string, $find) !== false) {
             return true;
