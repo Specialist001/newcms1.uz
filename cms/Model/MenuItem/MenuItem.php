@@ -41,22 +41,6 @@ class MenuItem
     /**
      * @return mixed
      */
-    public function getMenuId()
-    {
-        return $this->menu_id;
-    }
-
-    /**
-     * @param mixed $menu_id
-     */
-    public function setMenuId($menu_id)
-    {
-        $this->menu_id = $menu_id;
-    }
-
-    /**
-     * @return mixed
-     */
     public function getName()
     {
         return $this->name;
@@ -116,5 +100,21 @@ class MenuItem
     public function setLink($link)
     {
         $this->link = $link;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getMenuId()
+    {
+        return $this->menu_id;
+    }
+
+    /**
+     * @param mixed $menu_id
+     */
+    public function setMenuId($menu_id)
+    {
+        $this->menu_id = $menu_id;
     }
 }

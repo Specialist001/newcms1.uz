@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Апр 07 2018 г., 15:29
+-- Время создания: Апр 07 2018 г., 17:51
 -- Версия сервера: 5.6.37-log
 -- Версия PHP: 7.0.21
 
@@ -38,10 +38,9 @@ CREATE TABLE `menu` (
 --
 
 INSERT INTO `menu` (`id`, `name`) VALUES
-(1, 'Home'),
-(2, 'Pages'),
-(3, 'Posts'),
-(4, 'Admin');
+(1, 'header menu'),
+(2, 'footer menu'),
+(3, 'left menu');
 
 -- --------------------------------------------------------
 
@@ -63,14 +62,9 @@ CREATE TABLE `menu_item` (
 --
 
 INSERT INTO `menu_item` (`id`, `menu_id`, `name`, `parent`, `position`, `link`) VALUES
-(1, 0, 'Home', 0, 0, '#'),
-(2, 0, 'About', 0, 0, '#'),
-(3, 0, 'Sample Post', 0, 0, '#'),
-(4, 0, 'Contact', 0, 0, '#'),
-(5, 4, 'Admin', 0, 0, '/admin/'),
-(6, 4, 'New item 1', 0, 1, '#'),
-(7, 4, 'New item 2', 0, 2, '#'),
-(8, 3, 'New item', 0, 0, '#');
+(1, 1, 'Home', 0, 0, '#'),
+(2, 1, 'Contact', 0, 1, '/page/contact'),
+(3, 1, 'About', 0, 2, '/page/about');
 
 -- --------------------------------------------------------
 
@@ -82,6 +76,8 @@ CREATE TABLE `page` (
   `id` int(11) NOT NULL,
   `title` varchar(255) NOT NULL,
   `content` text NOT NULL,
+  `segment` varchar(255) NOT NULL,
+  `type` varchar(155) DEFAULT 'page',
   `status` varchar(55) NOT NULL DEFAULT 'publish',
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -90,12 +86,9 @@ CREATE TABLE `page` (
 -- Дамп данных таблицы `page`
 --
 
-INSERT INTO `page` (`id`, `title`, `content`, `status`, `date`) VALUES
-(1, 'Lorem ipsum', '<p>Dolor sit amet​</p>', 'publish', '2018-03-10 13:36:22'),
-(2, 'Lorem ipsum', '<p>Dolor sit amet​ 2</p>', 'publish', '2018-03-10 13:38:15'),
-(3, 'Lorem ipsum', '<ul><li>​<span>Dolor sit amet</span><span>​ 3</span><br></li><li>Dolor sit amet​ 3<span class=\"redactor-invisible-space\">​</span><br></li><li>Dolor sit amet​ 3<br></li></ul>', 'publish', '2018-03-10 13:39:07'),
-(4, 'fatal', '<p>a sjdhajskdh ajdks h​</p>', 'publish', '2018-03-12 07:10:51'),
-(5, 'Ferrum', '<p>1 2 3 4 5​</p>', 'publish', '2018-03-12 08:47:52');
+INSERT INTO `page` (`id`, `title`, `content`, `segment`, `type`, `status`, `date`) VALUES
+(1, 'About', '<p style=\"text-align: center;\">dsdfsdfsdf  sd\r\n</p><button class=\"ui secondary button\"><a href=\"http://locmatbaa.uz/label\" target=\"_blank\">asdasda</a></button><hr><p style=\"text-align: center;\">asdasdas\r\n</p><hr><p style=\"text-align: center;\">asasdasda sf sdf s<br>\r\n</p>', 'about', 'about', 'publish', '2018-04-07 11:56:46'),
+(2, 'About 2', '<p>asdfsd fdsf ds fds​</p>', 'about-2', 'page', 'publish', '2018-04-07 12:04:21');
 
 -- --------------------------------------------------------
 
@@ -108,6 +101,14 @@ CREATE TABLE `plugin` (
   `directory` varchar(255) NOT NULL,
   `is_active` tinyint(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `plugin`
+--
+
+INSERT INTO `plugin` (`id`, `directory`, `is_active`) VALUES
+(1, 'ExamplePlugin', 0),
+(2, 'LiveTest', 0);
 
 -- --------------------------------------------------------
 
@@ -130,7 +131,8 @@ CREATE TABLE `post` (
 INSERT INTO `post` (`id`, `title`, `content`, `status`, `date`) VALUES
 (1, '1 -', '<p>​ 1 1 1 1&nbsp;</p>', 'publish', '2018-03-15 09:31:02'),
 (2, '2', '<p>​2 2 2</p>', 'publish', '2018-03-15 09:32:21'),
-(3, '3', '<p>​3 3 3</p>', 'publish', '2018-03-15 09:33:34');
+(3, '3', '<p>​3 3 3</p>', 'publish', '2018-03-15 09:33:34'),
+(4, 'Post ', '<ul><li>​<span>​asdasd</span></li></ul>', 'publish', '2018-04-07 11:57:24');
 
 -- --------------------------------------------------------
 
@@ -202,6 +204,12 @@ ALTER TABLE `page`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Индексы таблицы `plugin`
+--
+ALTER TABLE `plugin`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Индексы таблицы `post`
 --
 ALTER TABLE `post`
@@ -227,22 +235,27 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT для таблицы `menu`
 --
 ALTER TABLE `menu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT для таблицы `menu_item`
 --
 ALTER TABLE `menu_item`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT для таблицы `page`
 --
 ALTER TABLE `page`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT для таблицы `plugin`
+--
+ALTER TABLE `plugin`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT для таблицы `post`
 --
 ALTER TABLE `post`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT для таблицы `user`
 --

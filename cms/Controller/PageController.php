@@ -12,7 +12,7 @@ class PageController extends CmsController
 
     public function show($segment)
     {
-        $this->load->model('Page', false. 'Admin');
+        $this->load->model('Page', false, 'Admin');
 
         $pageModel = $this->model->page;
 
