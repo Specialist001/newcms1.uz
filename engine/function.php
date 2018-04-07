@@ -111,7 +111,7 @@ function getPlugins()
         unset($list[1]);
 
         foreach ($list as $namePlugin) {
-            $namespace = '\\Plugin\\' . $namePlugin . '\\Plugin';
+            $namespace = '\\Provider\\' . $namePlugin . '\\Provider';
 
             if (class_exists($namespace)) {
                 $plugin = new $namespace($di);

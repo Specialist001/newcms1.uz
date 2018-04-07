@@ -7,7 +7,7 @@ class Plugin extends \Engine\Plugin
     public function details()
     {
         return [
-            'name'        => 'Plugin Demo',
+            'name'        => 'Provider Demo',
             'description' => 'Demo plugin',
             'author'      => 'Specialist001',
             'icon'      => 'icon-leaf'

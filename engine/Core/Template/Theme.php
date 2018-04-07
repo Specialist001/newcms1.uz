@@ -129,6 +129,13 @@ class Theme
 
     public static function getThemePath()
     {
-        return ROOT_DIR . '/content/themes/default';
+        //return ROOT_DIR . '/content/themes/default';
+        $activeTheme = Setting::get('active_theme');
+
+        if (empty($activeTheme)) {
+            $activeTheme = Config::item('defaultTheme');
+        }
+
+        return ROOT_DIR . '/content/themes/' . $activeTheme;
     }
 }

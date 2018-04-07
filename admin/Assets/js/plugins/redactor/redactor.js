@@ -29,7 +29,7 @@
 
 	var uuid = 0;
 
-	// Plugin
+	// Provider
 	$.fn.redactor = function(options)
 	{
 		var val = [];

@@ -35,7 +35,7 @@ class Cms
             $plugins = $pluginService->getActivePlugins();
 
             foreach ($plugins as $plugin) {
-                $pluginClass = '\\Plugin\\' . $plugin->directory . '\\Plugin';
+                $pluginClass = '\\Provider\\' . $plugin->directory . '\\Provider';
                 $pluginObject = new $pluginClass($this->di);
 
                 if (method_exists($pluginClass, 'init')) {
