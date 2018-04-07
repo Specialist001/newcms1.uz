@@ -8,7 +8,8 @@ class Common
     /**
      * @return bool
      */
-    static function isPost(){
+    static function isPost()
+    {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             return true;
         }
@@ -19,14 +20,16 @@ class Common
     /**
      * @return mixed
      */
-    static function getMethod(){
+    static function getMethod()
+    {
         return $_SERVER['REQUEST_METHOD'];
     }
 
     /**
      * @return bool|string
      */
-    static function getPathUrl(){
+    static function getPathUrl()
+    {
         $pathUrl = $_SERVER['REQUEST_URI'];
 
         if ($position = strpos($pathUrl, '?')) {
@@ -45,7 +48,7 @@ class Common
         return false;
     }
 
-    public static function isLinkActive($key)
+    static function isLinkActive($key)
     {
         if (self::searchMatchString($_SERVER['REQUEST_URI'], $key)) {
             return true;

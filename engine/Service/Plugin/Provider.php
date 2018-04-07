@@ -10,7 +10,7 @@ class Provider extends AbstractProvider
 
     public function init()
     {
-        $plugin = new Provider($this->di);
+        $plugin = new Plugin($this->di);
 
         $this->di->set($this->serviceName, $plugin);
 

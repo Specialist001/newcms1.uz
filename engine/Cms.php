@@ -26,8 +26,8 @@ class Cms
     /**
      * Run cms
      */
-    public function run(){
-
+    public function run()
+    {
         try {
             require_once __DIR__ . '/../' . mb_strtolower(ENV) . '/route.php';
 
@@ -35,7 +35,7 @@ class Cms
             $plugins = $pluginService->getActivePlugins();
 
             foreach ($plugins as $plugin) {
-                $pluginClass = '\\Provider\\' . $plugin->directory . '\\Provider';
+                $pluginClass = '\\Plugin\\' . $plugin->directory . '\\Plugin';
                 $pluginObject = new $pluginClass($this->di);
 
                 if (method_exists($pluginClass, 'init')) {
@@ -56,13 +56,9 @@ class Cms
             $parameters = $routerDispatch->getParameters();
 
             call_user_func_array([new $controller($this->di), $action], $parameters);
-        } catch (\Exception $e){
+        } catch (\Exception $e) {
             echo $e->getMessage();
             exit;
         }
-
-
     }
-
-
 }

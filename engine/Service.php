@@ -49,7 +49,7 @@ abstract class Service
     /**
      * @return mixed
      */
-    public function getModel()
+    public function getModel($name)
     {
         $this->load->model(ucfirst($name), false, 'Admin');
 
@@ -57,5 +57,4 @@ abstract class Service
 
         return $model->{lcfirst($name)};
     }
-
 }

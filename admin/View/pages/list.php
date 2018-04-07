@@ -6,7 +6,9 @@
             <div class="col page-title">
                 <h2 class="ui header">
                     Pages
-                    <a href="/admin/pages/create/" class="ui primary button right floated item">Create Page</a>
+                    <a href="/admin/pages/create/" class="ui primary button right floated item">
+                        Create Page
+                    </a>
                 </h2>
             </div>
             </div>
@@ -29,7 +31,9 @@
                             <?= $page->title ?>
                         </a>
                     </td>
-                    <td><?= $page->date ?></td>
+                    <td>
+                        <?= $page->date ?>
+                    </td>
                 </tr>
                 <?php endforeach; ?>
                 </tbody>

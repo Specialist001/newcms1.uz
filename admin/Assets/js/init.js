@@ -31,7 +31,7 @@ $(function () {
         onDrop: function ($item, container, _super) {
             var data = group.sortable("serialize").get();
             var jsonString = JSON.stringify(data, null, ' ');
-            var formData = new FormData;
+            var formData = new FormData();
 
             console.log(data);
 
@@ -47,7 +47,7 @@ $(function () {
                 beforeSend: function(){
 
                 },
-                success: function (result) {
+                success: function(result){
 
                 }
             });

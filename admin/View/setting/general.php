@@ -38,7 +38,7 @@
                             </div>
                         <?php else: ?>
                             <div class="field">
-                                <label for="formNameSite" class="col-2 col-form-label">
+                                <label for="formNameSite">
                                     <?= $setting->name ?>
                                 </label>
                                     <input type="text" name="<?= $setting->key_field ?>" value="<?= $setting->value ?>" id="formNameSite">

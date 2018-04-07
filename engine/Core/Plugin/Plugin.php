@@ -8,9 +8,9 @@ class Plugin extends Service
 {
     public function install($directory)
     {
-        $this->getLoad()->model('Provider');
+        $this->getLoad()->model('Plugin');
 
-        $pluginModel = $this->grtModel('plugin');
+        $pluginModel = $this->getModel('plugin');
 
         if (!$pluginModel->isInstallPlugin($directory)) {
             $pluginModel->addPlugin($directory);
@@ -19,7 +19,7 @@ class Plugin extends Service
 
     public function activate($id, $active)
     {
-        $this->getLoad()->model('Provider');
+        $this->getLoad()->model('Plugin');
 
         $pluginModel = $this->getModel('plugin');
         $pluginModel->activatePlugin($id, $active);
@@ -27,7 +27,7 @@ class Plugin extends Service
 
     public function getActivePlugins()
     {
-        $this->getLoad()->model('Provider');
+        $this->getLoad()->model('Plugin');
 
         $pluginModel = $this->getModel('plugin');
 

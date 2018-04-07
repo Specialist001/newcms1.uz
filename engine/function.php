@@ -111,7 +111,7 @@ function getPlugins()
         unset($list[1]);
 
         foreach ($list as $namePlugin) {
-            $namespace = '\\Provider\\' . $namePlugin . '\\Provider';
+            $namespace = '\\Plugin\\' . $namePlugin . '\\Plugin';
 
             if (class_exists($namespace)) {
                 $plugin = new $namespace($di);
@@ -138,7 +138,7 @@ function getTypes($switch = 'page')
                 list($switch, $key) = explode('-', $name, 2);
 
                 if (!empty($key)) {
-                    list($nameType) = explode('-', $key, 2);
+                    list($nameType) = explode('.', $key, 2);
                     $types[$nameType] = ucfirst($nameType);
                 }
             }

@@ -32,7 +32,7 @@ class SettingController extends AdminController
 
     public function themes()
     {
-        $this->data['activeTheme'] = '';
+        //$this->data['activeTheme'] = '';
         $this->data['themes'] = getThemes();
         $this->data['activeTheme'] = \Setting::get('active_theme');
 
@@ -52,7 +52,8 @@ class SettingController extends AdminController
         }
     }
 
-    public function ajaxMenuAddItem() {
+    public function ajaxMenuAddItem()
+    {
         $params = $this->request->post;
 
         $this->load->model('MenuItem', false, 'Cms');
@@ -60,12 +61,12 @@ class SettingController extends AdminController
         if (isset($params['menu_id']) && strlen($params['menu_id']) > 0) {
             $id = $this->model->menuItem->add($params);
 
-            $item = new \stdClass();
+            $item = new \stdClass;
             $item->id = $id;
             $item->name = MenuItemRepository::NEW_MENU_ITEM_NAME;
-            $item->link = "#";
+            $item->link = '#';
 
-            Theme::block('setting/menu_item',[
+            Theme::block('setting/menu_item', [
                'item' => $item
             ]);
         }

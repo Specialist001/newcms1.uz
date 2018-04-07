@@ -10,7 +10,7 @@ class PageRepository extends Model
     {
         $sql = $this->queryBuilder->select()
             ->from('page')
-            ->orderBy('id','DESC')
+            ->orderBy('id', 'DESC')
             ->sql();
 
         return $this->db->query($sql);
@@ -19,6 +19,7 @@ class PageRepository extends Model
     public function getPageData($id)
     {
         $page = new Page($id);
+
         return $page->findOne();
     }
 
@@ -33,6 +34,10 @@ class PageRepository extends Model
             ->where('segment', $segment)
             ->limit(1)
             ->sql();
+
+        $result = $this->db->query($sql, $this->queryBuilder->values);
+
+        return isset($result[0]) ? $result[0] : false;
     }
 
 
@@ -46,7 +51,7 @@ class PageRepository extends Model
         $page = new Page;
         $page->setTitle($params['title']);
         $page->setContent($params['content']);
-        $page->setSegment(\Engine\Helper\Text::transliteratin($params['title']));
+        $page->setSegment(\Engine\Helper\Text::transliteration($params['title']));
         $pageId = $page->save();
 
         return $pageId;
@@ -54,7 +59,7 @@ class PageRepository extends Model
 
     public function updatePage($params)
     {
-        if(isset($params['page_id'])) {
+        if (isset($params['page_id'])) {
             $page = new Page($params['page_id']);
             $page->setTitle($params['title']);
             $page->setContent($params['content']);

@@ -22,11 +22,6 @@ class Menu
         self::$menuItemRepository = new MenuItemRepository(self::$di);
     }
 
-    public static function show()
-    {
-
-    }
-
     public static function getItems($menuId)
     {
         //return self::$menuRepository->getList();

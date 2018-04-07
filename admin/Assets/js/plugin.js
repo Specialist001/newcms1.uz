@@ -2,7 +2,7 @@ var plugin = {
     ajaxMethod: 'POST',
 
     install: function(element, directory) {
-        var button   = new $(element);
+        var button   = $(element);
         var formData = new FormData();
 
         formData.append('directory', directory);
@@ -31,9 +31,8 @@ var plugin = {
 
         if (active === 0) {
             status = 1;
-        }
-        else {
-            status 0;
+        } else {
+            status = 0;
         }
 
         formData.append('id', pluginId);

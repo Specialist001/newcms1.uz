@@ -5,10 +5,12 @@
             <div class="ui grid">
                 <div class="sixteen wide column">
                     <div class="col page-title">
-                        <h2 class="ui header"><?= $page->title ?></h2>
+                        <h2 class="ui header">
+                            <?= $page->title ?>
                         <div class="sub header grey">
                             <?php echo $baseUrl . '/page/' . \Engine\Helper\Text::transliteration($page->title) ?>
                         </div>
+                        </h2>
                     </div>
                 </div>
             </div>

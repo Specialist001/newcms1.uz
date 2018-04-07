@@ -5,7 +5,7 @@ class PluginController extends AdminController
 {
     public function listPlugins()
     {
-        $this->load->model('Provider');
+        $this->load->model('Plugin');
 
         $installedPlugins = $this->model->plugin->getPlugins();
         $plugins = getPlugins();

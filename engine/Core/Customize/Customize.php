@@ -30,7 +30,7 @@ class Customize
         return $this->config;
     }
 
-    public function __clone()
+    protected function __clone()
     {
     }
 

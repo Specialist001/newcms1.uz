@@ -47,24 +47,6 @@ class MenuItemRepository extends Model
         return $menuItemId;
     }
 
-    public function sort($params = [])
-    {
-        $items = isset($params['data']) ? json_decode($params['data']) : [];
-
-        if (!empty($items) and isset($items[0])) {
-            foreach ($items[0] as $position => $item) {
-                $this->db->execute(
-                    $this->queryBuilder
-                        ->update('menu_item')
-                        ->set(['position' => $position])
-                        ->where('id', $item->id)
-                        ->sql(),
-                    $this->queryBuilder->values
-                );
-            }
-        }
-    }
-
     public function update($params = [])
     {
         if (empty($params)) {
@@ -93,5 +75,23 @@ class MenuItemRepository extends Model
             ->sql();
 
         return $this->db->query($sql, $this->queryBuilder->values);
+    }
+
+    public function sort($params = [])
+    {
+        $items = isset($params['data']) ? json_decode($params['data']) : [];
+
+        if (!empty($items) and isset($items[0])) {
+            foreach ($items[0] as $position => $item) {
+                $this->db->execute(
+                    $this->queryBuilder
+                        ->update('menu_item')
+                        ->set(['position' => $position])
+                        ->where('id', $item->id)
+                        ->sql(),
+                    $this->queryBuilder->values
+                );
+            }
+        }
     }
 }

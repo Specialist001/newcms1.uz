@@ -108,7 +108,7 @@ var menu = {
             beforeSend: function(){
 
             },
-            success: function () {
+            success: function (result){
                 $('.menu-item-' + itemId).remove();
             }
         });

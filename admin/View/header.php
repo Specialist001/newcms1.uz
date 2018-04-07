@@ -28,7 +28,6 @@
 </head>
 
 <body>
-<?php print_r(\Engine\Helper\Lang::e());?>
 
 <header>
     <div class="ui borderless main menu top-header">
@@ -36,7 +35,6 @@
             <div href="/admin/" class="header item logo-item">
                 <img class="logo" src="/admin/Assets/images/logo.png">
             </div>
-            <div class="item" href="#">Admin CMS</div>
 
             <?php foreach (Customize::getInstance()->getAdminMenuItems() as $key => $item): ?>
                 <a class="item" href="<?= $item['urlPath'] ?>">
@@ -50,5 +48,6 @@
                     <i class="icon-logout icons"></i> Logout
                 </a>
             </div>
+    </div>
 
 </header>

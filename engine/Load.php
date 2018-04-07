@@ -59,9 +59,10 @@ class Load
      */
     public function language($path)
     {
+        $languageCurrent = \Setting::get('language');
         $file = sprintf(
             self::FILE_MASK_LANGUAGE,
-            'english', $path
+            $languageCurrent, $path
         );
 
         $content = parse_ini_file($file, true);
