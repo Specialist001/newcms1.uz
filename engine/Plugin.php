@@ -1,6 +1,9 @@
 <?php
-
 namespace Engine;
+
+use Engine\Core\Database\Connection;
+use Engine\Core\Router\Router;
+use Engine\DI\DI;
 
 abstract class Plugin
 {
@@ -18,9 +21,7 @@ abstract class Plugin
         $this->customize = $this->di->get('customize');
     }
 
-    //abstract public function init();
     abstract public function details();
-    //abstract public function delete();
 
     /**
      * @return DI

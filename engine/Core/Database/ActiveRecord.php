@@ -56,6 +56,10 @@ trait ActiveRecord
                     $this->queryBuilder->values
                 );
             } else{
+                print_r($this->queryBuilder->insert($this->getTable())
+                    ->set($properties)
+                    ->sql());
+
                 $this->db->execute(
                     $this->queryBuilder->insert($this->getTable())
                     ->set($properties)
@@ -75,6 +79,10 @@ trait ActiveRecord
         $properties = [];
 
         foreach ($this->getProperties() as $key => $property){
+            if ($property->getName() == 'id') {
+                continue;
+            }
+
             if(isset($this->{$property->getName()})){
                 $properties[$property->getName()] = $this->{$property->getName()};
             }
