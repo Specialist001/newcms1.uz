@@ -2,6 +2,7 @@
 
 namespace Engine\Service\Database;
 
+use Engine\Core\Config\Config;
 use Engine\Service\AbstractProvider;
 use Engine\Core\Database\Connection;
 
@@ -17,12 +18,10 @@ class Provider extends AbstractProvider
      */
     public function init()
     {
-        // TODO: Implement init() method.
-        //It's for capture P2P
-        //and for capture GitHub
-        //it's from UTM
+        $config = Config::group('database');
 
-        $db = new Connection();
-        $this->di->set($this->serviceName, $db);
+        $this->di->set($this->serviceName, new Connection($config));
+
+        return $this;
     }
 }

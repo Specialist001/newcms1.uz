@@ -11,13 +11,16 @@ use Engine\Core\Config\Config;
  */
 class Connection
 {
+    private $config;
+
     private $link;
 
     /**
      * Connection constructor.
      */
-    public function __construct()
+    public function __construct(array $config)
     {
+        $this->config = $config;
         $this->connect();
     }
 
@@ -26,11 +29,11 @@ class Connection
      */
     private function connect()
     {
-        $config = Config::group('database');
+        //$config = Config::group('database');
 
-        $dsn = 'mysql:host=' .$config['host'] .';dbname=' .$config['db_name'] .';charset=' .$config['charset'];
+        $dsn = 'mysql:host=' .$this->config['host'] .';dbname=' .$this->config['db_name'] .';charset=' .$this->config['charset'];
 
-        $this->link = new PDO($dsn, $config['username'], $config['password']);
+        $this->link = new PDO($dsn, $this->config['username'], $this->config['password']);
 
         return $this;
     }
@@ -61,7 +64,7 @@ class Connection
 
         $result = $sth->fetchAll($statement);
 
-        if($result === false){
+        if ($result === false) {
             return [];
         }
 

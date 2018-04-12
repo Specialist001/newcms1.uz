@@ -43,7 +43,7 @@ class Config
      */
     public static function file($group = 'main')
     {
-        $path = path('config') . DS . $group . '.php';
+        $path = $_SERVER['DOCUMENT_ROOT'] . '/config/' . $group . '.php';
         //$path = $_SERVER['DOCUMENT_ROOT'] . '/' . mb_strtolower(ENV). '/Config/'. $group . '.php';
 
         // Check that the file exists before we attempt to load it.
