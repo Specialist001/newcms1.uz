@@ -1,6 +1,6 @@
 <?php
 
-namespace Engine\Core\Auth;
+namespace Ncms\Auth;
 
 
 interface AuthInterface

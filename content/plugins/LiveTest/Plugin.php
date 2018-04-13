@@ -1,7 +1,7 @@
 <?php
 namespace Plugin\LiveTest;
 
-class Plugin extends \Engine\Plugin
+class Plugin
 {
 
     public function details()
