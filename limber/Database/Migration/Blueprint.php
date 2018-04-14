@@ -94,7 +94,7 @@ class Blueprint
         ]);
 
         array_push($this->columns, $column);
-        
+
         return $column;
     }
 }
