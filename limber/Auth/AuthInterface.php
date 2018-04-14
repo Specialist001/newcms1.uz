@@ -1,6 +1,6 @@
 <?php
 
-namespace Ncms\Auth;
+namespace Limber\Auth;
 
 
 interface AuthInterface

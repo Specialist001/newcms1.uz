@@ -3,7 +3,7 @@
 require_once __DIR__ . '/../vendor/autoload.php';
 //require_once __DIR__ . '/function.php';
 
-if (version_compare($ver = PHP_VERSION, $req = NCMS_PHP_MIN, '<')) {
+if (version_compare($ver = PHP_VERSION, $req = LIMBER_PHP_MIN, '<')) {
     die(sprintf('You are running PHP %s, but Flexi needs at least PHP %s to run.', $ver, $req));
 }
 

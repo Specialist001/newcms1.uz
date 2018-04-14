@@ -1,5 +1,5 @@
 <?php
-namespace Ncms\Auth;
+namespace Limber\Auth;
 
 trait Authenticatable
 {

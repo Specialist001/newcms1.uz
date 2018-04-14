@@ -1,11 +1,11 @@
 <?php
-namespace Ncms\Auth;
+namespace Limber\Auth;
 
 //use Engine\Core\Auth\AuthInterface;
-use Ncms\Config\Config;
-use Ncms\Encription\Hash;
-use Ncms\Facades\Session;
-use Ncms\Orm\Model;
+use Limber\Config\Config;
+use Limber\Encription\Hash;
+use Limber\Facades\Session;
+use Limber\Orm\Model;
 
 
 class Auth implements AuthInterface
@@ -37,7 +37,7 @@ class Auth implements AuthInterface
         return static::$user;
     }
 
-    public static function authorize(\Ncms\Orm\Model $user)
+    public static function authorize(\Limber\Orm\Model $user)
     {
         Session::put('auth.authorized', true);
         Session::put('auth.user', $user);

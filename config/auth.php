@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'username' => 'admin@ncms.ru',
+    'username' => 'admin@limber.uz',
     'password' => '1111'
 ];
