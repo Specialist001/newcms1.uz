@@ -7,8 +7,8 @@ namespace Composer\Autoload;
 class ComposerStaticInitd78598d25841a8903f8aa9796c9a1ac1
 {
     public static $files = array (
-        '3ae68e4a48d888d33fb22f6e7da869c1' => __DIR__ . '/../..' . '/engine/defines.php',
-        '3e5f2adbac2ab25420dc93efc3f062ee' => __DIR__ . '/../..' . '/engine/function.php',
+        'fa87de22233d9162672dbced9caf3f89' => __DIR__ . '/../..' . '/Limber/Functions/functions.php',
+        '815a4c54f79efaed70379797e4474936' => __DIR__ . '/../..' . '/Limber/Functions/localization.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -16,18 +16,13 @@ class ComposerStaticInitd78598d25841a8903f8aa9796c9a1ac1
         array (
             'Plugin\\' => 7,
         ),
-        'E' => 
+        'M' => 
         array (
-            'Engine\\DI\\' => 10,
-            'Engine\\' => 7,
+            'Modules\\' => 8,
         ),
-        'C' => 
+        'L' => 
         array (
-            'Cms\\' => 4,
-        ),
-        'A' => 
-        array (
-            'Admin\\' => 6,
+            'Limber\\' => 7,
         ),
     );
 
@@ -36,21 +31,13 @@ class ComposerStaticInitd78598d25841a8903f8aa9796c9a1ac1
         array (
             0 => __DIR__ . '/../..' . '/content/plugins',
         ),
-        'Engine\\DI\\' => 
+        'Modules\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/engine/DI',
+            0 => __DIR__ . '/../..' . '/modules',
         ),
-        'Engine\\' => 
+        'Limber\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/engine',
-        ),
-        'Cms\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/cms',
-        ),
-        'Admin\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/admin',
+            0 => __DIR__ . '/../..' . '/Limber',
         ),
     );
 

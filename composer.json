@@ -9,15 +9,13 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "Engine\\": "engine",
-            "Cms\\": "cms",
-            "Admin\\": "admin",
-            "Engine\\DI\\": "engine/DI",
+            "Modules\\": "modules",
+            "Limber\\": "Limber",
             "Plugin\\": "content/plugins"
         },
         "files": [
-            "engine/defines.php",
-            "engine/function.php"
+            "Limber/Functions/functions.php",
+            "Limber/Functions/localization.php"
         ]
     }
 }

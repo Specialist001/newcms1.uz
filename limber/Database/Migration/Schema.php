@@ -70,6 +70,7 @@ class Schema
     {
         $query      = sprintf('DROP TABLE IF EXISTS `%s`', $table);
         $statement  = new Statement($query);
+
         $statement->execute();
     }
 

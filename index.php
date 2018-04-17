@@ -2,14 +2,20 @@
 ini_set("display_errors", 1);
 error_reporting(E_ALL);
 
-//define('ROOT_DIR', __DIR__);
+require_once __DIR__ . '/vendor/autoload.php';
+define('ROOT_DIR', __DIR__);
 
-define('ENV', 'Cms');
-//define('DS', DIRECTORY_SEPARATOR);
-
-if (!is_file($_SERVER['DOCUMENT_ROOT'] . '/config/database.php')) {
-    header('Location: /install');
-    exit;
+if (!is_file(ROOT_DIR . '/config/database.php')) {
+    \Limber\Http\Redirect::go('/install/');
+}
+$version_compare = version_compare($version = \Limber\Define::PHP_MIN, $required = \Limber\Define::PHP_MIN, '<');
+if ($version_compare) {
+    exit(sprintf('You are running PHP %s, but Flexi needs at least PHP %s to run.', $version, $required));
 }
 
-require_once 'engine/bootstrap.php';
+try{
+    \Limber\Routing\Router::initialize();
+} catch (\ErrorException $e) {
+    echo $e->getMessage();
+}
+
