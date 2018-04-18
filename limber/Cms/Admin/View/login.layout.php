@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="favicon.ico">
 
-    <title>Login to FlexiCMS</title>
+    <title>Login to Limber CMS</title>
 
     <link href="<?php echo Asset::get('assets/semantic/semantic.min.css') ?>" rel="stylesheet">
     <link href="<?php echo Asset::get('assets/semantic/components/grid.min.css') ?>" rel="stylesheet">

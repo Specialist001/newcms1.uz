@@ -9,13 +9,13 @@
     "require": {},
     "autoload": {
         "psr-4": {
+            "Limber\\": "limber",
             "Modules\\": "modules",
-            "Limber\\": "Limber",
             "Plugin\\": "content/plugins"
         },
         "files": [
-            "Limber/Functions/functions.php",
-            "Limber/Functions/localization.php"
+            "limber/Functions/functions.php",
+            "limber/Functions/localization.php"
         ]
     }
 }

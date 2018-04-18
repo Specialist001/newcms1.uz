@@ -12,6 +12,18 @@ class View implements ResponderInterface
 
     protected $data = [];
 
+    protected static $engine;
+
+    public function __construct()
+    {
+        static::$engine = new Engine();
+    }
+
+    public static function engine(): Engine
+    {
+        return static::$engine;
+    }
+
     public function data(): array
     {
         return $this->data;
@@ -19,30 +31,12 @@ class View implements ResponderInterface
 
     public static function theme(): string
     {
-        $module = Router::module();
-        $theme = \Setting::value('active_theme', 'theme');
-
-        $uriTheme = sprintf('%s/content/themes/%s', Uri::base(), $theme);
-
-        if ($module->module === 'Admin') {
-            $uriTheme = 'limber/Cms/Admin/View';
-        }
-
-        return $uriTheme;
+        return static::engine()->detectViewDirectory();
     }
 
-    public static function pathTheme(): string
+    public static function path(): string
     {
-        $module = Router::module();
-        $theme = \Setting::value('active_theme', 'theme');
-
-        $path = sprintf('%s/%s/', path_content('themes'), $theme);
-
-        if (in_array($module->module, ['Admin'])) {
-            $path = sprintf('%s/flexi/Cms/%s/View/', ROOT_DIR, $module->module);
-        }
-
-        return $path;
+        return ROOT_DIR . static::engine()->detectViewDirectory();;
     }
 
     public function respond()
@@ -61,7 +55,7 @@ class View implements ResponderInterface
     public function render(): string
     {
         // Get path for the views.
-        $path = static::pathTheme() . $this->file . '.php';
+        $path = static::path() . $this->file . '.php';
 
         // Render the view.
         return Component::load($path, $this->data);

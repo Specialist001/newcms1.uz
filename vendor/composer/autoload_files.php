@@ -6,6 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'fa87de22233d9162672dbced9caf3f89' => $baseDir . '/Limber/Functions/functions.php',
-    '815a4c54f79efaed70379797e4474936' => $baseDir . '/Limber/Functions/localization.php',
+    'fc2cda83e7398d18a704e14283685209' => $baseDir . '/limber/Functions/functions.php',
+    '85ffabecfda2655e8f603a5bede55813' => $baseDir . '/limber/Functions/localization.php',
 );

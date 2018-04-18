@@ -1,9 +1,9 @@
 <?php
 namespace Limber\Cms\Admin\Controller;
 
-use Flexi\Http\Input;
-use Flexi\Http\Uri;
-use Flexi\Cms\Admin\Model\Page as PageModel;
+use Limber\Http\Input;
+use Limber\Http\Uri;
+use Limber\Cms\Admin\Model\Page as PageModel;
 use \View;
 
 class PageController extends AdminController
@@ -42,7 +42,7 @@ class PageController extends AdminController
             $page = new \Limber\Cms\Admin\Model\Page;
             $page->setAtrribute('title', $params['title']);
             $page->setAtrribute('content', $params['content']);
-            $page->setAttribute('segment', \Flexi\Helper\Text::transliteration($params['title']));
+            $page->setAttribute('segment', \Limber\Helper\Text::transliteration($params['title']));
             $page->save();
 
             echo $page->getAttribute('id');

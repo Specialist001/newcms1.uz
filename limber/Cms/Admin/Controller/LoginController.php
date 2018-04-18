@@ -1,11 +1,12 @@
 <?php
 namespace Limber\Cms\Admin\Controller;
 
-use Flexi\Http\Input;
-use Flexi\Http\Redirect;
-use Flexi\Routing\Controller;
-use Flexi\Auth\Auth;
-use Flexi\Template\View;
+use Limber\Http\Input;
+use Limber\Http\Redirect;
+use Limber\Routing\Controller;
+use Limber\Auth\Auth;
+use Limber\Template\View;
+use Limber\Cms;
 
 class LoginController extends Controller
 {
@@ -26,7 +27,7 @@ class LoginController extends Controller
     public function authAdmin()
     {
         $params    = Input::post();
-        $userModel = new \Limber\Cms\Admin\Model\User();
+        $userModel = new Cms\Admin\Model\User();
         $user      = $userModel->getUserByParams($params);
 
         if ($user) {
@@ -37,5 +38,6 @@ class LoginController extends Controller
         }
 
         echo 'Incorrect email or password.';
+        exit;
     }
 }

@@ -38,7 +38,7 @@ class Console implements ConsoleInterface
         {
             // Get the class name.
             $name = substr($migration->migration, 0, -4);
-            $name = sprintf('\\Modules\\%s\\Migration\\%s', $migration->module, $name);
+            $name = sprintf('\\modules\\%s\\Migration\\%s', $migration->module, $name);
             // If migration exists, run it.
             if (is_file(path('modules', $migration->module) . 'Migration/' . $migration->migration)) {
                 // Instantiate the migration.
@@ -125,10 +125,10 @@ class Console implements ConsoleInterface
     private function blank($suffix, $module, $migration): string
     {
         $contents = "<?php\n";
-        $contents .= "namespace Modules\\$module\Migration;\n\n";
-        $contents .= "use \Flexi\Database\Migration\Blueprint;\n";
-        $contents .= "use \Flexi\Database\Migration\Migration;\n";
-        $contents .= "use \Flexi\Database\Migration\Schema;\n\n";
+        $contents .= "namespace modules\\$module\Migration;\n\n";
+        $contents .= "use \Limber\Database\Migration\Blueprint;\n";
+        $contents .= "use \Limber\Database\Migration\Migration;\n";
+        $contents .= "use \Limber\Database\Migration\Schema;\n\n";
         $contents .= "class $migration$suffix extends Migration\n";
         $contents .= "{\n\n";
         $contents .= "\t/**\n";

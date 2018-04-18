@@ -10,7 +10,7 @@ class Component
     {
         $data = array_merge_recursive(Layout::data(), $data);
 
-        $path = View::pathTheme() . $name .'.php';
+        $path = View::path() . $name .'.php';
 
         return static::load($path, $data);
     }

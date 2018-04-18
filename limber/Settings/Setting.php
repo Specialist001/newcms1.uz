@@ -14,7 +14,7 @@ class Setting
 
     public static function value($key, $section = 'general')
     {
-        /** @var \Flexi\Orm\Model $item */
+        /** @var \Limber\Orm\Model $item */
         $item = static::item($key, $section);
 
         return $item ? $item->getAttribute('value') : '';

@@ -40,7 +40,7 @@ class Module
 
     public function run()
     {
-        $class = 'Modules\\' . $this->module . '\Controller\\' . $this->controller;
+        $class = '\\modules\\' . $this->module . '\Controller\\' . $this->controller;
 
         if (in_array($this->module, ['Admin', 'Front'])) {
             $class = '\\Limber\\Cms\\' . $this->module . '\Controller\\' . $this->controller;

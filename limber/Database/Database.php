@@ -3,7 +3,7 @@ namespace Limber\Database;
 
 use \PDO;
 use \PDOException;
-use Flexi\Config\Config;
+use Limber\Config\Config;
 use Exception;
 
 class Database

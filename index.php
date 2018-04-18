@@ -10,7 +10,7 @@ if (!is_file(ROOT_DIR . '/config/database.php')) {
 }
 $version_compare = version_compare($version = \Limber\Define::PHP_MIN, $required = \Limber\Define::PHP_MIN, '<');
 if ($version_compare) {
-    exit(sprintf('You are running PHP %s, but Flexi needs at least PHP %s to run.', $version, $required));
+    exit(sprintf('You are running PHP %s, but Limber needs at least PHP %s to run.', $version, $required));
 }
 
 try{

@@ -1,9 +1,9 @@
 <?php
 namespace Limber\Cms\Admin\Controller;
 
-use Flexi\Http\Input;
-use Flexi\Http\Uri;
-use Flexi\Cms\Admin\Model\Post as PostModel;
+use Limber\Http\Input;
+use Limber\Http\Uri;
+use Limber\Cms\Admin\Model\Post as PostModel;
 use \View;
 
 class PostController extends AdminController

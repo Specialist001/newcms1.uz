@@ -41,7 +41,7 @@ class I18n
         $localizations = [];
         $path = path('modules') . sprintf('%s/Language/', $module->module);
         if (in_array($module->module, ['Admin', 'Front'])) {
-            $path = sprintf('%s/flexi/Cms/%s/Language/', ROOT_DIR, $module->module);
+            $path = sprintf('%s/limber/Cms/%s/Language/', ROOT_DIR, $module->module);
         }
         foreach (scandir($path) as $localization) {
 
@@ -67,7 +67,7 @@ class I18n
         $module = \DI::instance()->get('module');
         $path = path('modules') . sprintf('%s/Language/%s/', $module->module, Config::item('defaultLang'));
         if (in_array($module->module, ['Admin', 'Front'])) {
-            $path = sprintf('%s/flexi/Cms/%s/Language/%s/', ROOT_DIR, $module->module, Config::item('defaultLang'));
+            $path = sprintf('%s/limber/Cms/%s/Language/%s/', ROOT_DIR, $module->module, Config::item('defaultLang'));
         }
         return $path;
     }

@@ -64,7 +64,7 @@ class Session
         return static::make()->driver()->kept();
     }
 
-    public static function make(): \Flexi\Session\Session
+    public static function make(): \Limber\Session\Session
     {
         return static::$session ?? new Factory;
     }

@@ -1,11 +1,12 @@
 <?php
 namespace Limber\Cms\Admin\Controller;
 
-use Flexi\Http\Input;
-use Flexi\Localization\I18n;
-use Flexi\Cms\Admin\Model\Setting as SettingModel;
-use Flexi\Cms\Admin\Model\Menu as MenuModel;
-use Flexi\Cms\Admin\Model\MenuItem as MenuItemModel;
+use Limber\Http\Input;
+use Limber\Localization\I18n;
+use Limber\Cms\Admin\Model\Setting as SettingModel;
+use Limber\Cms\Admin\Model\Menu as MenuModel;
+use Limber\Cms\Admin\Model\MenuItem as MenuItemModel;
+use Limber\Settings\Setting;
 use \View;
 
 class SettingController extends AdminController
