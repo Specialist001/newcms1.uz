@@ -834,7 +834,7 @@ $.fn.transition = function() {
         },
 
         setting: function(name, value) {
-          module.debug('Changing setting', name, value);
+          module.debug('Changing settings', name, value);
           if( $.isPlainObject(name) ) {
             $.extend(true, settings, name);
           }
@@ -1083,7 +1083,7 @@ $.fn.transition.settings = {
 
   // possible errors
   error: {
-    noAnimation : 'Element is no longer attached to DOM. Unable to animate.  Use silent setting to surpress this warning in production.',
+    noAnimation : 'Element is no longer attached to DOM. Unable to animate.  Use silent settings to surpress this warning in production.',
     repeated    : 'That animation is already occurring, cancelling repeated animation',
     method      : 'The method you called is not defined',
     support     : 'This browser does not support CSS animations'

@@ -1,0 +1,72 @@
+<main>
+    <div class="ui container">
+        <div class="ui grid">
+            <div class="sixteen wide column">
+                <div class="col page-title">
+                    <h2 class="ui header">
+                        <?= $page->title ?>
+                        <div class="sub header grey">
+                            <?php echo $baseUrl . '/page/' . \Limber\Helper\Text::transliteration($page->title) ?>
+                        </div>
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <div class="ui grid">
+            <div class="twelve wide column">
+                <form id="formPage" class="ui form">
+                    <input type="hidden" name="page_id" id="formPageId" value="<?= $page->id ?>" />
+                    <div class="field">
+                        <label><?php __('pages.edit.label_title') ?></label>
+                        <input type="text" name="title" class="form-control" id="formTitle" value="<?= $page->title ?>" placeholder="<?php __('page.edit.placeholder_title') ?>">
+                    </div>
+                    <div class="field">
+                        <label><?php __('pages.edit.label_content') ?></label>
+                        <textarea name="content" id="redactor"><?= $page->content ?></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="four wide column">
+                <div class="ui segments">
+                    <div class="ui blue segment">
+                        <h4><?php __('pages.edit.update_segment_heading') ?></h4>
+                    </div>
+                    <div class="ui form segment">
+                        <div class="field">
+                            <label><?php __('pages.edit.label_status') ?></label>
+                            <select id="status" class="ui search dropdown">
+                                <option value="publish"<?php if ('publish' == $page->status) echo ' selected'; ?>>Опубликовано</option>
+                                <option value="draft"<?php if ('draft' == $page->status) echo ' selected'; ?>>В корзине</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="ui secondary segment">
+                        <p><?php __('pages.edit.description_form_button') ?></p>
+                        <button type="submit" class="ui primary button" onclick="page.update(this)">
+                            <?php __('pages.edit.form_button') ?>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="ui segments">
+                    <div class="ui blue segment">
+                        <h4><?php __('pages.edit.setting_segment.heading') ?></h4>
+                    </div>
+                    <div class="ui form segment">
+                        <div class="field">
+                            <label><?php __('pages.edit.setting_segment.label_type') ?></label>
+                            <select id="type" class="ui search dropdown">
+                                <option value="page">Basic</option>
+                                <?php foreach ($pageTypes as $key => $type): ?>
+                                <option value="<?php echo $key ?>"<?php if ($key == $page->type) echo ' selected'; ?>>
+                                    <?php echo $type ?>
+                                </option>
+                                <?php endforeach; ?>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

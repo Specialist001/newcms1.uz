@@ -1,6 +1,7 @@
 <?php
 namespace Limber\Cms\Admin\Controller;
 
+use Limber\Localization\I18n;
 use View;
 use Limber\Cms\Admin\Model\Plugin as PluginModel;
 
@@ -8,6 +9,8 @@ class PluginController extends AdminController
 {
     public function listPlugins()
     {
+        I18n::instance()->load('plugins/list');
+
         $pluginModel = new PluginModel();
         $installedPlugins = $pluginModel->getPlugins();
         $plugins = getPlugins();

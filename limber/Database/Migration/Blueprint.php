@@ -1,6 +1,8 @@
 <?php
 namespace Limber\Database\Migration;
 
+use Limber;
+
 class Blueprint
 {
     public $table = '';

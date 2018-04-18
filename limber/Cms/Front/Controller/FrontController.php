@@ -9,5 +9,20 @@ class FrontController extends Controller
 
     public function __construct()
     {
+        $this->loadThemeFunctions();
+    }
+
+    private function loadThemeFunctions()
+    {
+        $functions = \View::path() . 'functions.php';
+
+        if (is_file($functions)) {
+            require_once $functions;
+        }
+    }
+
+    public function isController(string $name)
+    {
+        return "Limber\\Cms\\Front\\Controller\\{$name}Controller" === $this->getNameController;
     }
 }

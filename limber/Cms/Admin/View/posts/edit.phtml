@@ -1,0 +1,36 @@
+<main>
+    <div class="ui container">
+        <div class="ui grid">
+            <div class="sixteen wide column">
+                <div class="col page-title">
+                    <h2 class="ui header">
+                        <?= $post->title ?>
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <div class="ui grid">
+            <div class="twelve wide column">
+                <form id="formPage" class="ui form">
+                    <input type="hidden" name="post_id" id="formPostId" value="<?= $post->id ?>" />
+                    <div class="field">
+                        <label><?php __('posts.edit.label_title') ?></label>
+                        <input type="text" name="title" class="form-control" id="formTitle" value="<?= $post->title ?>" placeholder="<?php __('posts.edit.placeholder_title') ?>">
+                    </div>
+                    <div class="field">
+                        <label><?php __('posts.edit.label_content') ?></label>
+                        <textarea name="content" id="redactor"><?= $post->content ?></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="four wide column">
+                <div>
+                    <p><?php __('posts.edit.description_form_button') ?></p>
+                    <button type="submit" class="ui primary button" onclick="post.update()">
+                        <?php __('posts.edit.form_button') ?>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

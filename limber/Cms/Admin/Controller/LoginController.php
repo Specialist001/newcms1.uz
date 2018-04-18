@@ -3,6 +3,7 @@ namespace Limber\Cms\Admin\Controller;
 
 use Limber\Http\Input;
 use Limber\Http\Redirect;
+use Limber\Localization\I18n;
 use Limber\Routing\Controller;
 use Limber\Auth\Auth;
 use Limber\Template\View;
@@ -17,6 +18,10 @@ class LoginController extends Controller
         if (Auth::authorized()) {
             Redirect:go('/admin/');
         }
+
+        I18n::instance()
+            ->load('dashboard/main')
+            ->load('dashboard/login')
     }
 
     public function form()

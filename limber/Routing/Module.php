@@ -19,7 +19,7 @@ class Module
 
     public $theme = '';
 
-    public $current = = [];
+    public $current = [];
 
     public function __construct(array $config = [])
     {
@@ -52,7 +52,7 @@ class Module
 
             return $this->response;
         } else {
-            throw new Exception(sprintf(Controller <strong>%s</strong> does not exists, $class));
+            throw new Exception(sprintf('Controller %s does not exists', $class));
         }
     }
 

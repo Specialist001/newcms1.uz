@@ -134,7 +134,7 @@ $.fn.search = function(parameters) {
         determine: {
           searchFields: function() {
             // this makes sure $.extend does not add specified search fields to default fields
-            // this is the only setting which should not extend defaults
+            // this is the only settings which should not extend defaults
             if(parameters && parameters.searchFields !== undefined) {
               settings.searchFields = parameters.searchFields;
             }
@@ -1251,7 +1251,7 @@ $.fn.search.settings = {
     noEndpoint  : 'No search endpoint was specified',
     noTemplate  : 'A valid template name was not specified.',
     serverError : 'There was an issue querying the server.',
-    maxResults  : 'Results must be an array to use maxResults setting',
+    maxResults  : 'Results must be an array to use maxResults settings',
     method      : 'The method you called is not defined.'
   },
 

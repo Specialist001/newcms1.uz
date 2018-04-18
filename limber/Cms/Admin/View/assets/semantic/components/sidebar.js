@@ -764,7 +764,7 @@ $.fn.sidebar = function(parameters) {
         },
 
         setting: function(name, value) {
-          module.debug('Changing setting', name, value);
+          module.debug('Changing settings', name, value);
           if( $.isPlainObject(name) ) {
             $.extend(true, settings, name);
           }
@@ -1023,7 +1023,7 @@ $.fn.sidebar.settings = {
     method       : 'The method you called is not defined.',
     pusher       : 'Had to add pusher element. For optimal performance make sure body content is inside a pusher element',
     movedSidebar : 'Had to move sidebar. For optimal performance make sure sidebar and pusher are direct children of your body tag',
-    overlay      : 'The overlay setting is no longer supported, use animation: overlay',
+    overlay      : 'The overlay settings is no longer supported, use animation: overlay',
     notFound     : 'There were no elements that matched the specified selector'
   }
 

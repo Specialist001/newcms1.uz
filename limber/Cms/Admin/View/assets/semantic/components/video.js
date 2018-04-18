@@ -274,7 +274,7 @@ $.fn.video = function(parameters) {
         },
 
         setting: function(name, value) {
-          module.debug('Changing setting', name, value);
+          module.debug('Changing settings', name, value);
           if( $.isPlainObject(name) ) {
             $.extend(true, settings, name);
           }

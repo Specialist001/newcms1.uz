@@ -4,12 +4,15 @@ namespace Limber\Cms\Admin\Controller;
 use Limber\Http\Input;
 use Limber\Http\Uri;
 use Limber\Cms\Admin\Model\Page as PageModel;
+use Limber\Localization\I18n;
 use \View;
 
 class PageController extends AdminController
 {
     public function listing()
     {
+        I18n::instance()->load('pages/list');
+
         $pageModel = new PageModel();
         $pages     = $pageModel->getPages();
 
@@ -20,17 +23,22 @@ class PageController extends AdminController
 
     public function create()
     {
+        I18n::instance()->load('pages/create');
+
         return View::make('pages/create');
     }
 
     public function edit($id)
     {
+        I18n::instance()->load('pages/edit');
+
         $pageModel = new PageModel();
         $page      = $pageModel->getPage($id);
 
         return View::make('pages/edit', [
             'baseUrl' => Uri::base(),
-            'page'    => $page
+            'page'    => $page,
+            'pageTypes' => getTypes()
         ]);
     }
 

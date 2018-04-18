@@ -146,7 +146,7 @@ $.site = $.fn.site = function(parameters) {
             $existingModules
           ;
           if(module.moduleExists(name)) {
-            module.verbose('Changing default setting', setting, value, name);
+            module.verbose('Changing default settings', setting, value, name);
             $.fn[name].settings[setting] = value;
             if(modifyExisting && namespace) {
               $existingModules = $(':data(module-' + namespace + ')');
@@ -172,7 +172,7 @@ $.site = $.fn.site = function(parameters) {
             $existingModules
           ;
           if(module.moduleExists(name)) {
-            module.verbose('Changing default setting', newSettings, name);
+            module.verbose('Changing default settings', newSettings, name);
             $.extend(true, $.fn[name].settings, newSettings);
             if(modifyExisting && namespace) {
               $existingModules = $(':data(module-' + namespace + ')');

@@ -1,11 +1,11 @@
 <?php
 
-function __($key)
+function __($key, $data = [])
 {
-    echo \Limber\Localization\I18n::instance()->get($key);
+    echo \Limber\Localization\I18n::instance()->get($key, $data);
 }
 
-function __e($key)
+function __e($key, $data = [])
 {
-    return \Limber\Localization\I18n::instance()->get($key);
+    return \Limber\Localization\I18n::instance()->get($key, $data);
 }

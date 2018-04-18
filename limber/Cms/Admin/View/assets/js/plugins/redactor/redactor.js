@@ -931,7 +931,7 @@
 				},
 				setForce: function($el)
 				{
-					// remove style and class if the specified setting
+					// remove style and class if the specified settings
 					if (this.block.clearStyle)
 					{
 						$el.removeAttr('class').removeAttr('style');
@@ -950,7 +950,7 @@
 				},
 				toggle: function($el)
 				{
-					// remove style and class if the specified setting
+					// remove style and class if the specified settings
 					if (this.block.clearStyle)
 					{
 						$el.removeAttr('class').removeAttr('style');

@@ -2,7 +2,7 @@
 Route::get('/admin/login/', [
     'controller' => 'LoginController',
     'action'     => 'form'
-]); =
+]);
 Route::get('/admin/', [
     'controller' => 'AdminController',
     'action'     => 'dashboard'
@@ -71,27 +71,27 @@ Route::post('/admin/settings/update/', [
     'controller' => 'SettingController',
     'action'     => 'updateSetting'
 ]);
-Route::post('/admin/setting/ajaxMenuAdd/', [
+Route::post('/admin/settings/ajaxMenuAdd/', [
     'controller' => 'SettingController',
     'action'     => 'ajaxMenuAdd'
 ]);
-Route::post('/admin/setting/ajaxMenuAddItem/', [
+Route::post('/admin/settings/ajaxMenuAddItem/', [
     'controller' => 'SettingController',
     'action'     => 'ajaxAddMenuItem'
 ]);
-Route::post('/admin/setting/ajaxMenuSortItems/', [
+Route::post('/admin/settings/ajaxMenuSortItems/', [
     'controller' => 'SettingController',
     'action'     => 'ajaxMenuSortItems'
 ]);
-Route::post('/admin/setting/ajaxMenuRemoveItem/', [
+Route::post('/admin/settings/ajaxMenuRemoveItem/', [
     'controller' => 'SettingController',
     'action'     => 'ajaxMenuRemoveItem'
 ]);
-Route::post('/admin/setting/ajaxMenuUpdateItem/', [
+Route::post('/admin/settings/ajaxMenuUpdateItem/', [
     'controller' => 'SettingController',
     'action'     => 'ajaxMenuUpdateItem'
 ]);
-Route::post('/admin/setting/activateTheme/', [
+Route::post('/admin/settings/activateTheme/', [
     'controller' => 'SettingController',
     'action'     => 'activateTheme'
 ]);

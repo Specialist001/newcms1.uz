@@ -8,6 +8,8 @@ use Limber\Routing\Router;
 
 class View implements ResponderInterface
 {
+    const TEMPLATE_EXTENSION = '.phtml';
+
     protected $file = '';
 
     protected $data = [];
@@ -21,6 +23,10 @@ class View implements ResponderInterface
 
     public static function engine(): Engine
     {
+        if (static::$engine == null) {
+            return new Engine();
+        }
+
         return static::$engine;
     }
 
@@ -55,7 +61,7 @@ class View implements ResponderInterface
     public function render(): string
     {
         // Get path for the views.
-        $path = static::path() . $this->file . '.php';
+        $path = static::path() . $this->file . self::TEMPLATE_EXTENSION;
 
         // Render the view.
         return Component::load($path, $this->data);

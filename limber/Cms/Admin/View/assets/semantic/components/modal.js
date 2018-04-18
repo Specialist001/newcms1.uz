@@ -674,7 +674,7 @@ $.fn.modal = function(parameters) {
               }
             }
             else {
-              module.verbose('Modal cannot fit on screen setting to scrolling');
+              module.verbose('Modal cannot fit on screen settings to scrolling');
               module.set.scrolling();
             }
           },
@@ -703,7 +703,7 @@ $.fn.modal = function(parameters) {
         },
 
         setting: function(name, value) {
-          module.debug('Changing setting', name, value);
+          module.debug('Changing settings', name, value);
           if( $.isPlainObject(name) ) {
             $.extend(true, settings, name);
           }

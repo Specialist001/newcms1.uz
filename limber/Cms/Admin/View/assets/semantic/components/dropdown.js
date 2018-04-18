@@ -687,7 +687,7 @@ $.fn.dropdown = function(parameters) {
                 if( settings.onNoResults.call(element, searchTerm) ) {
                   if(settings.allowAdditions) {
                     if(settings.hideAdditions) {
-                      module.verbose('User addition with no menu, setting empty style');
+                      module.verbose('User addition with no menu, settings empty style');
                       module.set.empty();
                       module.hideMenu();
                     }
@@ -3440,7 +3440,7 @@ $.fn.dropdown = function(parameters) {
         },
 
         setting: function(name, value) {
-          module.debug('Changing setting', name, value);
+          module.debug('Changing settings', name, value);
           if( $.isPlainObject(name) ) {
             $.extend(true, settings, name);
           }

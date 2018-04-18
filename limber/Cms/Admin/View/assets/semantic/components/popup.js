@@ -913,7 +913,7 @@ $.fn.popup = function(parameters) {
 
           fluidWidth: function(calculations) {
             calculations = calculations || module.get.calculations();
-            module.debug('Automatically setting element width to parent width', calculations.parent.width);
+            module.debug('Automatically settings element width to parent width', calculations.parent.width);
             $popup.css('width', calculations.container.width);
           },
 

@@ -49,9 +49,9 @@ class Router
     private static function routes()
     {
         Route::$module = 'Admin';
-        require_once ROOT_DIR . 'limber/Cms/Admin/routes.php';
+        require_once ROOT_DIR . '/limber/Cms/Admin/routes.php';
         Route::$module = 'Front';
-        require_once ROOT_DIR . 'limber/Cms/Front/routes.php';
+        require_once ROOT_DIR . '/limber/Cms/Front/routes.php';
 
         foreach (scandir(path('modules')) as $module) {
             if (in_array($module, ['.', '..'], true)) continue;
@@ -68,7 +68,7 @@ class Router
 
     private static function rewrite()
     {
-        foreach (Repository::stored() as $method = > $routes) {
+        foreach (Repository::stored() as $method => $routes) {
             foreach ($routes as $uri => $options) {
                 $segments = explode('/', $uri);
                 $rewrite  = false;

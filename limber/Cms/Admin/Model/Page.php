@@ -18,7 +18,7 @@ class Page extends Model
         return $query;
     }
 
-    public function getPage($id)
+    public function getPage(int $id)
     {
         return Query::table(static::$table, __CLASS__)
             ->select()

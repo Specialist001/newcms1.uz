@@ -14,7 +14,7 @@ var menu = {
     }
 
     $.ajax({
-        url: '/admin/setting/ajaxMenuAdd/',
+        url: '/admin/settings/ajaxMenuAdd/',
         type: this.ajaxMethod,
         data: formData,
         processData: false,
@@ -41,7 +41,7 @@ var menu = {
 
         var _this = this;
         $.ajax({
-            url: '/admin/setting/ajaxMenuAddItem/',
+            url: '/admin/settings/ajaxMenuAddItem/',
             type: this.ajaxMethod,
             data: formData,
             processData: false,
@@ -70,7 +70,7 @@ var menu = {
 
         var _this = this;
         $.ajax({
-            url: '/admin/setting/ajaxMenuUpdateItem/',
+            url: '/admin/settings/ajaxMenuUpdateItem/',
             type: this.ajaxMethod,
             data: formData,
             processData: false,
@@ -100,7 +100,7 @@ var menu = {
         }
 
         $.ajax({
-            url: '/admin/setting/ajaxMenuRemoveItem/',
+            url: '/admin/settings/ajaxMenuRemoveItem/',
             type: this.ajaxMethod,
             data: formData,
             processData: false,

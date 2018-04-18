@@ -156,7 +156,7 @@ $.site = $.fn.site = function(parameters) {
             $existingModules
           ;
           if(module.moduleExists(name)) {
-            module.verbose('Changing default setting', setting, value, name);
+            module.verbose('Changing default settings', setting, value, name);
             $.fn[name].settings[setting] = value;
             if(modifyExisting && namespace) {
               $existingModules = $(':data(module-' + namespace + ')');
@@ -182,7 +182,7 @@ $.site = $.fn.site = function(parameters) {
             $existingModules
           ;
           if(module.moduleExists(name)) {
-            module.verbose('Changing default setting', newSettings, name);
+            module.verbose('Changing default settings', newSettings, name);
             $.extend(true, $.fn[name].settings, newSettings);
             if(modifyExisting && namespace) {
               $existingModules = $(':data(module-' + namespace + ')');
@@ -2573,7 +2573,7 @@ $.fn.accordion = function(parameters) {
         },
 
         setting: function(name, value) {
-          module.debug('Changing setting', name, value);
+          module.debug('Changing settings', name, value);
           if( $.isPlainObject(name) ) {
             $.extend(true, settings, name);
           }
@@ -3405,7 +3405,7 @@ $.fn.checkbox = function(parameters) {
           }
         },
         setting: function(name, value) {
-          module.debug('Changing setting', name, value);
+          module.debug('Changing settings', name, value);
           if( $.isPlainObject(name) ) {
             $.extend(true, settings, name);
           }
@@ -4095,7 +4095,7 @@ $.fn.dimmer = function(parameters) {
         },
 
         setting: function(name, value) {
-          module.debug('Changing setting', name, value);
+          module.debug('Changing settings', name, value);
           if( $.isPlainObject(name) ) {
             $.extend(true, settings, name);
           }
@@ -5044,7 +5044,7 @@ $.fn.dropdown = function(parameters) {
                 if( settings.onNoResults.call(element, searchTerm) ) {
                   if(settings.allowAdditions) {
                     if(settings.hideAdditions) {
-                      module.verbose('User addition with no menu, setting empty style');
+                      module.verbose('User addition with no menu, settings empty style');
                       module.set.empty();
                       module.hideMenu();
                     }
@@ -7797,7 +7797,7 @@ $.fn.dropdown = function(parameters) {
         },
 
         setting: function(name, value) {
-          module.debug('Changing setting', name, value);
+          module.debug('Changing settings', name, value);
           if( $.isPlainObject(name) ) {
             $.extend(true, settings, name);
           }
@@ -8616,7 +8616,7 @@ $.fn.embed = function(parameters) {
         },
 
         setting: function(name, value) {
-          module.debug('Changing setting', name, value);
+          module.debug('Changing settings', name, value);
           if( $.isPlainObject(name) ) {
             $.extend(true, settings, name);
           }
@@ -9608,7 +9608,7 @@ $.fn.modal = function(parameters) {
               }
             }
             else {
-              module.verbose('Modal cannot fit on screen setting to scrolling');
+              module.verbose('Modal cannot fit on screen settings to scrolling');
               module.set.scrolling();
             }
           },
@@ -9637,7 +9637,7 @@ $.fn.modal = function(parameters) {
         },
 
         setting: function(name, value) {
-          module.debug('Changing setting', name, value);
+          module.debug('Changing settings', name, value);
           if( $.isPlainObject(name) ) {
             $.extend(true, settings, name);
           }
@@ -10158,7 +10158,7 @@ $.fn.nag = function(parameters) {
         },
 
         setting: function(name, value) {
-          module.debug('Changing setting', name, value);
+          module.debug('Changing settings', name, value);
           if( $.isPlainObject(name) ) {
             $.extend(true, settings, name);
           }
@@ -11323,7 +11323,7 @@ $.fn.popup = function(parameters) {
 
           fluidWidth: function(calculations) {
             calculations = calculations || module.get.calculations();
-            module.debug('Automatically setting element width to parent width', calculations.parent.width);
+            module.debug('Automatically settings element width to parent width', calculations.parent.width);
             $popup.css('width', calculations.container.width);
           },
 
@@ -12513,7 +12513,7 @@ $.fn.progress = function(parameters) {
               module.create.progressPoll();
             }
             else {
-              module.debug('Updated within interval, setting next update to use new value', value);
+              module.debug('Updated within interval, settings next update to use new value', value);
               module.set.nextValue(value);
             }
           },
@@ -12557,7 +12557,7 @@ $.fn.progress = function(parameters) {
         },
 
         setting: function(name, value) {
-          module.debug('Changing setting', name, value);
+          module.debug('Changing settings', name, value);
           if( $.isPlainObject(name) ) {
             $.extend(true, settings, name);
           }
@@ -13093,7 +13093,7 @@ $.fn.rating = function(parameters) {
         },
 
         setting: function(name, value) {
-          module.debug('Changing setting', name, value);
+          module.debug('Changing settings', name, value);
           if( $.isPlainObject(name) ) {
             $.extend(true, settings, name);
           }
@@ -13472,7 +13472,7 @@ $.fn.search = function(parameters) {
         determine: {
           searchFields: function() {
             // this makes sure $.extend does not add specified search fields to default fields
-            // this is the only setting which should not extend defaults
+            // this is the only settings which should not extend defaults
             if(parameters && parameters.searchFields !== undefined) {
               settings.searchFields = parameters.searchFields;
             }
@@ -14589,7 +14589,7 @@ $.fn.search.settings = {
     noEndpoint  : 'No search endpoint was specified',
     noTemplate  : 'A valid template name was not specified.',
     serverError : 'There was an issue querying the server.',
-    maxResults  : 'Results must be an array to use maxResults setting',
+    maxResults  : 'Results must be an array to use maxResults settings',
     method      : 'The method you called is not defined.'
   },
 
@@ -15461,7 +15461,7 @@ $.fn.shape = function(parameters) {
           }
         },
         setting: function(name, value) {
-          module.debug('Changing setting', name, value);
+          module.debug('Changing settings', name, value);
           if( $.isPlainObject(name) ) {
             $.extend(true, settings, name);
           }
@@ -16476,7 +16476,7 @@ $.fn.sidebar = function(parameters) {
         },
 
         setting: function(name, value) {
-          module.debug('Changing setting', name, value);
+          module.debug('Changing settings', name, value);
           if( $.isPlainObject(name) ) {
             $.extend(true, settings, name);
           }
@@ -16735,7 +16735,7 @@ $.fn.sidebar.settings = {
     method       : 'The method you called is not defined.',
     pusher       : 'Had to add pusher element. For optimal performance make sure body content is inside a pusher element',
     movedSidebar : 'Had to move sidebar. For optimal performance make sure sidebar and pusher are direct children of your body tag',
-    overlay      : 'The overlay setting is no longer supported, use animation: overlay',
+    overlay      : 'The overlay settings is no longer supported, use animation: overlay',
     notFound     : 'There were no elements that matched the specified selector'
   }
 
@@ -17686,7 +17686,7 @@ $.fn.sticky.settings = {
 
   error         : {
     container      : 'Sticky element must be inside a relative container',
-    visible        : 'Element is hidden, you must call refresh after element becomes visible. Use silent setting to surpress this warning in production.',
+    visible        : 'Element is hidden, you must call refresh after element becomes visible. Use silent settings to surpress this warning in production.',
     method         : 'The method you called is not defined.',
     invalidContext : 'Context specified does not exist',
     elementSize    : 'Sticky element is larger than its container, cannot create sticky.'
@@ -18399,7 +18399,7 @@ $.fn.tab = function(parameters) {
         },
 
         setting: function(name, value) {
-          module.debug('Changing setting', name, value);
+          module.debug('Changing settings', name, value);
           if( $.isPlainObject(name) ) {
             $.extend(true, settings, name);
           }
@@ -19493,7 +19493,7 @@ $.fn.transition = function() {
         },
 
         setting: function(name, value) {
-          module.debug('Changing setting', name, value);
+          module.debug('Changing settings', name, value);
           if( $.isPlainObject(name) ) {
             $.extend(true, settings, name);
           }
@@ -19742,7 +19742,7 @@ $.fn.transition.settings = {
 
   // possible errors
   error: {
-    noAnimation : 'Element is no longer attached to DOM. Unable to animate.  Use silent setting to surpress this warning in production.',
+    noAnimation : 'Element is no longer attached to DOM. Unable to animate.  Use silent settings to surpress this warning in production.',
     repeated    : 'That animation is already occurring, cancelling repeated animation',
     method      : 'The method you called is not defined',
     support     : 'This browser does not support CSS animations'
@@ -20596,7 +20596,7 @@ $.api = $.fn.api = function(parameters) {
         },
 
         setting: function(name, value) {
-          module.debug('Changing setting', name, value);
+          module.debug('Changing settings', name, value);
           if( $.isPlainObject(name) ) {
             $.extend(true, settings, name);
           }
@@ -21333,7 +21333,7 @@ $.fn.state = function(parameters) {
         },
 
         setting: function(name, value) {
-          module.debug('Changing setting', name, value);
+          module.debug('Changing settings', name, value);
           if( $.isPlainObject(name) ) {
             $.extend(true, settings, name);
           }

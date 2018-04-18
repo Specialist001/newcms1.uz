@@ -13,11 +13,13 @@ class SettingController extends AdminController
 {
     public function general()
     {
+        I18n::instance()->load('settings/general');
+
         $settingModel = new SettingModel();
         $settings = $settingModel->getSettings();
         $languages = I18n::instance()->all();
 
-        return View::make('setting/general', [
+        return View::make('settings/general', [
            'settings'   => $settings,
             'languages' => $languages
         ]);
@@ -25,6 +27,8 @@ class SettingController extends AdminController
 
     public function menus()
     {
+        I18n::instance()->load('settings/menus');
+
         $menuModel = new MenuModel();
         $menuItemModel = new MenuItemModel();
 
@@ -32,7 +36,7 @@ class SettingController extends AdminController
         $menus     = $menuModel->getList();
         $menuItems = $menuItemModel->getItems($menuId);
 
-        return View::make('setting/menus', [
+        return View::make('settings/menus', [
             'menus' => $menus,
             'menuId' => $menuId,
             'editMenu' => $menuItems
@@ -41,10 +45,26 @@ class SettingController extends AdminController
 
     public function themes()
     {
-        return View::make('setting/themes', [
+        I18n::instance()->load('settings/themes');
+
+        return View::make('settings/themes', [
             'themes' => getThemes(),
-            'activeTheme' => 'default'
+            'activeTheme' => Setting::value('active_theme', 'theme');
         ]);
+    }
+
+    public function activateTheme()
+    {
+        $theme = Input::post('theme');
+
+        SettingModel::where('key_field', '=', 'active_theme')
+            ->update([
+                'value' => $theme
+            ])
+            ->run('update')
+        ;
+
+        exit;
     }
 
     public function ajaxMenuAdd()
@@ -72,7 +92,7 @@ class SettingController extends AdminController
             $item->id   = $menuItem->getAttribute('id');
             $item->name = \Limber\Cms\Admin\Model\MenuItem::NEW_MENU_ITEM_NAME;
             $item->link = '#';
-            echo \Component::get('setting/menu_item', [
+            echo \Component::get('settings/menu_item', [
                 'item' => $item
             ]);
         }

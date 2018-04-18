@@ -4,4 +4,24 @@ namespace Limber\Routing;
 abstract class Controller
 {
     public $layout = 'main';
+
+    public $data = [];
+
+    public function setLayout($layout)
+    {
+        $this->layout = $layout;
+    }
+
+    /**
+     * @param array $data
+     */
+    public function setData(string $key, $value)
+    {
+        $this->data[$key] = $value;
+    }
+
+    public function getNameController()
+    {
+        return get_called_class();
+    }
 }

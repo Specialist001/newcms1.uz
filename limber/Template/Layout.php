@@ -1,6 +1,8 @@
 <?php
 namespace Limber\Template;
 
+use Limber;
+
 class Layout
 {
     protected static $data= [];
@@ -23,13 +25,13 @@ class Layout
         static::$data = array_merge_recursive(static::data(), $data);
 
         // Get the path to the layout.
-        $path = View::path() . $name . '.layout.php';
+        $path = View::path() . $name . '.layout' . View::TEMPLATE_EXTENSION;
 
         // Load.
         return Component::load($path, static::data());
     }
 
-    public static function view(\Limber\Template\View $view)
+    public static function view(Limber\Template\View $view)
     {
         foreach ($view->data() as $key => $value) {
             static::set($key, $value);

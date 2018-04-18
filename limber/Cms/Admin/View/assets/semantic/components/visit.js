@@ -508,7 +508,7 @@ $.fn.visit.settings = {
 
   error         : {
     method          : 'The method you called is not defined',
-    missingPersist  : 'Using the persist setting requires the inclusion of PersistJS',
+    missingPersist  : 'Using the persist settings requires the inclusion of PersistJS',
     noCookieStorage : 'The default storage cookie requires $.cookie to be included.'
   }
 

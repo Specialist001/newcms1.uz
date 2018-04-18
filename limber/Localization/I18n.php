@@ -16,10 +16,16 @@ class I18n
         return self::$instance;
     }
 
-    public function get(string $key): string
+    public function get(string $key, array $data = []): string
     {
         $lang = \DI::instance()->get('lang');
-        return isset($lang[$key]) ? $lang[$key] : '';
+        $text = isset($lang[$key]) ? $lang[$key] : '';
+
+        if (!empty($data)) {
+            $text = sprintf($text, ...$data);
+        }
+
+        return $text;
     }
 
     public function load(string $file)
@@ -27,8 +33,17 @@ class I18n
         $path    = static::path() . $file . '.ini';
         $content = parse_ini_file($path, true);
         $lang = \DI::instance()->get('lang') ?: [];
+
         foreach ($content as $key => $value) {
-            $lang[str_replace('/', '.', $file) . '.' . $key] = $value;
+            $keyLang = str_replace('/', '.', $file) . '.' . $key;
+
+            if (is_array($value)) {
+                foreach ($value as $k => $v) {
+                    $lang[$keyLang . '.' . $k] = $v;
+                }
+            } else {
+                $lang[$keyLang] = $value;
+            }
         }
         \DI::instance()->set('lang', $lang);
         return $this;
@@ -63,11 +78,16 @@ class I18n
 
     private static function path(): string
     {
+        $activeLanguage = \Setting::value('language');
+        if ($activeLanguage == '') {
+            $activeLanguage = Config::item('defaultLang');
+        }
+
         /** @var Module $module */
         $module = \DI::instance()->get('module');
-        $path = path('modules') . sprintf('%s/Language/%s/', $module->module, Config::item('defaultLang'));
+        $path = path('modules') . sprintf('%s/Language/%s/', $module->module, $activeLanguage);
         if (in_array($module->module, ['Admin', 'Front'])) {
-            $path = sprintf('%s/limber/Cms/%s/Language/%s/', ROOT_DIR, $module->module, Config::item('defaultLang'));
+            $path = sprintf('%s/limber/Cms/%s/Language/%s/', ROOT_DIR, $module->module, $activeLanguage);
         }
         return $path;
     }

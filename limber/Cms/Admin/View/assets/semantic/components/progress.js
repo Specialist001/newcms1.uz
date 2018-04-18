@@ -616,7 +616,7 @@ $.fn.progress = function(parameters) {
               module.create.progressPoll();
             }
             else {
-              module.debug('Updated within interval, setting next update to use new value', value);
+              module.debug('Updated within interval, settings next update to use new value', value);
               module.set.nextValue(value);
             }
           },
@@ -660,7 +660,7 @@ $.fn.progress = function(parameters) {
         },
 
         setting: function(name, value) {
-          module.debug('Changing setting', name, value);
+          module.debug('Changing settings', name, value);
           if( $.isPlainObject(name) ) {
             $.extend(true, settings, name);
           }
