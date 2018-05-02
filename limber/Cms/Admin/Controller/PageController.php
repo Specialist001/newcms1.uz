@@ -56,8 +56,8 @@ class PageController extends AdminController
 
         if (isset($params['title'])) {
             $page = new \Limber\Cms\Admin\Model\Page;
-            $page->setAtrribute('title', $params['title']);
-            $page->setAtrribute('content', $params['content']);
+            $page->setAttribute('title', $params['title']);
+            $page->setAttribute('content', $params['content']);
             $page->setAttribute('segment', \Limber\Helper\Text::transliteration($params['title']));
             $page->save();
 

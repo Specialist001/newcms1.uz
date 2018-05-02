@@ -11,7 +11,7 @@ class Mailer implements InterfaceMailer
 
     protected $transport;
 
-    public function __construct(string $nameTransport = 'Mail', array $config =[])
+    public function __construct(string $nameTransport = 'Mail', array $config = [])
     {
         $transport = sprintf(self::NAMESPACE_COMPONENT, $nameTransport);
 

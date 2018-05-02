@@ -16,7 +16,7 @@ class MenuItem extends Model
     {
         $query = Query::table(static::$table, __CLASS__)
             ->select()
-            ->where('menu_id', "=", $menuId)
+            ->where('menu_id', '=', $menuId)
             ->orderBy('position')
             ->all();
 

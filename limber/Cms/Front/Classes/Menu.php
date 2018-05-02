@@ -13,7 +13,7 @@ class Menu
             return $menuItems;
         }
 
-        $menuModel = new Limber\Cms\Admin\Model\MenuItem;
+        $menuModel = new Limber\Cms\Front\Model\MenuItem;
         $menuItems = $menuModel->getItemsByMenuId($menuId);
 
         Limber\DI\Container::instance()->set('menuItems', $menuItems);

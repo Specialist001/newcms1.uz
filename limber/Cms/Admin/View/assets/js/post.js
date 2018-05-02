@@ -17,14 +17,14 @@ var post = {
             beforeSend: function(){
 
             },
-            success: function(result){
+            success: function (result){
                 console.log(result);
                 window.location = '/admin/posts/edit/' + result;
             }
         });
     },
 
-    update: function (button) {
+    update: function(button) {
         var formData = new FormData();
 
         formData.append('post_id', $('#formPostId').val());
@@ -50,7 +50,7 @@ var post = {
             cache: false,
             processData: false,
             contentType: false,
-            beforeSend: function () {
+            beforeSend: function() {
 
             },
             success: function(result) {

@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Limber\Mail\Exceptions;
+namespace Limber\Mail\Exception;
 
 use Limber;
 

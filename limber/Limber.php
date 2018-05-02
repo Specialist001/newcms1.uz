@@ -20,7 +20,7 @@ class Limber
         class_alias('\\Limber\\Template\\Asset', 'Asset');
         class_alias('\\Limber\\Settings\\Setting', 'Setting');
         class_alias('\\Limber\\Customize\\Customize', 'Customize');
-        class_alias('\\Limber\\DI\\Container', 'Container');
+        class_alias('\\Limber\\DI\\Container', 'DI');
 
         // Initialize the URI.
         Uri::initialize();

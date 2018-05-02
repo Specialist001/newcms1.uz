@@ -9,7 +9,7 @@ var setting = {
             url: '/admin/settings/update/',
             type: this.ajaxMethod,
             data: formData,
-            beforeSend: function () {
+            beforeSend: function() {
                 button.addClass('loading');
             },
             success: function(result) {
@@ -31,7 +31,7 @@ var setting = {
             cache: false,
             processData: false,
             contentType: false,
-            beforeSend: function () {
+            beforeSend: function() {
                 button.addClass('loading');
             },
             success: function(result) {

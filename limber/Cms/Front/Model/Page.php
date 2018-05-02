@@ -18,7 +18,7 @@ class Page extends Model
         return $query;
     }
 
-    public function getPages(array $params)
+    public function getPages(array $params = [])
     {
         $fields = [];
 

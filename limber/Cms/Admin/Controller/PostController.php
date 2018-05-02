@@ -58,8 +58,8 @@ class PostController extends AdminController
 
         if (isset($params['title'])) {
             $post = new Limber\Cms\Admin\Model\Post;
-            $post->setAtrribute('title', $params['title']);
-            $post->setAtrribute('content', $params['content']);
+            $post->setAttribute('title', $params['title']);
+            $post->setAttribute('content', $params['content']);
             $post->setAttribute('segment', Limber\Helper\Text::transliteration($params['title']));
             $post->save();
 
@@ -105,7 +105,7 @@ class PostController extends AdminController
 
         if (isset($params['title'])) {
             $post = new Limber\Cms\Admin\Model\Post;
-            $post->setAttribute('id', $params['page_id']);
+            $post->setAttribute('id', $params['post_id']);
             $post->setAttribute('title', $params['title']);
             $post->setAttribute('content', $params['content']);
             if ($fileId) {

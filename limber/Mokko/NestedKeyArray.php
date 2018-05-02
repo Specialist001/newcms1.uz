@@ -69,7 +69,7 @@ class NestedKeyArray implements \ArrayAccess, \IteratorAggregate
                 $target[$currKey] = [];
             }
 
-            $this->setNastedOffset($target[$currKey], $offsets, $value);
+            $this->setNestedOffset($target[$currKey], $offsets, $value);
         }
 
         return $this;

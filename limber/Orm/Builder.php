@@ -1,5 +1,5 @@
 <?php
-namespace Limber\Orm\Behaviour;
+namespace Limber\Orm;
 
 class Builder
 {

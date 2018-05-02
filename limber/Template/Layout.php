@@ -5,7 +5,7 @@ use Limber;
 
 class Layout
 {
-    protected static $data= [];
+    protected static $data = [];
 
     protected static $view;
 

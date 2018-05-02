@@ -28,7 +28,7 @@ class Component
             return $component;
         } else {
             throw new Exception(
-                sprintf('View file <strong>%s</strong> does not exist!', $path)
+                sprintf('View file %s does not exist!', $path)
             );
         }
     }

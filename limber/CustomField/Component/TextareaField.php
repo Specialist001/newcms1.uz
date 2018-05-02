@@ -5,7 +5,7 @@ use Limber;
 use Limber\CustomField;
 use stdClass;
 
-class TextareField extends CustomField\AbstractField
+class TextareaField extends CustomField\AbstractField
 {
     public function __construct(stdClass $field)
     {

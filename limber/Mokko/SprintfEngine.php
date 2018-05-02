@@ -6,7 +6,7 @@ class SprintfEngine extends Engine
     public function render($template, $value)
     {
         if (strstr($template, '%') == false) {
-            return parent::render($template, $value)
+            return parent::render($template, $value);
         }
 
         $result = $template;

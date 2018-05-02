@@ -2,7 +2,7 @@
 namespace Limber\CustomField;
 
 use Limber\CustomField\Component\InputField;
-use Limber\CustomField\Component\TextareField;
+use Limber\CustomField\Component\TextareaField;
 use Limber\CustomField\Types\TypeCustomField;
 
 class CustomField

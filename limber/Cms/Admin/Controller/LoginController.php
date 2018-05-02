@@ -21,7 +21,7 @@ class LoginController extends Controller
 
         I18n::instance()
             ->load('dashboard/main')
-            ->load('dashboard/login')
+            ->load('dashboard/login');
     }
 
     public function form()

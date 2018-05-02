@@ -9,7 +9,7 @@ function path($section)
         case 'modules':
             return $_SERVER['DOCUMENT_ROOT'] . '/modules/';
         case 'content':
-            return $_SERVER['DOCUMENT_ROOT'] . 'content/';
+            return $_SERVER['DOCUMENT_ROOT'] . '/content/';
         default:
             return $_SERVER['DOCUMENT_ROOT'];
 
@@ -23,37 +23,12 @@ function path_content($section = '')
         case 'themes':
             return path('content') . 'themes';
         case 'plugins':
-            return path('content') . 'plugins';;
+            return path('content') . 'plugins';
         case 'uploads':
             return path('content') . 'uploads';
         default:
             return path('content');
     }
-}
-
-function languages()
-{
-    $directory = path('language');
-    $list      = scandir($directory);
-    $languages = [];
-
-    if (!empty($list)) {
-        unset($list[0]);
-        unset($list[1]);
-
-        foreach ($list as $dir) {
-            $pathLangDir = $directory . DS . $dir;
-            $pathConfig  = $pathLangDir . '/config.json';
-            if (is_dir($pathLangDir) and is_file($pathConfig)) {
-                $config = file_get_contents($pathConfig);
-                $info   = json_decode($config);
-
-                $languages[] = $info;
-            }
-        }
-    }
-
-    return $languages;
 }
 
 function getThemes()
@@ -85,6 +60,31 @@ function getThemes()
     }
 
     return $themes;
+}
+
+function languages()
+{
+    $directory = path('language');
+    $list      = scandir($directory);
+    $languages = [];
+
+    if (!empty($list)) {
+        unset($list[0]);
+        unset($list[1]);
+
+        foreach ($list as $dir) {
+            $pathLangDir = $directory . DS . $dir;
+            $pathConfig  = $pathLangDir . '/config.json';
+            if (is_dir($pathLangDir) and is_file($pathConfig)) {
+                $config = file_get_contents($pathConfig);
+                $info   = json_decode($config);
+
+                $languages[] = $info;
+            }
+        }
+    }
+
+    return $languages;
 }
 
 function getPlugins()

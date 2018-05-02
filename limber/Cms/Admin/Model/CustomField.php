@@ -4,6 +4,7 @@ namespace Limber\Cms\Admin\Model;
 use Limber;
 use Limber\CustomField\Params;
 use Limber\Orm\Model;
+use Query;
 
 class CustomField extends Model
 {

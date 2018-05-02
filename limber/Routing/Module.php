@@ -24,6 +24,10 @@ class Module
     public function __construct(array $config = [])
     {
         foreach ($config as $key => $value) {
+            $this->$key = $value;
+        }
+        $this->current = $this->current();
+        if (isset($this->current['theme'])) {
             $this->theme = $this->current['theme'];
         }
     }
@@ -52,7 +56,9 @@ class Module
 
             return $this->response;
         } else {
-            throw new Exception(sprintf('Controller %s does not exists', $class));
+            throw new Exception(sprintf(
+                'Controller %s does not exist.'
+            ,$class));
         }
     }
 
@@ -60,10 +66,11 @@ class Module
     {
         $modules = [];
 
-        foreach (scandir(path('modules')) as $module) {
+        foreach (scandir(path('modules')) as $module)
+        {
             if ($module === '.' || $module === '..')    continue;
 
-            if(is_file(path('modules') . 'module.php')) {
+            if (is_file(path('modules') . 'module.php')) {
                 array_push($modules, $module);
             }
         }

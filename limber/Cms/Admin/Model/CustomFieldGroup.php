@@ -43,10 +43,12 @@ class CustomFieldGroup extends Model
             ->first()
             ;
     }
+
     public function getFieldGroupByPage(Limber\Cms\Admin\Model\Page $page)
     {
         $layout = $page->getAttribute('layout');
         $template = $page->getAttribute('type');
+
         $sql = "
             SELECT
               id,
