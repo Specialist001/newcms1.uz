@@ -17,4 +17,20 @@ class Page extends Model
         ;
         return $query;
     }
+
+    public function getPages(array $params)
+    {
+        $fields = [];
+
+        $query = Query::table(static::$table, __CLASS__)
+            ->select($fields);
+
+        if (isset($params['layout'])) {
+            $query = $query->where('layout', '=', $params['layout']);
+        }
+
+        $query = $query->all();
+
+        return $query;
+    }
 }

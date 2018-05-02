@@ -6,17 +6,66 @@ $('#redactor').redactor({
     imageResizable: true
 });
 
+var files;
+$('input.upload-file').on('change', function(){
+    files = this.files;
+
+    if (files && files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function(e) {
+            $('img.post-image').attr('src', e.target.result);
+        };
+
+        reader.readAsDataURL(files[0]);
+    }
+});
+
+$('.upload-post-image').on( 'click', function(event) {
+    event.stopPropagation();
+    event.preventDefault();
+
+    $('input.upload-file').click();
+});
+
 $(document)
-   .ready(function() {
-   // show dropdown on hover
-       $('.ui.dropdown').dropdown({
-           on: 'hover'
-            });
-       $('.btn-create-menu').on('click', function(){
-           $('.mini.modal')
-              .modal('show');
-                    });
+    .ready(function() {
+        // show dropdown on hover
+        $('.ui.dropdown').dropdown({
+            on: 'hover'
         });
+
+        $('.btn-create-menu').on('click', function() {
+            $('.mini.modal')
+                .modal('show')
+            ;
+        });
+
+        $('.btn-create-group-fields').on('click', function() {
+            $('.tiny.modal')
+                .modal('show')
+            ;
+        });
+
+        $('.ui.help-element')
+            .popup({
+                hoverable: true,
+                delay: {
+                    show: 100,
+                    hide: 500
+                }
+            })
+        ;
+
+        $('.ui.accordion')
+            .accordion()
+        ;
+
+        $('.menu .item')
+            .tab()
+        ;
+    })
+;
 
 
 $(function () {
@@ -53,6 +102,6 @@ $(function () {
             });
 
             _super($item, container);
-        } 
+        }
     });
 });

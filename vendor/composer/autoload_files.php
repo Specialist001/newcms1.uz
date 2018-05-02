@@ -8,4 +8,5 @@ $baseDir = dirname($vendorDir);
 return array(
     'fc2cda83e7398d18a704e14283685209' => $baseDir . '/limber/Functions/functions.php',
     '85ffabecfda2655e8f603a5bede55813' => $baseDir . '/limber/Functions/localization.php',
+    '64db375941dde7b423f4164c871baeef' => $baseDir . '/limber/Functions/menus.php',
 );

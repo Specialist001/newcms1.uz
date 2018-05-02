@@ -3,6 +3,7 @@ var page = {
 
     add: function() {
         var formData = new FormData();
+        var customFieldsForm = $('#customFieldsForm');
 
         formData.append('title', $('#formTitle').val());
         formData.append('content', $('.redactor-editor').html());
@@ -32,6 +33,8 @@ var page = {
         formData.append('content', $('.redactor-editor').html());
         formData.append('status', $('#status').val());
         formData.append('type', $('#type').val());
+        formData.append('layout', $('#layout').val());
+        formData.append('custom_fields', customFieldsForm.serialize());
 
         $(button).addClass('loading');
 

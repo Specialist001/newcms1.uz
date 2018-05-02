@@ -16,10 +16,16 @@ class PageController extends FrontController
 
     public function show($segment)
     {
+        class_alias('\\Limber\\Cms\\Fron\\Classes\\Page', 'Page');
+
         $pageModel = new Model\Page();
         $page = $pageModel->getPageBySegment($segment);
+
+        $this->setLayout($page->getAttribute('layout'));
+        \Page::setPage($page);
+
         return View::make($this->pageTemplate($page->getAttribute('type')), [
-            'data' => $page
+            'page' => $page
         ]);
     }
 

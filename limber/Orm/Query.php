@@ -138,6 +138,19 @@ class Query
         return $this;
     }
 
+    /**
+     * @param string $sql
+     * @return array
+     */
+    public static function result(string $sql)
+    {
+        // Instantiate the statement.
+        $stmt = new Statement($sql);
+        $stmt->execute();
+
+        return $stmt->all();
+    }
+
     public function create(array $attributes = []): bool
     {
         if (!empty($attributes)) {

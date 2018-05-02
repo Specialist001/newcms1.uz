@@ -2,6 +2,7 @@
 namespace Limber\Orm;
 
 use Limber\Database\Database;
+use Limber\Limber;
 
 class Model
 {
@@ -13,6 +14,11 @@ class Model
 
     public function __construct()
     {
+    }
+
+    public static function getTable(): string
+    {
+        return static::$table;
     }
 
     public function __get(string $attribute)
@@ -89,6 +95,12 @@ class Model
         return $query->select($fields);
     }
 
+    /**
+     * @param string $column      The name of the column.
+     * @param string $operator    The clause operator.
+     * @param mixed $value        The value to check against the column.
+     * @return \Limber\Orm\Query
+     */
     public static function where(string $column, string $operator = '=', $value): Query
     {
         $query = static::query();

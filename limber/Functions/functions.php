@@ -9,7 +9,7 @@ function path($section)
         case 'modules':
             return $_SERVER['DOCUMENT_ROOT'] . '/modules/';
         case 'content':
-            return $_SERVER['DOCUMENT_ROOT'] . '/content/';
+            return $_SERVER['DOCUMENT_ROOT'] . 'content/';
         default:
             return $_SERVER['DOCUMENT_ROOT'];
 
@@ -124,7 +124,11 @@ function getTypes($switch = 'page')
             if ($name === '.' || $name === '..') continue;
 
             if (\Limber\Helper\Common::searchMatchString($name, $switch)) {
-                list($switch, $key, $extension) = explode('.', $name, 3);
+                $chunk = explode('.', $name, 3);
+
+                if ($chunk[0] == $switch && $chunk[1] == 'phtml') continue;
+
+                list($switch, $key, $extension) = $chunk;
 
                 // Ignore files.
                 if ($key === $switch || $key === 'layout') continue;
@@ -137,4 +141,27 @@ function getTypes($switch = 'page')
     }
 
     return $types;
+}
+
+function getLayouts()
+{
+    $themePath = path_content('themes') . '/' . \Setting::value('active_theme', 'theme');
+    $list = scandir($themePath);
+    $layouts = [];
+    if (!empty($list)) {
+        foreach ($list as $name) {
+            // Ignore hidden directories.
+            if ($name === '.' || $name === '..') continue;
+            if (\Limber\Helper\Common::searchMatchString($name, 'layout')) {
+                $chunk = explode('.', $name, 3);
+                list($switch, $key, $extension) = $chunk;
+                // Ignore files.
+                if ($switch === 'main' || $key !== 'layout') continue;
+                if (!empty($key)) {
+                    $layouts[$switch] = ucfirst($switch);
+                }
+            }
+        }
+    }
+    return $layouts;
 }
