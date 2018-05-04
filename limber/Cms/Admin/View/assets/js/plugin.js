@@ -1,7 +1,7 @@
 var plugin = {
     ajaxMethod: 'POST',
 
-    install: function(element, directory) {
+    install: function (element, directory) {
         var button   = $(element);
         var formData = new FormData();
 
@@ -45,7 +45,7 @@ var plugin = {
             cache: false,
             processData: false,
             contentType: false,
-            success: function(result) {
+            success: function (result) {
                 button.attr('data-active', status);
             }
         });

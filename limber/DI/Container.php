@@ -15,7 +15,8 @@ class Container
      * @param $key
      * @return mixed
      */
-    public function get($key){
+    public function get($key)
+    {
         return $this->has($key) ? $this->container[$key] : null;
     }
 
@@ -24,7 +25,8 @@ class Container
      * @param $value
      * @return $this
      */
-    public function set($key, $value){
+    public function set($key, $value)
+    {
         $this->container[$key] = $value;
 
         return $this;
@@ -35,21 +37,9 @@ class Container
      * @param $key
      * @return bool
      */
-    public function has($key){
-        return isset($this->container[$key]);
-    }
-
-    public function push($key, $element = [])
+    public function has($key)
     {
-        if($this->has($key) !== null){
-            $this->set($key, []);
-        }
-
-        if(!empty($element)){
-            $this->container[$key][$element['key']] = $element['value'];
-        }
-
-        //array_push($this->container[$key], $element);
+        return isset($this->container[$key]);
     }
 
     public static function instance(): Container

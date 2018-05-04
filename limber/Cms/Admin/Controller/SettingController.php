@@ -49,7 +49,7 @@ class SettingController extends AdminController
 
         return View::make('settings/themes', [
             'themes' => getThemes(),
-            'activeTheme' => Setting::value('active_theme', 'theme');
+            'activeTheme' => Setting::value('active_theme', 'theme')
         ]);
     }
 
@@ -71,7 +71,7 @@ class SettingController extends AdminController
     {
         $params = Input::post();
         if (isset($params['name']) && strlen($params['name']) > 0) {
-            $menu = \Limber\Cms\Admin\Model\Menu;
+            $menu = new \Limber\Cms\Admin\Model\Menu;
             $menu->setAttribute('name', $params['name']);
             $menu->save();
 

@@ -18,7 +18,7 @@ class Engine
 
         $directory = sprintf('/content/themes/%s/', $theme);
 
-        if ($module->module = Define::DEFAULT_MODULE['admin']) {
+        if ($module->module == Define::DEFAULT_MODULE['admin']) {
             $directory = '/limber/Cms/Admin/View/';
         }
 

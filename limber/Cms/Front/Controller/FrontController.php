@@ -23,6 +23,6 @@ class FrontController extends Controller
 
     public function isController(string $name)
     {
-        return "Limber\\Cms\\Front\\Controller\\{$name}Controller" === $this->getNameController;
+        return "Limber\\Cms\\Front\\Controller\\{$name}Controller" === $this->getNameController();
     }
 }

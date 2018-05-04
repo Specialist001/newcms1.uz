@@ -15,7 +15,8 @@
         },
         "files": [
             "limber/Functions/functions.php",
-            "limber/Functions/localization.php"
+            "limber/Functions/localization.php",
+            "limber/Functions/menus.php"
         ]
     }
 }

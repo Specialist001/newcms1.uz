@@ -40,7 +40,7 @@ class Route
         return false;
     }
 
-    private static function prefixed(string $uri): string
+    public static function prefixed(string $uri): string
     {
         $uri = trim($uri, '/');
 

@@ -3,8 +3,8 @@ namespace Limber\Routing;
 
 use Limber\Http\Request;
 use Limber\Http\Uri;
-use Limber\Template\Layout;
 use Limber\Limber;
+use Limber\Template\Layout;
 
 class Router
 {
@@ -37,12 +37,13 @@ class Router
             $response->respond();
         }
 
-        $layout = $module->instance()->layout();
+        $layout = $module->instance()->layout;
 
         if ($layout !== '') {
             echo Layout::get($layout);
         }
 
+        // Close Limber.
         Limber::close();
     }
 

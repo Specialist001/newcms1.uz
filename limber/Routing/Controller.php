@@ -7,7 +7,7 @@ abstract class Controller
 
     public $data = [];
 
-    public function setLayout($layout)
+    public function setLayout(string $layout)
     {
         $this->layout = $layout;
     }

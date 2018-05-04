@@ -17,6 +17,12 @@ class Database
 
     public static function initialize()
     {
+        static::$connection = static::connect();
+    }
+
+    public static function finalize()
+    {
+        // Close connection.
         static::$connection = null;
     }
 

@@ -9,6 +9,7 @@ class ComposerStaticInitd78598d25841a8903f8aa9796c9a1ac1
     public static $files = array (
         'fc2cda83e7398d18a704e14283685209' => __DIR__ . '/../..' . '/limber/Functions/functions.php',
         '85ffabecfda2655e8f603a5bede55813' => __DIR__ . '/../..' . '/limber/Functions/localization.php',
+        '64db375941dde7b423f4164c871baeef' => __DIR__ . '/../..' . '/limber/Functions/menus.php',
     );
 
     public static $prefixLengthsPsr4 = array (

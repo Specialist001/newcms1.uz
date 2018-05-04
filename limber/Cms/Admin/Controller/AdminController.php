@@ -14,12 +14,12 @@ class AdminController extends Controller
     public function __construct()
     {
         if (!Auth::authorized()) {
-            Redirect:go('/admin/login/');
+            Redirect::go('/admin/login/');
         }
 
         I18n::instance()
-            ->load('/dashboard/main/')
-            ->load('/dashboard/menu/');
+            ->load('dashboard/main')
+            ->load('dashboard/menu');
     }
 
     public function dashboard()

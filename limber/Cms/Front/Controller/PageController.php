@@ -18,8 +18,12 @@ class PageController extends FrontController
     {
         $pageModel = new Model\Page();
         $page = $pageModel->getPageBySegment($segment);
+
+        $this->setLayout($page->getAttribute('layout'));
+        \Page::setPage($page);
+
         return View::make($this->pageTemplate($page->getAttribute('type')), [
-            'data' => $page
+            'page' => $page
         ]);
     }
 
