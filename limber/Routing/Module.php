@@ -44,10 +44,10 @@ class Module
 
     public function run()
     {
-        $class = '\\modules\\' . $this->module . '\Controller\\' . $this->controller;
+        $class = '\\modules\\' . $this->module . '\\Controller\\' . $this->controller;
 
         if (in_array($this->module, ['Admin', 'Front'])) {
-            $class = '\\Limber\\Cms\\' . $this->module . '\Controller\\' . $this->controller;
+            $class = '\\Limber\\Cms\\' . $this->module . '\\Controller\\' . $this->controller;
         }
 
         if (class_exists($class)) {

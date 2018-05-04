@@ -16,7 +16,7 @@ class LoginController extends Controller
     public function __construct()
     {
         if (Auth::authorized()) {
-            Redirect:go('/admin/');
+            Redirect::go('/admin/');
         }
 
         I18n::instance()
@@ -38,7 +38,7 @@ class LoginController extends Controller
         if ($user) {
             if ($user->getAttribute('role') == 'admin') {
                 Auth::authorize($user);
-                Redirect:go('/admin/login/');
+                Redirect::go('/admin/login/');
             }
         }
 

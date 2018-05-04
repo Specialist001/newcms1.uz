@@ -67,8 +67,7 @@ $(document)
     })
 ;
 
-
-$(function () {
+$(function() {
     var group = $("ol.edit-menu").sortable({
         group: 'edit-menu',
         handle: 'i.icon-cursor-move',

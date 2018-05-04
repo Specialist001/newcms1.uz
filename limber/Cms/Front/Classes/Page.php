@@ -26,6 +26,11 @@ class Page
         return static::$page;
     }
 
+    public static function getId()
+    {
+        return static::getPage()->getAttribute('id');
+    }
+
     /**
      * Display page title.
      */

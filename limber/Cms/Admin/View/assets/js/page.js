@@ -3,7 +3,6 @@ var page = {
 
     add: function() {
         var formData = new FormData();
-        var customFieldsForm = $('#customFieldsForm');
 
         formData.append('title', $('#formTitle').val());
         formData.append('content', $('.redactor-editor').html());
@@ -25,8 +24,9 @@ var page = {
         });
     },
 
-    update: function (button) {
+    update: function(button) {
         var formData = new FormData();
+        var customFieldsForm = $('#customFieldsForm');
 
         formData.append('page_id', $('#formPageId').val());
         formData.append('title', $('#formTitle').val());
@@ -45,10 +45,10 @@ var page = {
             cache: false,
             processData: false,
             contentType: false,
-            beforeSend: function () {
+            beforeSend: function(){
                 
             },
-            success: function(result) {
+            success: function(result){
                 window.location.reload();
             }
         });

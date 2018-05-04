@@ -2,12 +2,9 @@
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/cms" isTestSource="false" packagePrefix="Cms\" />
-      <sourceFolder url="file://$MODULE_DIR$/admin" isTestSource="false" packagePrefix="Admin\" />
+      <sourceFolder url="file://$MODULE_DIR$/modules" isTestSource="false" packagePrefix="Modules\" />
       <sourceFolder url="file://$MODULE_DIR$/content/plugins" isTestSource="false" packagePrefix="Plugin\" />
-      <sourceFolder url="file://$MODULE_DIR$/engine" isTestSource="false" packagePrefix="Engine\" />
-      <sourceFolder url="file://$MODULE_DIR$/engine/DI" isTestSource="false" packagePrefix="Engine\DI\" />
-      <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/limber" isTestSource="false" packagePrefix="Limber\" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
     </content>
     <orderEntry type="inheritedJdk" />

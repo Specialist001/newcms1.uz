@@ -64,6 +64,25 @@ class Builder
         return $clause;
     }
 
+    public static function orderBy(array $orderBy)
+    {
+        if (empty($orderBy)) {
+            return '';
+        }   else {
+            $clause = ' ORDER BY ';
+
+            foreach ($orderBy as $key => $order) {
+                if (array_key_exists($key + 1, $orderBy)) {
+                    $clause .= $order['column'] . ' ' . $order['direction'] . ', ';
+                }   else {
+                    $clause .= $order['column'] . ' ' . $order['direction'];
+                }
+            }
+        }
+
+        return $clause;
+    }
+
     public static function describe(string $table): string
     {
         return 'DESCRIBE ' . $table;
