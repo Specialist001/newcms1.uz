@@ -39,16 +39,12 @@ class Module
 
     public function path(): string
     {
-        return path('modules') . $this->module . '/';
+        return path('modules') . '/' . $this->module . '/';
     }
 
     public function run()
     {
-        $class = '\\modules\\' . $this->module . '\\Controller\\' . $this->controller;
-
-        if (in_array($this->module, ['Admin', 'Front'])) {
-            $class = '\\Limber\\Cms\\' . $this->module . '\\Controller\\' . $this->controller;
-        }
+        $class = '\\Modules\\' . $this->module . '\\Controller\\' . $this->controller;
 
         if (class_exists($class)) {
             $this->instance = new $class;
@@ -66,8 +62,7 @@ class Module
     {
         $modules = [];
 
-        foreach (scandir(path('modules')) as $module)
-        {
+        foreach (scandir(path('modules')) as $module) {
             if ($module === '.' || $module === '..')    continue;
 
             if (is_file(path('modules') . 'module.php')) {

@@ -1,7 +1,7 @@
 <?php
 namespace Limber\Auth;
 
-//use Engine\Core\Auth\AuthInterface;
+use Limber;
 use Limber\Config\Config;
 use Limber\Encription\Hash;
 use Limber\Facades\Session;
@@ -37,7 +37,7 @@ class Auth implements AuthInterface
         return static::$user;
     }
 
-    public static function authorize(\Limber\Orm\Model $user)
+    public static function authorize(Limber\Orm\Model $user)
     {
         Session::put('auth.authorized', true);
         Session::put('auth.user', $user);

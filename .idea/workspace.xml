@@ -2,13 +2,322 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da7840d4-8f95-4ae6-80c1-568c8eabb120" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/newcms1.uz.iml" afterPath="$PROJECT_DIR$/.idea/newcms1.uz.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/limber/Sitemap/ChangeFreq.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/limber/Sitemap/Sitemap.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/limber/Sitemap/SitemapIndex.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/modules/SEOPack/Controller/SitemapController.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/modules/SEOPack/View/routes.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/modules/SEOPack/View/sitemap.phtml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/modules/SEOPack/module.php" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/limber/Auth/Auth.php" afterPath="$PROJECT_DIR$/limber/Auth/Auth.php" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/admin.layout.phtml" afterPath="$PROJECT_DIR$/content/themes/admin/admin.layout.phtml" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/css/dashboard.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/css/dashboard.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/css/login.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/css/login.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/images/logo.png" afterPath="$PROJECT_DIR$/content/themes/admin/assets/images/logo.png" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/custom-field.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/custom-field.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/init.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/init.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/jquery-2.0.3.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/jquery-2.0.3.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/jquery-sortable.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/jquery-sortable.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/menu.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/menu.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/page.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/page.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugin.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugin.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/lang/ar.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/lang/ar.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/lang/az.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/lang/az.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/lang/ba.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/lang/ba.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/lang/bg.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/lang/bg.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/lang/by.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/lang/by.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/lang/ca.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/lang/ca.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/lang/cs.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/lang/cs.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/lang/da.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/lang/da.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/lang/de.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/lang/de.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/lang/el.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/lang/el.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/lang/eo.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/lang/eo.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/lang/es.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/lang/es.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/lang/es_ar.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/lang/es_ar.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/lang/fa.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/lang/fa.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/lang/fi.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/lang/fi.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/lang/fr.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/lang/fr.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/lang/ge.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/lang/ge.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/lang/he.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/lang/he.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/lang/hr.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/lang/hr.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/lang/hu.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/lang/hu.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/lang/id.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/lang/id.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/lang/it.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/lang/it.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/lang/ja.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/lang/ja.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/lang/ko.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/lang/ko.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/lang/lt.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/lang/lt.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/lang/lv.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/lang/lv.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/lang/mk.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/lang/mk.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/lang/nl.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/lang/nl.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/lang/no_NB.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/lang/no_NB.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/lang/pl.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/lang/pl.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/lang/pt_br.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/lang/pt_br.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/lang/pt_pt.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/lang/pt_pt.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/lang/ro.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/lang/ro.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/lang/ru.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/lang/ru.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/lang/sk.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/lang/sk.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/lang/sl.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/lang/sl.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/lang/sq.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/lang/sq.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/lang/sr-cir.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/lang/sr-cir.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/lang/sr-lat.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/lang/sr-lat.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/lang/sv.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/lang/sv.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/lang/th.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/lang/th.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/lang/tr.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/lang/tr.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/lang/ua.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/lang/ua.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/lang/vi.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/lang/vi.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/lang/zh_cn.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/lang/zh_cn.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/lang/zh_tw.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/lang/zh_tw.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/plugins/clips/clips.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/plugins/clips/clips.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/plugins/clips/clips.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/plugins/clips/clips.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/plugins/counter/counter.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/plugins/counter/counter.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/plugins/definedlinks/definedlinks.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/plugins/definedlinks/definedlinks.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/plugins/filemanager/filemanager.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/plugins/filemanager/filemanager.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/plugins/fontcolor/fontcolor.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/plugins/fontcolor/fontcolor.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/plugins/fontfamily/fontfamily.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/plugins/fontfamily/fontfamily.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/plugins/fontsize/fontsize.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/plugins/fontsize/fontsize.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/plugins/fullscreen/fullscreen.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/plugins/fullscreen/fullscreen.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/plugins/imagemanager/imagemanager.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/plugins/imagemanager/imagemanager.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/plugins/limiter/limiter.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/plugins/limiter/limiter.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/plugins/table/table.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/plugins/table/table.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/plugins/textdirection/textdirection.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/plugins/textdirection/textdirection.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/plugins/textexpander/textexpander.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/plugins/textexpander/textexpander.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/plugins/video/video.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/plugins/video/video.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/redactor-font.eot" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/redactor-font.eot" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/redactor.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/redactor.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/redactor.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/redactor.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/redactor.less" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/redactor.less" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/redactor/redactor.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/redactor/redactor.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/langs/ar.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/langs/ar.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/langs/bg.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/langs/bg.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/langs/ca.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/langs/ca.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/langs/cs.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/langs/cs.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/langs/da.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/langs/da.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/langs/de.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/langs/de.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/langs/el.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/langs/el.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/langs/es.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/langs/es.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/langs/es_ar.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/langs/es_ar.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/langs/fa.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/langs/fa.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/langs/fi.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/langs/fi.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/langs/fr.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/langs/fr.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/langs/he.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/langs/he.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/langs/hr.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/langs/hr.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/langs/hu.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/langs/hu.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/langs/id.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/langs/id.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/langs/it.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/langs/it.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/langs/ja.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/langs/ja.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/langs/ko.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/langs/ko.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/langs/my.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/langs/my.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/langs/nl.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/langs/nl.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/langs/no_nb.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/langs/no_nb.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/langs/ph.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/langs/ph.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/langs/pl.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/langs/pl.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/langs/pt.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/langs/pt.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/langs/ro.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/langs/ro.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/langs/rs.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/langs/rs.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/langs/rs_latin.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/langs/rs_latin.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/langs/ru.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/langs/ru.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/langs/sk.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/langs/sk.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/langs/sv.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/langs/sv.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/langs/tr.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/langs/tr.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/langs/ua.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/langs/ua.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/langs/vi.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/langs/vi.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/langs/zh_cn.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/langs/zh_cn.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/langs/zh_tw.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/langs/zh_tw.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/plugins/base64/trumbowyg.base64.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/plugins/base64/trumbowyg.base64.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/plugins/base64/trumbowyg.base64.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/plugins/base64/trumbowyg.base64.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/plugins/cleanpaste/trumbowyg.cleanpaste.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/plugins/cleanpaste/trumbowyg.cleanpaste.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/plugins/cleanpaste/trumbowyg.cleanpaste.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/plugins/cleanpaste/trumbowyg.cleanpaste.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/plugins/colors/trumbowyg.colors.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/plugins/colors/trumbowyg.colors.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/plugins/colors/trumbowyg.colors.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/plugins/colors/trumbowyg.colors.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/plugins/colors/ui/sass/trumbowyg.colors.scss" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/plugins/colors/ui/sass/trumbowyg.colors.scss" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/plugins/colors/ui/trumbowyg.colors.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/plugins/colors/ui/trumbowyg.colors.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/plugins/colors/ui/trumbowyg.colors.min.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/plugins/colors/ui/trumbowyg.colors.min.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/plugins/emoji/trumbowyg.emoji.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/plugins/emoji/trumbowyg.emoji.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/plugins/emoji/trumbowyg.emoji.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/plugins/emoji/trumbowyg.emoji.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/plugins/insertaudio/trumbowyg.insertaudio.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/plugins/insertaudio/trumbowyg.insertaudio.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/plugins/insertaudio/trumbowyg.insertaudio.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/plugins/insertaudio/trumbowyg.insertaudio.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/plugins/noembed/trumbowyg.noembed.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/plugins/noembed/trumbowyg.noembed.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/plugins/noembed/trumbowyg.noembed.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/plugins/noembed/trumbowyg.noembed.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/plugins/pasteimage/trumbowyg.pasteimage.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/plugins/pasteimage/trumbowyg.pasteimage.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/plugins/pasteimage/trumbowyg.pasteimage.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/plugins/pasteimage/trumbowyg.pasteimage.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/plugins/preformatted/trumbowyg.preformatted.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/plugins/preformatted/trumbowyg.preformatted.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/plugins/preformatted/trumbowyg.preformatted.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/plugins/preformatted/trumbowyg.preformatted.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/plugins/table/trumbowyg.table.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/plugins/table/trumbowyg.table.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/plugins/table/trumbowyg.table.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/plugins/table/trumbowyg.table.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/plugins/template/trumbowyg.template.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/plugins/template/trumbowyg.template.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/plugins/template/trumbowyg.template.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/plugins/template/trumbowyg.template.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/plugins/upload/trumbowyg.upload.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/plugins/upload/trumbowyg.upload.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/plugins/upload/trumbowyg.upload.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/plugins/upload/trumbowyg.upload.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/trumbowyg.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/trumbowyg.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/trumbowyg.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/trumbowyg.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/ui/icons.svg" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/ui/icons.svg" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/ui/sass/trumbowyg.scss" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/ui/sass/trumbowyg.scss" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/ui/trumbowyg.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/ui/trumbowyg.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/plugins/trumbowyg/ui/trumbowyg.min.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/plugins/trumbowyg/ui/trumbowyg.min.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/post.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/post.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/js/setting.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/js/setting.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/accordion.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/accordion.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/accordion.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/accordion.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/accordion.min.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/accordion.min.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/accordion.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/accordion.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/ad.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/ad.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/ad.min.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/ad.min.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/api.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/api.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/api.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/api.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/breadcrumb.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/breadcrumb.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/breadcrumb.min.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/breadcrumb.min.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/button.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/button.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/button.min.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/button.min.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/card.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/card.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/card.min.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/card.min.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/checkbox.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/checkbox.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/checkbox.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/checkbox.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/checkbox.min.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/checkbox.min.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/checkbox.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/checkbox.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/colorize.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/colorize.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/colorize.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/colorize.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/comment.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/comment.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/comment.min.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/comment.min.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/container.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/container.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/container.min.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/container.min.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/dimmer.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/dimmer.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/dimmer.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/dimmer.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/dimmer.min.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/dimmer.min.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/dimmer.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/dimmer.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/divider.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/divider.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/divider.min.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/divider.min.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/dropdown.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/dropdown.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/dropdown.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/dropdown.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/dropdown.min.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/dropdown.min.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/dropdown.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/dropdown.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/embed.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/embed.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/embed.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/embed.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/embed.min.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/embed.min.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/embed.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/embed.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/feed.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/feed.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/feed.min.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/feed.min.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/flag.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/flag.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/flag.min.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/flag.min.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/form.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/form.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/form.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/form.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/form.min.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/form.min.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/form.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/form.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/grid.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/grid.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/grid.min.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/grid.min.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/header.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/header.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/header.min.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/header.min.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/icon.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/icon.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/icon.min.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/icon.min.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/image.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/image.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/image.min.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/image.min.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/input.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/input.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/input.min.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/input.min.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/item.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/item.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/item.min.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/item.min.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/label.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/label.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/label.min.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/label.min.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/list.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/list.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/list.min.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/list.min.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/loader.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/loader.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/loader.min.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/loader.min.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/menu.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/menu.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/menu.min.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/menu.min.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/message.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/message.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/message.min.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/message.min.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/modal.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/modal.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/modal.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/modal.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/modal.min.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/modal.min.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/modal.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/modal.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/nag.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/nag.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/nag.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/nag.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/nag.min.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/nag.min.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/nag.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/nag.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/popup.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/popup.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/popup.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/popup.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/popup.min.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/popup.min.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/popup.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/popup.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/progress.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/progress.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/progress.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/progress.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/progress.min.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/progress.min.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/progress.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/progress.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/rail.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/rail.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/rail.min.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/rail.min.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/rating.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/rating.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/rating.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/rating.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/rating.min.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/rating.min.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/rating.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/rating.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/reset.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/reset.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/reset.min.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/reset.min.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/reveal.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/reveal.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/reveal.min.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/reveal.min.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/search.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/search.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/search.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/search.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/search.min.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/search.min.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/search.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/search.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/segment.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/segment.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/segment.min.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/segment.min.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/shape.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/shape.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/shape.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/shape.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/shape.min.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/shape.min.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/shape.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/shape.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/sidebar.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/sidebar.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/sidebar.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/sidebar.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/sidebar.min.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/sidebar.min.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/sidebar.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/sidebar.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/site.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/site.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/site.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/site.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/site.min.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/site.min.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/site.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/site.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/state.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/state.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/state.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/state.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/statistic.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/statistic.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/statistic.min.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/statistic.min.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/step.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/step.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/step.min.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/step.min.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/sticky.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/sticky.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/sticky.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/sticky.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/sticky.min.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/sticky.min.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/sticky.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/sticky.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/tab.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/tab.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/tab.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/tab.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/tab.min.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/tab.min.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/tab.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/tab.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/table.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/table.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/table.min.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/table.min.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/transition.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/transition.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/transition.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/transition.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/transition.min.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/transition.min.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/transition.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/transition.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/video.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/video.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/video.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/video.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/video.min.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/video.min.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/video.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/video.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/visibility.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/visibility.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/visibility.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/visibility.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/visit.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/visit.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/components/visit.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/components/visit.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/semantic.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/semantic.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/semantic.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/semantic.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/semantic.min.css" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/semantic.min.css" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/semantic.min.js" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/semantic.min.js" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/themes/default/assets/fonts/icons.eot" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/themes/default/assets/fonts/icons.eot" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/themes/default/assets/fonts/icons.otf" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/themes/default/assets/fonts/icons.otf" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/themes/default/assets/fonts/icons.svg" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/themes/default/assets/fonts/icons.svg" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/themes/default/assets/fonts/icons.ttf" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/themes/default/assets/fonts/icons.ttf" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/themes/default/assets/fonts/icons.woff" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/themes/default/assets/fonts/icons.woff" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/themes/default/assets/fonts/icons.woff2" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/themes/default/assets/fonts/icons.woff2" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/assets/semantic/themes/default/assets/images/flags.png" afterPath="$PROJECT_DIR$/content/themes/admin/assets/semantic/themes/default/assets/images/flags.png" />
+      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/login.layout.phtml" afterPath="$PROJECT_DIR$/content/themes/admin/login.layout.phtml" />
+      <change beforePath="$PROJECT_DIR$/limber/Functions/functions.php" afterPath="$PROJECT_DIR$/limber/Functions/functions.php" />
+      <change beforePath="$PROJECT_DIR$/limber/Localization/I18n.php" afterPath="$PROJECT_DIR$/limber/Localization/I18n.php" />
+      <change beforePath="$PROJECT_DIR$/limber/Routing/Controller.php" afterPath="$PROJECT_DIR$/limber/Routing/Controller.php" />
+      <change beforePath="$PROJECT_DIR$/limber/Routing/Module.php" afterPath="$PROJECT_DIR$/limber/Routing/Module.php" />
+      <change beforePath="$PROJECT_DIR$/limber/Routing/Router.php" afterPath="$PROJECT_DIR$/limber/Routing/Router.php" />
+      <change beforePath="$PROJECT_DIR$/limber/Settings/Setting.php" afterPath="$PROJECT_DIR$/limber/Settings/Setting.php" />
+      <change beforePath="$PROJECT_DIR$/limber/Template/Asset.php" afterPath="$PROJECT_DIR$/limber/Template/Asset.php" />
+      <change beforePath="$PROJECT_DIR$/limber/Template/Engine.php" afterPath="$PROJECT_DIR$/limber/Template/Engine.php" />
+      <change beforePath="$PROJECT_DIR$/limber/Template/Layout.php" afterPath="$PROJECT_DIR$/limber/Template/Layout.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,10 +330,53 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="Engine.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/limber/Template/Engine.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="660">
+              <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Layout.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/limber/Template/Layout.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="572">
+              <caret line="29" column="8" lean-forward="false" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/limber/Sitemap/ChangeFreq.php" />
+        <option value="$PROJECT_DIR$/limber/Sitemap/Sitemap.php" />
+        <option value="$PROJECT_DIR$/limber/Sitemap/SitemapIndex.php" />
+        <option value="$PROJECT_DIR$/modules/SEOPack/Controller/SitemapController.php" />
+        <option value="$PROJECT_DIR$/modules/SEOPack/module.php" />
+        <option value="$PROJECT_DIR$/modules/SEOPack/View/routes.php" />
+        <option value="$PROJECT_DIR$/limber/Auth/Auth.php" />
+        <option value="$PROJECT_DIR$/limber/Functions/functions.php" />
+        <option value="$PROJECT_DIR$/limber/Localization/I18n.php" />
+        <option value="$PROJECT_DIR$/limber/Routing/Controller.php" />
+        <option value="$PROJECT_DIR$/limber/Routing/Module.php" />
+        <option value="$PROJECT_DIR$/limber/Routing/Router.php" />
+        <option value="$PROJECT_DIR$/limber/Settings/Setting.php" />
+        <option value="$PROJECT_DIR$/limber/Template/Asset.php" />
+        <option value="$PROJECT_DIR$/limber/Template/Engine.php" />
+        <option value="$PROJECT_DIR$/limber/Template/Layout.php" />
+      </list>
+    </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -37,11 +389,14 @@
       <path value="$PROJECT_DIR$/vendor/composer" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="200" />
     <option name="y" value="114" />
     <option name="width" value="1400" />
     <option name="height" value="820" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -69,13 +424,57 @@
             <path>
               <item name="newcms1.uz" type="b2602c69:ProjectViewProjectNode" />
               <item name="newcms1.uz" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="content" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="newcms1.uz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="newcms1.uz" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="content" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="newcms1.uz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="newcms1.uz" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="content" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="newcms1.uz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="newcms1.uz" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="content" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="newcms1.uz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="newcms1.uz" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="limber" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="newcms1.uz" type="b2602c69:ProjectViewProjectNode" />
               <item name="newcms1.uz" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="limber" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Sitemap" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Auth" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="newcms1.uz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="newcms1.uz" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="limber" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Routing" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="newcms1.uz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="newcms1.uz" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="limber" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Settings" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="newcms1.uz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="newcms1.uz" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="limber" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Template" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -88,6 +487,11 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\OServer\OSPanel\domains\newcms1.uz\content\themes\admin" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -114,15 +518,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1525690009570</updated>
-      <workItem from="1525690012120" duration="114000" />
+      <workItem from="1525690012120" duration="6741000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114000" />
+    <option name="totallyTimeSpent" value="6741000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -131,7 +536,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -169,6 +574,168 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/limber/Sitemap/SitemapIndex.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="25" column="16" lean-forward="false" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/limber/Sitemap/Sitemap.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="29" column="21" lean-forward="false" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/limber/Sitemap/ChangeFreq.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/SEOPack/Controller/SitemapController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/SEOPack/View/sitemap.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/limber/Routing/Module.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="64" column="54" lean-forward="false" selection-start-line="64" selection-start-column="54" selection-end-line="64" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/limber/Routing/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="25" lean-forward="false" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/limber/Localization/I18n.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="711">
+          <caret line="96" column="5" lean-forward="true" selection-start-line="96" selection-start-column="5" selection-end-line="96" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/limber/Functions/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="33" column="14" lean-forward="false" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/limber/Config/Repository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-411">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/limber/Auth/AuthInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/limber/Auth/Authenticatable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/limber/Auth/Auth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="39" column="37" lean-forward="false" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
+          <folding>
+            <element signature="e#42#67#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/SEOPack/View/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="29" lean-forward="false" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/SEOPack/module.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/limber/Template/Asset.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/limber/Settings/Setting.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="24" column="28" lean-forward="false" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/limber/Routing/Router.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/limber/Template/Engine.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/limber/Template/Layout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="29" column="8" lean-forward="false" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
           <folding />
         </state>
       </provider>

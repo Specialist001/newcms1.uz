@@ -5,6 +5,8 @@ abstract class Controller
 {
     public $layout = 'main';
 
+    public $theme = null;
+
     public $data = [];
 
     public function setLayout(string $layout)

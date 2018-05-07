@@ -5,11 +5,11 @@ function path($section)
     switch (strtolower($section))
     {
         case 'config':
-            return $_SERVER['DOCUMENT_ROOT'] . '/config/';
+            return $_SERVER['DOCUMENT_ROOT'] . 'config';
         case 'modules':
-            return $_SERVER['DOCUMENT_ROOT'] . '/modules/';
+            return $_SERVER['DOCUMENT_ROOT'] . 'modules';
         case 'content':
-            return $_SERVER['DOCUMENT_ROOT'] . '/content/';
+            return $_SERVER['DOCUMENT_ROOT'] . 'content';
         default:
             return $_SERVER['DOCUMENT_ROOT'];
 
@@ -21,17 +21,17 @@ function path_content($section = '')
     switch (strtolower($section))
     {
         case 'themes':
-            return path('content') . 'themes';
+            return path('content') . '/themes';
         case 'plugins':
-            return path('content') . 'plugins';
+            return path('content') . '/plugins';
         case 'uploads':
-            return path('content') . 'uploads';
+            return path('content') . '/uploads';
         default:
             return path('content');
     }
 }
 
-function getThemes()
+function get_themes()
 {
     $themesPath = path_content('themes');
     $list       = scandir($themesPath);

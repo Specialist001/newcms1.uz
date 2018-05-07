@@ -49,17 +49,12 @@ class Router
 
     private static function routes()
     {
-        Route::$module = 'Admin';
-        require_once ROOT_DIR . '/limber/Cms/Admin/routes.php';
-        Route::$module = 'Front';
-        require_once ROOT_DIR . '/limber/Cms/Front/routes.php';
-
         foreach (scandir(path('modules')) as $module) {
             if (in_array($module, ['.', '..'], true)) continue;
 
             Route::$module = $module;
 
-            if (is_file($path = path('modules') . $module . '/routes.php')) {
+            if (is_file($path = path('modules') . '/' . $module . '/routes.php')) {
                 require_once $path;
             }
         }
