@@ -1,5 +1,5 @@
 <?php
-namespace Modules\Front\Classes;
+namespace Limber\Cms\Front\Classes;
 
 use Limber;
 
@@ -13,7 +13,7 @@ class Page
     /**
      * @param Flexi\Cms\Front\Model\Page $page
      */
-    public static function setPage(Modules\Front\Model\Page $page)
+    public static function setPage(Limber\Cms\Front\Model\Page $page)
     {
         static::$page = $page;
     }
