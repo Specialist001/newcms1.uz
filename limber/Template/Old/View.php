@@ -26,7 +26,6 @@ class View implements ResponderInterface
         if (static::$engine == null) {
             return new Engine();
         }
-
         return static::$engine;
     }
 
@@ -42,14 +41,13 @@ class View implements ResponderInterface
 
     public static function path(): string
     {
-        return ROOT_DIR . static::engine()->detectViewDirectory();;
+        return ROOT_DIR . static::engine()->detectViewDirectory();
     }
 
     public function respond()
     {
         // Get the module action instance.
         $instance = Router::module()->instance();
-
         // If we have no layout, then directly output the view.
         if (is_object($instance) && isset($instance->layout) && $instance->layout === '') {
             echo $this->render();
@@ -63,7 +61,15 @@ class View implements ResponderInterface
         // Get path for the views.
         //$path = static::path() . $this->file . self::TEMPLATE_EXTENSION;
         $path = Router::module()->path() . 'View/' . $this->file . self::TEMPLATE_EXTENSION;
+        // Render the view.
+        return Component::load($path, $this->data);
+    }
 
+    public function render(): string
+    {
+        // Get path for the views.
+        //$path = static::path() . $this->file . self::TEMPLATE_EXTENSION;
+        $path = Router::module()->path() . 'View/' . $this->file . self::TEMPLATE_EXTENSION;
         // Render the view.
         return Component::load($path, $this->data);
     }
@@ -75,7 +81,6 @@ class View implements ResponderInterface
         $class          = new $name;
         $class->file    = $file;
         $class->data    = $data;
-
         // Return new object.
         return $class;
     }
