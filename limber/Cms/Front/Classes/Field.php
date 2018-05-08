@@ -1,7 +1,7 @@
 <?php
-namespace Modules\Front\Classes;
+namespace Limber\Cms\Front\Classes;
 
-use Modules\Front\Model\CustomField as CustomFieldModel;
+use Limber\Cms\Front\Model\CustomField as CustomFieldModel;
 
 class Field
 {

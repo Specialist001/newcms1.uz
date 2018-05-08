@@ -2,98 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da7840d4-8f95-4ae6-80c1-568c8eabb120" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/limber/Template/Old/Asset.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/limber/Template/Old/Component.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/limber/Template/Old/Engine.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/limber/Template/Old/Layout.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/limber/Template/Old/View.php" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/limber/Cms/Front/Classes/Field.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/limber/Cms/Front/Classes/Menu.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/limber/Cms/Front/Classes/Page.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/limber/Cms/Front/Classes/Post.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/limber/Cms/Front/Classes/Widget.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/limber/Cms/Front/Model/CustomField.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/limber/Cms/Front/Model/CustomFieldValue.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/limber/Cms/Front/Model/Post.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/limber/Functions/view.php" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/Controller/AdminController.php" afterPath="$PROJECT_DIR$/modules/Admin/Controller/AdminController.php" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/Controller/CustomFieldController.php" afterPath="$PROJECT_DIR$/modules/Admin/Controller/CustomFieldController.php" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/Controller/LoginController.php" afterPath="$PROJECT_DIR$/modules/Admin/Controller/LoginController.php" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/Controller/PageController.php" afterPath="$PROJECT_DIR$/modules/Admin/Controller/PageController.php" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/Controller/PluginController.php" afterPath="$PROJECT_DIR$/modules/Admin/Controller/PluginController.php" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/Controller/PostController.php" afterPath="$PROJECT_DIR$/modules/Admin/Controller/PostController.php" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/Controller/SettingController.php" afterPath="$PROJECT_DIR$/modules/Admin/Controller/SettingController.php" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/Language/en/dashboard/login.ini" afterPath="$PROJECT_DIR$/modules/Admin/Language/en/dashboard/login.ini" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/Language/en/dashboard/main.ini" afterPath="$PROJECT_DIR$/modules/Admin/Language/en/dashboard/main.ini" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/Language/en/dashboard/menu.ini" afterPath="$PROJECT_DIR$/modules/Admin/Language/en/dashboard/menu.ini" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/Language/en/lang.json" afterPath="$PROJECT_DIR$/modules/Admin/Language/en/lang.json" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/Language/en/pages/create.ini" afterPath="$PROJECT_DIR$/modules/Admin/Language/en/pages/create.ini" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/Language/en/pages/edit.ini" afterPath="$PROJECT_DIR$/modules/Admin/Language/en/pages/edit.ini" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/Language/en/pages/list.ini" afterPath="$PROJECT_DIR$/modules/Admin/Language/en/pages/list.ini" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/Language/en/plugins/list.ini" afterPath="$PROJECT_DIR$/modules/Admin/Language/en/plugins/list.ini" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/Language/en/posts/create.ini" afterPath="$PROJECT_DIR$/modules/Admin/Language/en/posts/create.ini" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/Language/en/posts/edit.ini" afterPath="$PROJECT_DIR$/modules/Admin/Language/en/posts/edit.ini" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/Language/en/posts/list.ini" afterPath="$PROJECT_DIR$/modules/Admin/Language/en/posts/list.ini" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/Language/en/posts/posts.ini" afterPath="$PROJECT_DIR$/modules/Admin/Language/en/posts/posts.ini" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/Language/en/settings.ini" afterPath="$PROJECT_DIR$/modules/Admin/Language/en/settings.ini" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/Language/en/settings/general.ini" afterPath="$PROJECT_DIR$/modules/Admin/Language/en/settings/general.ini" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/Language/en/settings/menus.ini" afterPath="$PROJECT_DIR$/modules/Admin/Language/en/settings/menus.ini" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/Language/en/settings/themes.ini" afterPath="$PROJECT_DIR$/modules/Admin/Language/en/settings/themes.ini" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/Language/ru/dashboard/login.ini" afterPath="$PROJECT_DIR$/modules/Admin/Language/ru/dashboard/login.ini" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/Language/ru/dashboard/main.ini" afterPath="$PROJECT_DIR$/modules/Admin/Language/ru/dashboard/main.ini" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/Language/ru/dashboard/menu.ini" afterPath="$PROJECT_DIR$/modules/Admin/Language/ru/dashboard/menu.ini" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/Language/ru/lang.json" afterPath="$PROJECT_DIR$/modules/Admin/Language/ru/lang.json" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/Language/ru/pages/create.ini" afterPath="$PROJECT_DIR$/modules/Admin/Language/ru/pages/create.ini" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/Language/ru/pages/edit.ini" afterPath="$PROJECT_DIR$/modules/Admin/Language/ru/pages/edit.ini" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/Language/ru/pages/list.ini" afterPath="$PROJECT_DIR$/modules/Admin/Language/ru/pages/list.ini" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/Language/ru/plugins/list.ini" afterPath="$PROJECT_DIR$/modules/Admin/Language/ru/plugins/list.ini" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/Language/ru/posts/create.ini" afterPath="$PROJECT_DIR$/modules/Admin/Language/ru/posts/create.ini" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/Language/ru/posts/edit.ini" afterPath="$PROJECT_DIR$/modules/Admin/Language/ru/posts/edit.ini" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/Language/ru/posts/list.ini" afterPath="$PROJECT_DIR$/modules/Admin/Language/ru/posts/list.ini" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/Language/ru/settings/general.ini" afterPath="$PROJECT_DIR$/modules/Admin/Language/ru/settings/general.ini" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/Language/ru/settings/menus.ini" afterPath="$PROJECT_DIR$/modules/Admin/Language/ru/settings/menus.ini" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/Language/ru/settings/themes.ini" afterPath="$PROJECT_DIR$/modules/Admin/Language/ru/settings/themes.ini" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/Model/CustomField.php" afterPath="$PROJECT_DIR$/modules/Admin/Model/CustomField.php" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/Model/CustomFieldGroup.php" afterPath="$PROJECT_DIR$/modules/Admin/Model/CustomFieldGroup.php" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/Model/CustomFieldValue.php" afterPath="$PROJECT_DIR$/modules/Admin/Model/CustomFieldValue.php" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/Model/File.php" afterPath="$PROJECT_DIR$/modules/Admin/Model/File.php" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/Model/Menu.php" afterPath="$PROJECT_DIR$/modules/Admin/Model/Menu.php" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/Model/MenuItem.php" afterPath="$PROJECT_DIR$/modules/Admin/Model/MenuItem.php" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/Model/Page.php" afterPath="$PROJECT_DIR$/modules/Admin/Model/Page.php" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/Model/Plugin.php" afterPath="$PROJECT_DIR$/modules/Admin/Model/Plugin.php" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/Model/Post.php" afterPath="$PROJECT_DIR$/modules/Admin/Model/Post.php" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/Model/Setting.php" afterPath="$PROJECT_DIR$/modules/Admin/Model/Setting.php" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/Model/User.php" afterPath="$PROJECT_DIR$/modules/Admin/Model/User.php" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/Service/CustomField/CustomFieldService.php" afterPath="$PROJECT_DIR$/modules/Admin/Service/CustomField/CustomFieldService.php" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/custom_fields/components/item_field.phtml" afterPath="$PROJECT_DIR$/modules/Admin/View/custom_fields/components/item_field.phtml" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/custom_fields/components/template_options.phtml" afterPath="$PROJECT_DIR$/modules/Admin/View/custom_fields/components/template_options.phtml" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/custom_fields/fields_group.phtml" afterPath="$PROJECT_DIR$/modules/Admin/View/custom_fields/fields_group.phtml" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/custom_fields/list_group.phtml" afterPath="$PROJECT_DIR$/modules/Admin/View/custom_fields/list_group.phtml" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/dashboard.phtml" afterPath="$PROJECT_DIR$/modules/Admin/View/dashboard.phtml" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/pages/create.phtml" afterPath="$PROJECT_DIR$/modules/Admin/View/pages/create.phtml" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/pages/edit.phtml" afterPath="$PROJECT_DIR$/modules/Admin/View/pages/edit.phtml" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/pages/list.phtml" afterPath="$PROJECT_DIR$/modules/Admin/View/pages/list.phtml" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/plugins/list.phtml" afterPath="$PROJECT_DIR$/modules/Admin/View/plugins/list.phtml" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/posts/create.phtml" afterPath="$PROJECT_DIR$/modules/Admin/View/posts/create.phtml" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/posts/edit.phtml" afterPath="$PROJECT_DIR$/modules/Admin/View/posts/edit.phtml" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/posts/list.phtml" afterPath="$PROJECT_DIR$/modules/Admin/View/posts/list.phtml" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/settings/general.phtml" afterPath="$PROJECT_DIR$/modules/Admin/View/settings/general.phtml" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/settings/menu_item.phtml" afterPath="$PROJECT_DIR$/modules/Admin/View/settings/menu_item.phtml" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/settings/menus.phtml" afterPath="$PROJECT_DIR$/modules/Admin/View/settings/menus.phtml" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/settings/tabs.phtml" afterPath="$PROJECT_DIR$/modules/Admin/View/settings/tabs.phtml" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/View/settings/themes.phtml" afterPath="$PROJECT_DIR$/modules/Admin/View/settings/themes.phtml" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/module.php" afterPath="$PROJECT_DIR$/modules/Admin/module.php" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Admin/routes.php" afterPath="$PROJECT_DIR$/modules/Admin/routes.php" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Front/Classes/Field.php" afterPath="$PROJECT_DIR$/modules/Front/Classes/Field.php" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Front/Classes/Menu.php" afterPath="$PROJECT_DIR$/modules/Front/Classes/Menu.php" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Front/Classes/Page.php" afterPath="$PROJECT_DIR$/modules/Front/Classes/Page.php" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Front/Classes/Post.php" afterPath="$PROJECT_DIR$/modules/Front/Classes/Post.php" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Front/Classes/Widget.php" afterPath="$PROJECT_DIR$/modules/Front/Classes/Widget.php" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Front/Controller/FrontController.php" afterPath="$PROJECT_DIR$/modules/Front/Controller/FrontController.php" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Front/Controller/HomeController.php" afterPath="$PROJECT_DIR$/modules/Front/Controller/HomeController.php" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Front/Controller/PageController.php" afterPath="$PROJECT_DIR$/modules/Front/Controller/PageController.php" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Front/Model/CustomField.php" afterPath="$PROJECT_DIR$/modules/Front/Model/CustomField.php" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Front/Model/CustomFieldValue.php" afterPath="$PROJECT_DIR$/modules/Front/Model/CustomFieldValue.php" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Front/Model/Menu.php" afterPath="$PROJECT_DIR$/modules/Front/Model/Menu.php" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Front/Model/MenuItem.php" afterPath="$PROJECT_DIR$/modules/Front/Model/MenuItem.php" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Front/Model/Page.php" afterPath="$PROJECT_DIR$/modules/Front/Model/Page.php" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Front/Model/Post.php" afterPath="$PROJECT_DIR$/modules/Front/Model/Post.php" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Front/module.php" afterPath="$PROJECT_DIR$/modules/Front/module.php" />
-      <change beforePath="$PROJECT_DIR$/limber/Cms/Front/routes.php" afterPath="$PROJECT_DIR$/modules/Front/routes.php" />
-      <change beforePath="$PROJECT_DIR$/limber/Template/View.php" afterPath="$PROJECT_DIR$/limber/Template/View.php" />
+      <change beforePath="$PROJECT_DIR$/limber/Database/Database.php" afterPath="$PROJECT_DIR$/limber/Database/Database.php" />
+      <change beforePath="$PROJECT_DIR$/limber/Limber.php" afterPath="$PROJECT_DIR$/limber/Limber.php" />
+      <change beforePath="$PROJECT_DIR$/limber/Routing/Module.php" afterPath="$PROJECT_DIR$/limber/Routing/Module.php" />
+      <change beforePath="$PROJECT_DIR$/limber/Sitemap/AbstractSitemap.php" afterPath="$PROJECT_DIR$/limber/Sitemap/AbstractSitemap.php" />
+      <change beforePath="$PROJECT_DIR$/limber/Template/Asset.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/limber/Template/Component.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/limber/Template/Engine.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/limber/Template/Layout.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/limber/Template/Old/Asset.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/limber/Template/Old/Component.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/limber/Template/Old/Engine.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/limber/Template/Old/Layout.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/limber/Template/Old/View.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/limber/Template/View.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/modules/Front/Classes/Field.php" afterPath="$PROJECT_DIR$/modules/Front/Classes/Field.php" />
+      <change beforePath="$PROJECT_DIR$/modules/Front/Classes/Menu.php" afterPath="$PROJECT_DIR$/modules/Front/Classes/Menu.php" />
+      <change beforePath="$PROJECT_DIR$/modules/Front/Classes/Page.php" afterPath="$PROJECT_DIR$/modules/Front/Classes/Page.php" />
+      <change beforePath="$PROJECT_DIR$/modules/Front/Classes/Post.php" afterPath="$PROJECT_DIR$/modules/Front/Classes/Post.php" />
+      <change beforePath="$PROJECT_DIR$/modules/Front/Classes/Widget.php" afterPath="$PROJECT_DIR$/modules/Front/Classes/Widget.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -106,17 +43,42 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="Post.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/limber/Cms/Front/Model/Post.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="12" column="7" lean-forward="false" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+              <folding>
+                <element signature="e#41#62#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Database.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/limber/Database/Database.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="35" column="56" lean-forward="true" selection-start-line="35" selection-start-column="56" selection-end-line="35" selection-end-column="56" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>flexi</find>
       <find>Limber</find>
       <find>Limber\Cms</find>
+      <find>Modules</find>
     </findStrings>
     <replaceStrings>
       <replace />
       <replace>Modules</replace>
+      <replace>Limber\Cms</replace>
     </replaceStrings>
     <dirStrings>
       <dir>D:\OServer\OSPanel\domains\newcms1.uz\limber\Cms\Admin</dir>
@@ -128,22 +90,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/limber/Sitemap/ChangeFreq.php" />
-        <option value="$PROJECT_DIR$/limber/Sitemap/Sitemap.php" />
-        <option value="$PROJECT_DIR$/limber/Sitemap/SitemapIndex.php" />
-        <option value="$PROJECT_DIR$/modules/SEOPack/Controller/SitemapController.php" />
-        <option value="$PROJECT_DIR$/modules/SEOPack/module.php" />
-        <option value="$PROJECT_DIR$/modules/SEOPack/View/routes.php" />
-        <option value="$PROJECT_DIR$/limber/Auth/Auth.php" />
-        <option value="$PROJECT_DIR$/limber/Functions/functions.php" />
         <option value="$PROJECT_DIR$/limber/Localization/I18n.php" />
         <option value="$PROJECT_DIR$/limber/Routing/Controller.php" />
-        <option value="$PROJECT_DIR$/limber/Routing/Module.php" />
         <option value="$PROJECT_DIR$/limber/Routing/Router.php" />
         <option value="$PROJECT_DIR$/limber/Settings/Setting.php" />
         <option value="$PROJECT_DIR$/limber/Template/Asset.php" />
         <option value="$PROJECT_DIR$/limber/Template/Engine.php" />
-        <option value="$PROJECT_DIR$/limber/Template/Layout.php" />
         <option value="$PROJECT_DIR$/limber/Template/Old/Asset.php" />
         <option value="$PROJECT_DIR$/limber/Template/Old/Component.php" />
         <option value="$PROJECT_DIR$/limber/Template/Old/Engine.php" />
@@ -175,6 +127,20 @@
         <option value="$PROJECT_DIR$/modules/Front/Model/Menu.php" />
         <option value="$PROJECT_DIR$/modules/Front/Model/MenuItem.php" />
         <option value="$PROJECT_DIR$/modules/Front/Model/Page.php" />
+        <option value="$PROJECT_DIR$/limber/Functions/view.php" />
+        <option value="$PROJECT_DIR$/limber/Routing/Module.php" />
+        <option value="$PROJECT_DIR$/limber/Template/Layout.php" />
+        <option value="$PROJECT_DIR$/modules/Front/Classes/Menu.php" />
+        <option value="$PROJECT_DIR$/modules/Front/Classes/Field.php" />
+        <option value="$PROJECT_DIR$/modules/Front/Classes/Page.php" />
+        <option value="$PROJECT_DIR$/modules/Front/Classes/Post.php" />
+        <option value="$PROJECT_DIR$/modules/Front/Classes/Widget.php" />
+        <option value="$PROJECT_DIR$/limber/Cms/Front/Classes/Field.php" />
+        <option value="$PROJECT_DIR$/limber/Cms/Front/Classes/Post.php" />
+        <option value="$PROJECT_DIR$/limber/Cms/Front/Model/Post.php" />
+        <option value="$PROJECT_DIR$/limber/Database/Database.php" />
+        <option value="$PROJECT_DIR$/limber/Limber.php" />
+        <option value="$PROJECT_DIR$/limber/Sitemap/AbstractSitemap.php" />
       </list>
     </option>
   </component>
@@ -228,6 +194,47 @@
             <path>
               <item name="newcms1.uz" type="b2602c69:ProjectViewProjectNode" />
               <item name="newcms1.uz" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="limber" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Cms" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="newcms1.uz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="newcms1.uz" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="limber" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Cms" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Front" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="newcms1.uz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="newcms1.uz" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="limber" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Cms" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Front" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Classes" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="newcms1.uz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="newcms1.uz" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="limber" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Cms" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Front" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Model" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="newcms1.uz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="newcms1.uz" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="limber" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Database" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="newcms1.uz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="newcms1.uz" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="limber" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Sitemap" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="newcms1.uz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="newcms1.uz" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -255,9 +262,12 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\OServer\OSPanel\domains\newcms1.uz\limber\Cms\Front\Model" />
+      <recent name="D:\OServer\OSPanel\domains\newcms1.uz\limber\Cms\Front" />
       <recent name="D:\OServer\OSPanel\domains\newcms1.uz\modules" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -291,15 +301,16 @@
       <option name="presentableId" value="Default" />
       <updated>1525690009570</updated>
       <workItem from="1525690012120" duration="6741000" />
-      <workItem from="1525762728772" duration="3404000" />
+      <workItem from="1525762728772" duration="5742000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10145000" />
+    <option name="totallyTimeSpent" value="12483000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -308,7 +319,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18020834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18020834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -334,145 +345,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/limber/Routing/Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="25" lean-forward="false" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/limber/Localization/I18n.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="711">
-          <caret line="96" column="5" lean-forward="true" selection-start-line="96" selection-start-column="5" selection-end-line="96" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/limber/Functions/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="33" column="14" lean-forward="false" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/limber/Config/Repository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-411">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/limber/Auth/AuthInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/limber/Auth/Authenticatable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/limber/Auth/Auth.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="39" column="37" lean-forward="false" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/SEOPack/View/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="29" lean-forward="false" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/SEOPack/module.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/limber/Settings/Setting.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="24" column="28" lean-forward="false" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/limber/Routing/Router.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/limber/Template/Component.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="19" lean-forward="false" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
-          <folding>
-            <element signature="e#34#60#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/limber/Template/Asset.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/limber/Template/Old/Asset.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="25" lean-forward="false" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/limber/Template/Old/Component.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="682">
-          <caret line="31" column="1" lean-forward="true" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/limber/Template/Layout.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="21" column="33" lean-forward="true" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/limber/Template/Engine.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/limber/Template/Old/Engine.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="34" column="1" lean-forward="true" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/limber/Template/Old/Layout.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="799">
@@ -485,9 +357,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1870">
           <caret line="85" column="5" lean-forward="false" selection-start-line="85" selection-start-column="5" selection-end-line="85" selection-end-column="5" />
-          <folding>
-            <element signature="e#34#59#0#PHP" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -691,22 +561,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/Front/Classes/Field.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/Front/Controller/FrontController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="25" column="23" lean-forward="false" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/Front/Controller/HomeController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
@@ -715,22 +569,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/Front/Controller/PageController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" column="8" lean-forward="false" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
-          <folding>
-            <element signature="e#43#68#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/Front/Model/MenuItem.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
           <caret line="1" column="17" lean-forward="false" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
           <folding>
-            <element signature="e#38#59#0#PHP" expanded="true" />
+            <element signature="e#38#59#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -747,6 +591,182 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
           <caret line="1" column="17" lean-forward="false" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/limber/Functions/view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/limber/Template/Layout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/Front/Classes/Menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="32" lean-forward="false" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/limber/Routing/Module.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="56" column="12" lean-forward="false" selection-start-line="56" selection-start-column="12" selection-end-line="56" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/Front/Classes/Page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-198">
+          <caret line="3" column="11" lean-forward="true" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/Front/Classes/Post.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="32" lean-forward="false" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/Front/Controller/PageController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="e#43#68#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/Front/Controller/FrontController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="15" lean-forward="true" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/Front/Classes/Widget.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="17" lean-forward="false" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/limber/Auth/Auth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="584">
+          <caret line="39" column="37" lean-forward="false" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
+          <folding>
+            <element signature="e#30#41#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/limber/Cms/Front/Classes/Field.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="14" lean-forward="false" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/limber/Cms/Front/Classes/Menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/Front/Classes/Field.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="11" lean-forward="false" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/limber/Cms/Front/Model/CustomFieldValue.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#41#52#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/limber/Cms/Front/Model/CustomField.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-147">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/limber/Cms/Front/Classes/Post.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="35" lean-forward="false" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/limber/Cms/Front/Classes/Page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/limber/Cms/Front/Model/Post.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="7" lean-forward="false" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+          <folding>
+            <element signature="e#41#62#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/limber/Sitemap/AbstractSitemap.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="689">
+          <caret line="83" column="7" lean-forward="false" selection-start-line="83" selection-start-column="7" selection-end-line="83" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/limber/Limber.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="24" column="66" lean-forward="false" selection-start-line="24" selection-start-column="66" selection-end-line="24" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/limber/Database/Database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="35" column="56" lean-forward="true" selection-start-line="35" selection-start-column="56" selection-end-line="35" selection-end-column="56" />
           <folding />
         </state>
       </provider>

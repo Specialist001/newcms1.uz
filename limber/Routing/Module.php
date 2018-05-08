@@ -53,8 +53,8 @@ class Module
             return $this->response;
         } else {
             throw new Exception(sprintf(
-                'Controller %s does not exist.'
-            ,$class));
+                'Controller %s does not exist.', $class)
+            );
         }
     }
 

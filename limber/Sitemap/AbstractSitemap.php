@@ -32,18 +32,18 @@ abstract class AbstractSitemap
    public function getSimpleXmlElement()
    {
      if (!$this->xml) {
-	$this->xml = simplexml_load_string(
-		sprintf(
-			'<?xml version="%s" encoding="%s"?' . '><%s xmlns="%s" />',
-			$this->xmlVersion,
-			$this->encoding,
-			$this->root,
-			$this->xmlns
-		)
-	);
+         $this->xml = simplexml_load_string(
+             sprintf(
+                '<?xml version="%s" encoding="%s"?' . '><%s xmlns="%s" />',
+                $this->xmlVersion,
+                $this->encoding,
+                $this->root,
+                $this->xmlns
+             )
+         );
      }
 
-     return $this->xml; 
+     return $this->xml;
    }
 
    public function toString()
@@ -55,32 +55,32 @@ abstract class AbstractSitemap
    {
 	try {
 		return $this->toString();
-	    } catch (\Exception $e) {
+	} catch (\Exception $e) {
 		     return $e;
-	    }
+	  }
    }
 
    public function getAutoEscape()
    {
- 	return $this->autoEscape;
+       return $this->autoEscape;
    }
 
    public function setAutoEscape($autoEscape)
    {
-	$this->autoEscape = $autoEscape;
+       $this->autoEscape = $autoEscape;
 
-	return $this;
+       return $this;
    }
 
    public function getDateFormat()
    {
-	return $this->dateFormat;
+       return $this->dateFormat;
    }
 
    public function setDateFormat($dateFormat)
    {
-	$this->dateFormat = $dateFormat;
+       $this->dateFormat = $dateFormat;
 
-	return $this;
+       return $this;
    }
 }

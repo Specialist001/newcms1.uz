@@ -33,7 +33,7 @@ class Database
         $username = Config::item('username', 'database');
         $password = Config::item('password', 'database');
         $name     = Config::item('db_name', 'database');
-	$charset  = Config::item('charset', 'database');
+	    $charset  = Config::item('charset', 'database');
         $dsn      = sprintf('%s:host=%s;dbname=%s;charset=%s', $driver, $host, $name, $charset);
         $options  = [
             PDO::ATTR_PERSISTENT => false,
