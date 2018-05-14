@@ -2,6 +2,7 @@
 namespace Modules\Admin\Controller;
 
 use Limber;
+use Modules;
 use Limber\Helper\ImageUploader;
 use Limber\Http\Input;
 use Limber\Http\Uri;

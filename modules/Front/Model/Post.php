@@ -1,5 +1,5 @@
 <?php
-namespace Limber\Cms\Front\Model;
+namespace Modules\Front\Model;
 
 use Limber\Orm\Model;
 use Query;

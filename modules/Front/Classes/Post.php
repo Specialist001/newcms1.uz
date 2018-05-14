@@ -1,7 +1,7 @@
 <?php
 namespace Modules\Front\Classes;
 
-use Limber;
+use Modules;
 
 class Post
 {
