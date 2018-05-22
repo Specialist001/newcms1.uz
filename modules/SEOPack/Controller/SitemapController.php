@@ -1,8 +1,9 @@
 <?php
 namespace Modules\SEOPack\Controller;
 
+use Limber\Config\Config;
 use Limber\Sitemap\Sitemap;
-use Limber\Cms\Admin\Model\Page as PageModel;
+use Modules\Admin\Model\Page as PageModel;
 
 class SitemapController extends \Controller
 {
@@ -16,7 +17,7 @@ class SitemapController extends \Controller
         $sitemap->addItem('https://matbaa.uz/');
 
         foreach ($pages as $page) {
-            $sitemap->addItem('https://matbaa.uz/service/' . $page->getAttribute('segment'));
+            $sitemap->addItem(Config::item('baseUrl') . '/page/' . $page->getAttribute('segment'));
         }
 
         header('Content-Type: application/xml');
