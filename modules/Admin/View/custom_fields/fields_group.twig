@@ -1,3 +1,6 @@
+{% extends "layout.twig" %}
+
+{% block content %}
 <main>
     <div class="ui container">
         <div class="ui grid">
@@ -15,32 +18,30 @@
         <div class="ui grid">
             <div class="sixteen wide column">
                 <div class="setting-tabs">
-                    <?php echo Component::get('settings/tabs') ?>
+                    {% include "settings/tabs.twig" %}
                 </div>
             </div>
         </div>
 
         <div class="ui grid">
             <div class="twelve wide column">
-                <?php if (!empty($fieldList)): ?>
+                {% if fieldList is not empty %}
                     <form id="updateFieldsGroup">
-                        <input type="hidden" name="group_id" value="<?php echo $group->id ?>">
+                        <input type="hidden" name="group_id" value="{{ group.id }}">
                         <div id="containerFields" class="ui styled fluid accordion">
-                            <?php foreach ($fieldList as $field) {
-                                echo Component::get('custom_fields/components/item_field', [
-                                    'field' => $field
-                                ]);
-                            } ?>
+                            {% for field in fieldList %}
+                                {% include "custom_fields/components/item_field.twig" %}
+                            {% endfor %}
                         </div>
                     </form>
                     <br>
-                    <button class="ui basic button" onclick="customField.addField(<?php echo $group->id ?>)">
+                    <button class="ui basic button" onclick="customField.addField({{ group.id }})">
                         <i class="icon plus"></i>
                         Add Field
                     </button>
-                <?php else: ?>
+                {% else %}
                     <form id="updateFieldsGroup">
-                        <input type="hidden" name="group_id" value="<?php echo $group->id ?>">
+                        <input type="hidden" name="group_id" value="{{ group.id }}">
                         <div id="containerFields" class="ui styled fluid accordion"></div>
                     </form>
                     <br>
@@ -49,7 +50,7 @@
                             <div class="empty-list-text">
                                 <div class="ui basic segment">
                                     <p>Empty field list</p>
-                                    <button class="ui basic button" onclick="customField.addField(<?php echo $group->id ?>)">
+                                    <button class="ui basic button" onclick="customField.addField({{ group.id }})">
                                         <i class="icon plus"></i>
                                         Add Field
                                     </button>
@@ -57,7 +58,7 @@
                             </div>
                         </div>
                     </div>
-                <?php endif; ?>
+                {% endif %}
             </div>
             <div class="four wide column">
                 <div class="ui segments">
@@ -75,3 +76,4 @@
         </div>
     </div>
 </main>
+{% endblock %}

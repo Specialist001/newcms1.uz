@@ -6,7 +6,9 @@
             "email": "darking-uz@yandex.ru"
         }
     ],
-    "require": {},
+    "require": {
+        "twig/twig": "^2.0"
+    },
     "autoload": {
         "psr-4": {
             "Limber\\": "limber",

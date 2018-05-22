@@ -2,6 +2,7 @@
 namespace Modules\Admin\Model;
 
 use Limber;
+use Modules;
 use Limber\Orm\Model;
 use Query;
 

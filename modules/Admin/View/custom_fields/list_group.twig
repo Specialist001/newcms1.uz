@@ -1,3 +1,6 @@
+{% extends "layout.twig" %}
+
+{% block content %}
 <main>
     <div class="ui container">
         <div class="ui grid">
@@ -15,14 +18,14 @@
         <div class="ui grid">
             <div class="sixteen wide column">
                 <div class="setting-tabs">
-                    <?php echo Component::get('settings/tabs') ?>
+                    {% include "settings/tabs.twig" %}
                 </div>
             </div>
         </div>
 
         <div class="ui grid">
             <div class="sixteen wide column">
-                <?php if (!empty($listGroup)): ?>
+                {% if listGroup is not empty %}
                     <table class="ui very basic table">
                         <thead>
                         <tr>
@@ -34,7 +37,7 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <?php foreach ($listGroup as $group): ?>
+                        {% for group in listGroup %}
                             <tr>
                                 <th scope="row">
                                     <div class="inline field">
@@ -45,28 +48,28 @@
                                     </div>
                                 </th>
                                 <td>
-                                    <a href="/admin/settings/custom_fields/group/<?php echo $group->id ?>">
-                                        <?php echo $group->title ?>
+                                    <a href="/admin/settings/custom_fields/group/{{ group.id }}">
+                                        {{ group.title }}
                                     </a>
                                 </td>
                                 <td>
-                                    <?php echo $group->count_fields ?>
+                                    {{ group.count_fields }}
                                 </td>
                                 <td>
-                                    <?php echo ucfirst($group->type) ?>
+                                    {{ group.type|capitalize }}
                                 </td>
                                 <td>
-                                    <?php if ($group->status) {
-                                        echo 'Active';
-                                    } else {
-                                        echo 'Inactive';
-                                    } ?>
+                                    {% if group.status %}
+                                        Active
+                                    {% else %}
+                                        Inactive
+                                    {% endif %}
                                 </td>
                             </tr>
-                        <?php endforeach; ?>
+                        {% endfor %}
                         </tbody>
                     </table>
-                <?php else: ?>
+                {% else %}
                     <div class="row">
                         <div class="col">
                             <div class="empty-list-text">
@@ -76,7 +79,7 @@
                             </div>
                         </div>
                     </div>
-                <?php endif; ?>
+                {% endif %}
             </div>
         </div>
     </div>
@@ -97,13 +100,13 @@
                     <div class="required field">
                         <label>Type entity</label>
                         <select id="typeGroup" class="ui fluid dropdown" onchange="customField.loadTemplates(this)">
-                            <?php if (isset($groupFieldTypes)): ?>
-                                <?php foreach ($groupFieldTypes as $groupType): ?>
-                                    <option value="<?php echo $groupType ?>">
-                                        <?php echo ucfirst($groupType) ?>
+                            {% if groupFieldTypes %}
+                                {% for groupType in groupFieldTypes %}
+                                    <option value="{{ groupType }}">
+                                        {{ groupType|capitalize }}
                                     </option>
-                                <?php endforeach; ?>
-                            <?php endif; ?>
+                                {% endfor %}
+                            {% endif %}
                         </select>
                     </div>
                     <div class="field">
@@ -111,13 +114,13 @@
                         <select id="layoutGroup" class="ui search dropdown">
                             <option value="all">All</option>
                             <option value="main">Main</option>
-                            <?php if (isset($listLayouts)): ?>
-                                <?php foreach ($listLayouts as $key => $layout): ?>
-                                    <option value="<?php echo $key ?>">
-                                        <?php echo $layout ?>
+                            {% if listLayouts %}
+                                {% for key,layout in listLayouts %}
+                                    <option value="{{ key }}">
+                                        {{ layout }}
                                     </option>
-                                <?php endforeach; ?>
-                            <?php endif; ?>
+                                {% endfor %}
+                            {% endif %}
                         </select>
                     </div>
                     <div class="field">
@@ -125,13 +128,13 @@
                         <select id="templateGroup" class="ui search dropdown">
                             <option value="all">All</option>
                             <option value="page">Basic</option>
-                            <?php if (isset($listTemplates)): ?>
-                                <?php foreach ($listTemplates as $key => $template): ?>
-                                    <option value="<?php echo $key ?>">
-                                        <?php echo $template ?>
+                            {% if listTemplates %}
+                                {% for key,template in listTemplates %}
+                                    <option value="{{ key }}">
+                                        {{ template }}
                                     </option>
-                                <?php endforeach; ?>
-                            <?php endif; ?>
+                                {% endfor %}
+                            {% endif %}
                         </select>
                     </div>
                 </form>
@@ -148,3 +151,4 @@
         </div>
     </div>
 </div>
+{% endblock %}

@@ -1,32 +1,50 @@
 <?php
 namespace Limber\Template;
 
-use Limber\Config\Config;
-use Limber\Http\Uri;
+use Limber;
 use Limber\Routing\ResponderInterface;
 use Limber\Routing\Router;
+use Twig_Environment;
+use Twig_Function;
+use Twig_Loader_Filesystem;
 
 class View implements ResponderInterface
 {
-    const TEMPLATE_EXTENSION = '.phtml';
-
     protected $file = '';
 
     protected $data = [];
 
-    protected static $engine;
+    protected $pathTemplates = '';
 
-    public function __construct()
-    {
-        static::$engine = new Engine();
-    }
+    protected $twig;
 
-    public static function engine(): Engine
+    public function __construct
     {
-        if (static::$engine == null) {
-            return new Engine();
+        $this->pathTemplates = $this->pathTemplates();
+
+        //$_SERVER['DOCUMENT_ROOT'] . '/content/themes/default';
+        $loader = new Twig_Loader_Filesystem($this->pathTemplates);
+        $this->twig = new Twig_Environment($loader);
+
+        $functions[] = new Twig_Function('__', function ($key, $data = []) {
+            echo Limber\Localization\I18n::instance()->get($key, $data);
+        });
+
+        $functions[] = new Twig_Function('asset', function ($file) {
+            echo Asset::get($file);
+        });
+
+        $functions[] = new Twig_Function('get_setting', function ($key, $section = 'general') {
+            return \Setting::value($key, $section);
+        });
+
+        $functions[] = new Twig_Function('uniqid', function () {
+            return uniqid();
+        });
+
+        foreach ($functions as $function) {
+            $this->twig->addFunction($function);
         }
-        return static::$engine;
     }
 
     public function data(): array
@@ -34,37 +52,21 @@ class View implements ResponderInterface
         return $this->data;
     }
 
-
-    public static function theme(): string
+    public static function pathTemplates(): string
     {
-        return static::engine()->detectThemeDirectory();
-    }
-
-    public static function path(): string
-    {
-        return ROOT_DIR . static::engine()->detectViewDirectory();
+        return Router::module()->viewPath;
     }
 
     public function respond()
     {
-        // Get the module action instance.
-        $instance = Router::module()->instance();
-
-        // If we have no layout, then directly output the view.
-        if (is_object($instance) && isset($instance->layout) && $instance->layout === '') {
-            echo $this->render();
-        } else {
-            Layout::view($this);
-        }
+        echo $this->render();
     }
 
     public function render(): string
     {
-        // Get path for the views.
-        //$path = static::path() . $this->file . self::TEMPLATE_EXTENSION;
-        $path = Router::module()->path() . 'View/' . $this->file . self::TEMPLATE_EXTENSION;
-        // Render the view.
-        return Component::load($path, $this->data);
+        $template = $this->twig->load($this->file . '.twig');
+
+        return $template->render($this->data);
     }
 
     public static function make(string $file, array $data = []): View

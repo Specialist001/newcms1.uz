@@ -4,7 +4,7 @@ namespace Limber\Routing;
 use Limber\Http\Request;
 use Limber\Http\Uri;
 use Limber\Limber;
-use Limber\Template\Layout;
+use Limber\Template\View;
 
 class Router
 {
@@ -37,11 +37,11 @@ class Router
             $response->respond();
         }
 
-        $layout = $module->instance()->layout;
+        //$layout = $module->instance()->layout;
 
-        if ($layout !== '') {
-            echo Layout::get($layout);
-        }
+        //if ($layout !== '') {
+        //    echo Layout::get($layout);
+        //}
 
         // Close Limber.
         Limber::close();
@@ -54,7 +54,7 @@ class Router
 
             Route::$module = $module;
 
-            if (is_file($path = path('modules') . '/' . $module . '/routes.php')) {
+            if (is_file($path = path('modules') . DIRECTORY_SEPARATOR . $module . '/routes.php')) {
                 require_once $path;
             }
         }

@@ -14,7 +14,7 @@ class SitemapController extends \Controller
         $pages = $pageModel->getPages();
 
         $sitemap = new Sitemap;
-        $sitemap->addItem('https://matbaa.uz/');
+        $sitemap->addItem(Config::item('baseUrl'));
 
         foreach ($pages as $page) {
             $sitemap->addItem(Config::item('baseUrl') . '/page/' . $page->getAttribute('segment'));

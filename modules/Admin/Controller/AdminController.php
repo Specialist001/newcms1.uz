@@ -22,11 +22,13 @@ class AdminController extends Controller
         I18n::instance()
             ->load('dashboard/main', 'Admin')
             ->load('dashboard/menu', 'Admin');
+
+        $this->setData('navigation', \Customize::instance()->getAdminMenuItems());
     }
 
     public function dashboard()
     {
-        return View::make('dashboard');
+        return View::make('dashboard', $this->data);
     }
 
     public function logout()

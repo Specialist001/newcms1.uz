@@ -11,6 +11,13 @@ use \View;
 
 class SettingController extends AdminController
 {
+    public function __construct()
+    {
+        parent::__construct();
+
+        $this->setData('settingNavItems', \Customize::instance()->getAdminSettingItems());
+    }
+
     public function general()
     {
         I18n::instance()->load('settings/general');
@@ -19,10 +26,10 @@ class SettingController extends AdminController
         $settings = $settingModel->getSettings();
         $languages = I18n::instance()->all();
 
-        return View::make('settings/general', [
-           'settings'   => $settings,
-            'languages' => $languages
-        ]);
+        $this->setData('settings', $settings);
+        $this->setData('languages', $languages);
+
+        return View::make('settings/general', $this->data);
     }
 
     public function menus()
@@ -36,21 +43,21 @@ class SettingController extends AdminController
         $menus     = $menuModel->getList();
         $menuItems = $menuItemModel->getItems($menuId);
 
-        return View::make('settings/menus', [
-            'menus' => $menus,
-            'menuId' => $menuId,
-            'editMenu' => $menuItems
-        ]);
+        $this->setData('menus', $menus);
+        $this->setData('menuId', $menuId);
+        $this->setData('editMenu', $menuItems);
+
+        return View::make('settings/menus', $this->data);
     }
 
     public function themes()
     {
         I18n::instance()->load('settings/themes');
 
-        return View::make('settings/themes', [
-            'themes' => getThemes(),
-            'activeTheme' => Setting::value('active_theme', 'theme')
-        ]);
+        $this->setData('themes', get_themes());
+        $this->setData('activeTheme', Setting::value('active_theme', 'theme'));
+
+        return View::make('settings/themes', $this->data);
     }
 
     public function activateTheme()
@@ -87,14 +94,12 @@ class SettingController extends AdminController
             $menuItem = new \Modules\Admin\Model\MenuItem;
             $menuItem->setAttribute('menu_id', $params['menu_id']);
             $menuItem->setAttribute('name', \Modules\Admin\Model\MenuItem::NEW_MENU_ITEM_NAME);
+            $menuItem->setAttribute('link', '#');
             $menuItem->save();
-            $item = new \stdClass;
-            $item->id   = $menuItem->getAttribute('id');
-            $item->name = \Modules\Admin\Model\MenuItem::NEW_MENU_ITEM_NAME;
-            $item->link = '#';
-            echo \Component::get('settings/menu_item', [
-                'item' => $item
-            ]);
+
+            echo \View::make('settings/menu_item', [
+                'item' => $menuItem
+            ])->render();
         }
         exit;
     }
