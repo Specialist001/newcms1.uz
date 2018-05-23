@@ -1,10 +1,13 @@
+{% extends "layout.twig" %}
+
+{% block content %}
 <main>
     <div class="ui container">
         <div class="ui grid">
             <div class="sixteen wide column">
                 <div class="col page-title">
                     <h2 class="ui header">
-                        <?php __('pages.create.heading') ?>
+                        {{ __('pages.create.heading') }}
                     </h2>
                 </div>
             </div>
@@ -13,23 +16,24 @@
             <div class="twelve wide column">
                 <form id="formPage" class="ui form">
                     <div class="field">
-                        <label><?php __('pages.create.label_title') ?></label>
-                        <input type="text" name="title" class="form-control" id="formTitle" placeholder="<?php __('pages.create.placeholder_title') ?>">
+                        <label>{{ __('pages.create.label_title') }}</label>
+                        <input type="text" name="title" class="form-control" id="formTitle" placeholder="{{ __('pages.create.placeholder_title') }}">
                     </div>
                     <div class="field">
-                        <label><?php __('pages.create.label_content') ?></label>
+                        <label>{{ __('pages.create.label_content') }}</label>
                         <textarea name="content" id="redactor"></textarea>
                     </div>
                 </form>
             </div>
             <div class="four wide column">
                 <div>
-                    <p><?php __('pages.create.description_form_button') ?></p>
+                    <p>{{ __('pages.create.description_form_button') }}</p>
                     <button type="submit" class="ui primary button" onclick="page.add()">
-                        <?php __('pages.create.form_button') ?>
+                        {{ __('pages.create.form_button') }}
                     </button>
                 </div>
             </div>
         </div>
     </div>
 </main>
+{% endblock %}
