@@ -37,12 +37,6 @@ class Router
             $response->respond();
         }
 
-        //$layout = $module->instance()->layout;
-
-        //if ($layout !== '') {
-        //    echo Layout::get($layout);
-        //}
-
         // Close Limber.
         Limber::close();
     }

@@ -6,6 +6,7 @@ use Limber\Http\Redirect;
 use Limber\Routing\Controller;
 use Limber\Template\View;
 use Limber\Localization\I18n;
+use Modules\Admin\Model\ResourceType as ResourceTypeModel;
 
 class AdminController extends Controller
 {
@@ -23,7 +24,10 @@ class AdminController extends Controller
             ->load('dashboard/main', 'Admin')
             ->load('dashboard/menu', 'Admin');
 
+        $resourceTypeModel = new ResourceTypeModel();
+
         $this->setData('navigation', \Customize::instance()->getAdminMenuItems());
+        $this->setData('resourcesType', $resourceTypeModel->getResourcesType());
     }
 
     public function dashboard()

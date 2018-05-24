@@ -3,6 +3,8 @@ namespace Modules\Admin\Controller;
 
 use \View;
 use Limber;
+use Modules;
+use Modules\Admin\Model\ResourceType as ResourceTypeModel;
 
 class CustomFieldController extends AdminController
 {
@@ -31,7 +33,9 @@ class CustomFieldController extends AdminController
      */
     public function listingGroup()
     {
-        $this->setData('groupFieldTypes', Limber\CustomField\Types\TypeGroup::ARRAY_GROUP_TYPES);
+        $resourceTypeModel = new ResourceTypeModel();
+
+        $this->setData('groupFieldTypes', $resourceTypeModel->getResourcesType());
         $this->setData('listLayouts', getLayouts());
         $this->setData('listTemplates', getTypes());
         $this->setData('listGroup', $this->customFieldGroupModel->getListGroup());
@@ -85,7 +89,7 @@ class CustomFieldController extends AdminController
         $customFieldGroupId = $this->customFieldGroupModel->addGroup([
             'title'    => $params['title'],
             'type'     => $params['type'],
-            'layout'   => $params['layout'],
+            //'layout'   => $params['layout'],
             'template' => $params['template']
         ]);
         echo $customFieldGroupId;

@@ -18,7 +18,7 @@ class View implements ResponderInterface
 
     protected $twig;
 
-    public function __construct
+    public function __construct()
     {
         $this->pathTemplates = $this->pathTemplates();
 
