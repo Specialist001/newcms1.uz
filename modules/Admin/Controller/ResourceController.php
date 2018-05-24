@@ -88,7 +88,7 @@ class ResourceController extends AdminController
         }
 
         $this->setData('baseUrl', Uri::base());
-        $this->setData('resource', $resource);
+        $this->setData('resources', $resource);
         $this->setData('pageTypes', getTypes());
         $this->setData('layouts', getLayouts());
         $this->setData('nameResource', $name);
@@ -112,7 +112,7 @@ class ResourceController extends AdminController
 
             $resourceType = $this->resourceTypeModel->getResourceType($params['resource_type_id']);
 
-            echo '/admin/resource/' . $resourceType->getAttribute('name') . '/edit/' . $resource->getAttribute('id');
+            echo '/admin/resources/' . $resourceType->getAttribute('name') . '/edit/' . $resource->getAttribute('id');
             exit;
         }
     }

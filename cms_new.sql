@@ -129,7 +129,7 @@ CREATE TABLE `plugin` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `resource`
+-- Структура таблицы `resources`
 --
 
 CREATE TABLE `resource` (
@@ -258,7 +258,7 @@ ALTER TABLE `plugin`
   ADD PRIMARY KEY (`id`);
 
 --
--- Индексы таблицы `resource`
+-- Индексы таблицы `resources`
 --
 ALTER TABLE `resource`
   ADD PRIMARY KEY (`id`);
@@ -330,7 +330,7 @@ ALTER TABLE `plugin`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `resource`
+-- AUTO_INCREMENT для таблицы `resources`
 --
 ALTER TABLE `resource`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;

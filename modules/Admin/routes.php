@@ -55,6 +55,31 @@ Route::post('/admin/post/update/', [
     'controller' => 'PostController',
     'action'     => 'update'
 ]);
+Route::get('/admin/resources/(name:any)', [
+    'controller' => 'ResourceController',
+    'action'     => 'listing'
+]);
+
+Route::get('/admin/resources/(name:any)/create/', [
+    'controller' => 'ResourceController',
+    'action'     => 'create'
+]);
+
+Route::get('/admin/resources/(name:any)/edit/(id:numeric)', [
+    'controller' => 'ResourceController',
+    'action'     => 'edit'
+]);
+
+Route::post('/admin/resources/add/', [
+    'controller' => 'ResourceController',
+    'action'     => 'add'
+]);
+
+Route::post('/admin/resources/update/', [
+    'controller' => 'ResourceController',
+    'action'     => 'update'
+]);
+
 Route::get('/admin/settings/general/', [
     'controller' => 'SettingController',
     'action'     => 'general'

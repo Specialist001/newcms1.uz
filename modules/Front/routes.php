@@ -4,7 +4,7 @@ Route::get('/', [
     'action'     => 'index'
 ]);
 
-Route::get('/page/(segment:any)', [
-    'controller' => 'PageController',
+Route::get('/(resourceType:any)/(segment:any)', [
+    'controller' => 'ResourceController',
     'action'     => 'show'
 ]);

@@ -6,7 +6,7 @@ use Query;
 
 class Resource extends Model
 {
-    protected static $table = 'resource';
+    protected static $table = 'resources';
     /**
      * @param array $params
      * @return bool

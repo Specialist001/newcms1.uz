@@ -11,7 +11,7 @@ class Config
                 'urlPath'   => '/admin/',
                 'title'     => 'Home'
             ],
-            'resource' => [
+            'resources' => [
                 'classIcon' => 'folder outline icon',
                 'urlPath'   => '#',
                 'title'     => 'Resources',
