@@ -1,0 +1,10 @@
+{% extends "main.layout.twig" %}
+
+{% block content %}
+    <div>
+        <h1>{{ page.getAttribute('title') }}</h1>
+        <div>
+            {{ page.getAttribute('content') }}
+        </div>
+    </div>
+{% endblock %}
