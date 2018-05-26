@@ -10,9 +10,9 @@ use Modules\Admin\Model\ResourceType as ResourceTypeModel;
 
 class AdminController extends Controller
 {
-    public $layout = 'admin';
+    //public $layout = 'admin';
 
-    public $theme  = 'admin';
+    //public $theme  = 'admin';
 
     public function __construct()
     {

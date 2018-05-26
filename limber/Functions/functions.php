@@ -143,7 +143,7 @@ function getTypes($switch = 'page')
     return $types;
 }
 
-function getLayouts()
+/*function getLayouts()
 {
     $themePath = path_content('themes') . '/' . \Setting::value('active_theme', 'theme');
     $list = scandir($themePath);
@@ -164,4 +164,4 @@ function getLayouts()
         }
     }
     return $layouts;
-}
+}*/

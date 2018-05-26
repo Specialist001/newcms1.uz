@@ -50,6 +50,11 @@ class Module
         return Config::item('baseUrl') . DIRECTORY_SEPARATOR . 'modules' . DIRECTORY_SEPARATOR . $this->module . DIRECTORY_SEPARATOR;
     }
 
+    public static function getUrlByName($name)
+    {
+        return Config::item('baseUrl') . DIRECTORY_SEPARATOR . 'modules' . DIRECTORY_SEPARATOR . $name . DIRECTORY_SEPARATOR;
+    }
+
     public function pathView(): string
     {
         return $this->path() . 'View' . DIRECTORY_SEPARATOR;
@@ -64,6 +69,17 @@ class Module
         }
 
         return path_content('themes') . DIRECTORY_SEPARATOR . $theme . DIRECTORY_SEPARATOR;
+    }
+
+    public function urlTheme(): string
+    {
+        $theme = \Setting::value('active_theme', 'theme');
+
+        if ($theme == '') {
+            $theme = Config::item('defaultTheme');
+        }
+
+        return Config::item('baseUrl') . DIRECTORY_SEPARATOR . 'content' . DIRECTORY_SEPARATOR . 'themes' .  DIRECTORY_SEPARATOR . $theme . DIRECTORY_SEPARATOR;
     }
 
     public function run()

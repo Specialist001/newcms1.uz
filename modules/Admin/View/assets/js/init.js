@@ -1,10 +1,6 @@
-/*$('#redactor').redactor({
-    imageUpload: '/ajax/redactor/core/uploadImage/',
-    fileUpload: '/ajax/redactor/core/uploadFile/',
-    plugins: ['table', 'video', 'source'],
-    imagePosition: true,
-    imageResizable: true
-});*/
+if ($('#redactor').length > 0) {
+    var redactor = new Jodit('#redactor');
+}
 
 var files;
 $('input.upload-file').on('change', function(){
@@ -37,14 +33,12 @@ $(document)
 
         $('.btn-create-menu').on('click', function() {
             $('.mini.modal')
-                .modal('show')
-            ;
+                .modal('show');
         });
 
         $('.btn-create-group-fields').on('click', function() {
             $('.tiny.modal')
-                .modal('show')
-            ;
+                .modal('show');
         });
 
         $('.ui.help-element')
@@ -54,16 +48,13 @@ $(document)
                     show: 100,
                     hide: 500
                 }
-            })
-        ;
+            });
 
         $('.ui.accordion')
-            .accordion()
-        ;
+            .accordion();
 
         $('.menu .item')
-            .tab()
-        ;
+            .tab();
     })
 ;
 

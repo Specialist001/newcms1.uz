@@ -1,6 +1,7 @@
 <?php
 namespace Modules\Front\Controller;
 
+use Limber\Http\Redirect;
 use Limber\Template\View;
 use Modules\Front\Model;
 
@@ -21,7 +22,20 @@ class ResourceController extends FrontController
     public function show(string $resourceType, $segment)
     {
         $resource = $this->resourceModel->getResourceBySegment($segment);
-        print_r($resource);
-        return View::make('page', $this->data);
+
+        if ($resource->getAttribute('status') !== 'publish') {
+            Redirect::go('/');
+            }
+
+        $templateName = $resourceType;
+
+        if ($resource->getAttribute('type') !== 'basic') {
+            $templateName .= '.' . $resource->getAttribute('type');
+        }
+
+        //print_r($resource);
+
+        $this->setData($resourceType, $resource);
+        return View::make($templateName, $this->data);
     }
 }
