@@ -9,6 +9,8 @@ use Modules\Admin\Service\CustomField\CustomFieldService;
 use Limber\Localization\I18n;
 use Modules\Admin\Model\Resource as ResourceModel;
 use Modules\Admin\Model\ResourceType as ResourceTypeModel;
+use Modules\Admin\Model\Category as CategoryModel;
+use Modules\Admin\Model\ResourceToCategory as ResourceToCategoryModel;
 
 /**
  * Class ResourceController
@@ -26,6 +28,10 @@ class ResourceController extends AdminController
      */
     protected $resourceTypeModel;
 
+    protected $categoryModel;
+
+    protected $resourceToCategory;
+
     /**
      * ResourceController constructor.
      */
@@ -35,6 +41,8 @@ class ResourceController extends AdminController
 
         $this->resourceModel = new ResourceModel();
         $this->resourceTypeModel = new ResourceTypeModel();
+        $this->categoryModel = new CategoryModel();
+        $this->resourceToCategory = new ResourceToCategoryModel();
     }
 
     /**
@@ -50,6 +58,9 @@ class ResourceController extends AdminController
 
         $this->setData('resources', $resources);
         $this->setData('resource_type', $resourceType);
+        $this->setData('categories', $this->categoryModel->getCategoriesByResourceType(
+            $resourceType->getAttribute('id'), 'ru')
+        );
 
         return View::make('resources/list', $this->data);
     }
@@ -81,6 +92,7 @@ class ResourceController extends AdminController
 
         $resource = $this->resourceModel->getResource($id);
         $customFields = $customFieldService->getResourceFields($resource);
+        $inCategories = $this->resourceToCategory->getIdsCategoriesByResourceId($id);
 
         $image = false;
         if ($resource->getAttribute('thumbnail')) {
@@ -89,11 +101,12 @@ class ResourceController extends AdminController
 
         $this->setData('baseUrl', Uri::base());
         $this->setData('resources', $resource);
-        $this->setData('pageTypes', getTypes());
-        $this->setData('layouts', getLayouts());
+        $this->setData('pageTypes', getTypes($name));
         $this->setData('nameResource', $name);
         $this->setData('customFields', $customFields);
         $this->setData('image', $image);
+        $this->setData('inCategories', $inCategories);
+        $this->setData('categories', $this->categoryModel->getCategoriesByResourceType($resource->getAttribute('resource_type_id'), 'ru'));
 
         return View::make('resources/edit', $this->data);
     }
@@ -178,6 +191,19 @@ class ResourceController extends AdminController
                         'element_id' => $resource->getAttribute('id'),
                         'value' => $value
                     ]);
+                }
+            }
+
+            if (isset($params['categories'])) {
+                $this->resourceToCategory->deleteAll($resource->getAttribute('id'));
+
+                foreach ($params['categories'] as $id => $value) {
+                    if (!$this->resourceToCategory->is($resource->getAttribute('id'), $id)) {
+                        $this->resourceToCategory->add([
+                            'resource_id' => $resource->getAttribute('id'),
+                            'category_id' => $id
+                                ]);
+                        }
                 }
             }
 

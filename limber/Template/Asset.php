@@ -7,7 +7,7 @@ class Asset
 {
     public static $container = [];
 
-    public static function get($file): string
+    public static function get(string $file): string
     {
         if (Router::module()->module === 'Front') {
             return Router::module()->urlTheme() . $file;

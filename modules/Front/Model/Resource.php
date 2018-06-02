@@ -23,17 +23,21 @@ class Resource extends Model
      * @param array $params
      * @return array|Query
      */
-    public function getResources(array $params = [])
+    public function getResources(int $typeId, array $params = [])
     {
         $fields = [];
         $query = Query::table(static::$table, __CLASS__)
-            ->select($fields);
+            ->select($fields)
+            ->where('resource_type_id', '=', $typeId);
+
         if (isset($params['order_by']) && is_array($params['order_by'])) {
             foreach ($params['order_by'] as $column => $direction) {
                 $query = $query->orderBy($column, $direction);
             }
         }
+
         $query = $query->all();
+
         return $query;
     }
 }

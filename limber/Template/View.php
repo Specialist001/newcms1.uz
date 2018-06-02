@@ -22,31 +22,21 @@ class View implements ResponderInterface
     {
         $this->pathTemplates = $this->pathTemplates();
 
-        //$_SERVER['DOCUMENT_ROOT'] . '/content/themes/default';
-        $adminPath = '/domains/newcms1.uz/modules/Admin/View/';
+        $adminPath = $_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . 'modules/Admin/View/';
         $loader = new Twig_Loader_Filesystem($this->pathTemplates);
         $loader->addPath($adminPath, 'admin');
+
         $this->twig = new Twig_Environment($loader);
 
-        $functions[] = new Twig_Function('__', function ($key, $data = []) {
-            echo Limber\Localization\I18n::instance()->get($key, $data);
-        });
+        $this->twig->addExtension(new Limber\Template\Extension\AssetExtension());
+        $this->twig->addExtension(new Limber\Template\Extension\SettingExtension());
+        $this->twig->addExtension(new Limber\Template\Extension\ResourceExtension());
+        $this->twig->addExtension(new Limber\Template\Extension\LocalizationExtension());
+        $this->twig->addExtension(new Limber\Template\Extension\HelperExtension());
+        $this->twig->addExtension(new Limber\Template\Extension\FileExtension());
+        $this->twig->addExtension(new Limber\Template\Extension\CustomFieldExtension());
+        $this->twig->addExtension(new Limber\Template\Extension\MenuExtension());
 
-        $functions[] = new Twig_Function('asset', function ($file) {
-            echo Asset::get($file);
-        });
-
-        $functions[] = new Twig_Function('get_setting', function ($key, $section = 'general') {
-            return \Setting::value($key, $section);
-        });
-
-        $functions[] = new Twig_Function('uniqid', function () {
-            return uniqid();
-        });
-
-        foreach ($functions as $function) {
-            $this->twig->addFunction($function);
-        }
     }
 
     public function data(): array

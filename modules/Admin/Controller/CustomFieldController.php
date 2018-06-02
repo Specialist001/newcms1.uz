@@ -36,7 +36,6 @@ class CustomFieldController extends AdminController
         $resourceTypeModel = new ResourceTypeModel();
 
         $this->setData('groupFieldTypes', $resourceTypeModel->getResourcesType());
-        $this->setData('listLayouts', getLayouts());
         $this->setData('listTemplates', getTypes());
         $this->setData('listGroup', $this->customFieldGroupModel->getListGroup());
 

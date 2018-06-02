@@ -8,6 +8,7 @@ class ComposerStaticInitd78598d25841a8903f8aa9796c9a1ac1
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
+        'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
         'fc2cda83e7398d18a704e14283685209' => __DIR__ . '/../..' . '/limber/Functions/functions.php',
         '85ffabecfda2655e8f603a5bede55813' => __DIR__ . '/../..' . '/limber/Functions/localization.php',
         '64db375941dde7b423f4164c871baeef' => __DIR__ . '/../..' . '/limber/Functions/menus.php',
@@ -24,6 +25,7 @@ class ComposerStaticInitd78598d25841a8903f8aa9796c9a1ac1
         ),
         'P' => 
         array (
+            'Psr\\Http\\Message\\' => 17,
             'Plugin\\' => 7,
         ),
         'M' => 
@@ -33,6 +35,14 @@ class ComposerStaticInitd78598d25841a8903f8aa9796c9a1ac1
         'L' => 
         array (
             'Limber\\' => 7,
+        ),
+        'I' => 
+        array (
+            'Intervention\\Image\\' => 19,
+        ),
+        'G' => 
+        array (
+            'GuzzleHttp\\Psr7\\' => 16,
         ),
     );
 
@@ -45,6 +55,10 @@ class ComposerStaticInitd78598d25841a8903f8aa9796c9a1ac1
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
         ),
+        'Psr\\Http\\Message\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/http-message/src',
+        ),
         'Plugin\\' => 
         array (
             0 => __DIR__ . '/../..' . '/content/plugins',
@@ -56,6 +70,14 @@ class ComposerStaticInitd78598d25841a8903f8aa9796c9a1ac1
         'Limber\\' => 
         array (
             0 => __DIR__ . '/../..' . '/limber',
+        ),
+        'Intervention\\Image\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/intervention/image/src/Intervention/Image',
+        ),
+        'GuzzleHttp\\Psr7\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/guzzlehttp/psr7/src',
         ),
     );
 
