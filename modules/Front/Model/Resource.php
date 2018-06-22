@@ -19,6 +19,25 @@ class Resource extends Model
             ->first();
         return $query;
     }
+
+    public function getNextResource(int $resourceId)
+    {
+        $sql = "SELECT * FROM " . static::$table . " WHERE id > {$resourceId} LIMIT 1";
+
+        $result = Query::result($sql);
+
+        return isset($result[0]) ? $result[0] : null;
+    }
+
+    public function getPrevResource(int $resourceId)
+    {
+        $sql = "SELECT * FROM " . static::$table . " WHERE id < {$resourceId} ORDER BY id DESC LIMIT 1";
+
+        $result = Query::result($sql);
+
+        return isset($result[0]) ? $result[0] : null;
+    }
+
     /**
      * @param array $params
      * @return array|Query
@@ -29,6 +48,12 @@ class Resource extends Model
         $query = Query::table(static::$table, __CLASS__)
             ->select($fields)
             ->where('resource_type_id', '=', $typeId);
+
+        /*if (isset($params['categories']) && !empty($params['categories'])) {
+            foreach ($params['categories'] as $categoryId) {
+                ->where('resource_type_id', '=', $typeId);
+            }
+        }*/
 
         if (isset($params['order_by']) && is_array($params['order_by'])) {
             foreach ($params['order_by'] as $column => $direction) {

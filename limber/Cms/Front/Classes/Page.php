@@ -6,12 +6,12 @@ use Limber;
 class Page
 {
     /**
-     * @var Flexi\Cms\Front\Model\Page
+     * @var Limber\Cms\Front\Model\Page
      */
     protected static $page;
 
     /**
-     * @param Flexi\Cms\Front\Model\Page $page
+     * @param Limber\Cms\Front\Model\Page $page
      */
     public static function setPage(Limber\Cms\Front\Model\Page $page)
     {
@@ -19,7 +19,7 @@ class Page
     }
 
     /**
-     * @return Flexi\Cms\Front\Model\Page
+     * @return Limber\Cms\Front\Model\Page
      */
     public static function getPage()
     {
