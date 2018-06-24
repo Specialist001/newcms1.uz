@@ -23,9 +23,9 @@ class Limber
         class_alias('\\Limber\\Settings\\Setting', 'Setting');
         class_alias('\\Limber\\Customize\\Customize', 'Customize');
         class_alias('\\Limber\\DI\\Container', 'DI');
-        class_alias('\\Modules\\Front\\Classes\\Page', 'Page');
-        class_alias('\\Modules\\Front\\Classes\\Field', 'Field');
-        class_alias('\\Modules\\Front\\Classes\\Post', 'Post');
+        class_alias('\\Modules\\Frontend\\Classes\\Page', 'Page');
+        class_alias('\\Modules\\Frontend\\Classes\\Field', 'Field');
+        class_alias('\\Modules\\Frontend\\Classes\\Post', 'Post');
 
         // Initialize the URI.
         Uri::initialize();

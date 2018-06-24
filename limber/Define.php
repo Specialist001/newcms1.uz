@@ -8,8 +8,8 @@ class Define
     const EXEC    = true;
     const PHP_MIN = '7.0.0';
     const DEFAULT_MODULE = [
-        'admin' => 'Admin',
-        'front' => 'Front'
+        'admin' => 'Backend',
+        'front' => 'Frontend'
     ];
 
     const VIEW_PATH_MASK = [

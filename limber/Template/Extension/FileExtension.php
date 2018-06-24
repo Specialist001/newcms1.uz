@@ -24,8 +24,9 @@ class FileExtension extends Twig_Extension
      */
     public function getFileLink(int $id)
     {
-        $fileModel = new \Modules\Front\Model\File;
+        $fileModel = new \Modules\Frontend\Model\File;
         $file = $fileModel->getFileById($id);
+
         if ($file === null) {
             return '';
         }

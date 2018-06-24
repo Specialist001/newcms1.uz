@@ -229,7 +229,7 @@ CREATE TABLE `setting` (
 INSERT INTO `setting` (`id`, `name`, `key_field`, `value`, `section`) VALUES
 (1, 'Name Site', 'name_site', 'nCms', 'general'),
 (2, 'Description', 'description', 'Example new CMS', 'general'),
-(3, 'Admin email', 'admin_email', 'admin@admin.com', 'general'),
+(3, 'Backend email', 'admin_email', 'admin@admin.com', 'general'),
 (4, 'Language', 'language', 'ru', 'general'),
 (5, 'Active theme', 'active_theme', 'default', 'theme');
 

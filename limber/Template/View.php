@@ -22,9 +22,9 @@ class View implements ResponderInterface
     {
         $this->pathTemplates = $this->pathTemplates();
 
-        $adminPath = $_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . 'modules/Admin/View/';
+        $backendPath = $_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . 'modules/Backend/View/';
         $loader = new Twig_Loader_Filesystem($this->pathTemplates);
-        $loader->addPath($adminPath, 'admin');
+        $loader->addPath($backendPath, 'backend');
 
         $this->twig = new Twig_Environment($loader);
 
