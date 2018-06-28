@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace Limber\Config;
 
@@ -43,8 +44,7 @@ class Config
      */
     public static function file($group = 'main')
     {
-        $path = $_SERVER['DOCUMENT_ROOT'] . '/config/' . $group . '.php';
-        //$path = $_SERVER['DOCUMENT_ROOT'] . '/' . mb_strtolower(ENV). '/Config/'. $group . '.php';
+        $path = $_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . 'config' . DIRECTORY_SEPARATOR . $group . '.php';
 
         // Check that the file exists before we attempt to load it.
         if (file_exists($path)) {

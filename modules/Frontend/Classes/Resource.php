@@ -1,9 +1,9 @@
 <?php
-namespace Modules\Front\Classes;
-use Modules\Front\Model;
+namespace Modules\Frontend\Classes;
+use Modules\Frontend\Model;
 /**
  * Class Resource
- * @package Modules\Frontend\Classes
+ * @package Modules\Frontendend\Classes
  */
 class Resource
 {

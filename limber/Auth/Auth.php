@@ -3,7 +3,7 @@ namespace Limber\Auth;
 
 use Limber;
 use Limber\Config\Config;
-use Limber\Encription\Hash;
+use Limber\Encryption\Hash;
 use Limber\Facades\Session;
 use Limber\Orm\Model;
 
@@ -32,12 +32,12 @@ class Auth implements AuthInterface
         return static::$authorized;
     }
 
-    public static function user(): Model
+    public static function user(): object
     {
         return static::$user;
     }
 
-    public static function authorize(Limber\Orm\Model $user)
+    public static function authorize($user)
     {
         Session::put('auth.authorized', true);
         Session::put('auth.user', $user);

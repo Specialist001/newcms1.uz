@@ -7,10 +7,12 @@ class TypeCustomField
     const TYPE_NUMBER = 'number';
     const TYPE_TEXTAREA = 'textarea';
     const TYPE_EMAIL = 'email';
+    const TYPE_SELECT = 'select';
     const ARRAY_FIELD_TYPES = [
         self::TYPE_TEXT,
         self::TYPE_NUMBER,
         self::TYPE_EMAIL,
-        self::TYPE_TEXTAREA
+        self::TYPE_TEXTAREA,
+        self::TYPE_SELECT
     ];
 }

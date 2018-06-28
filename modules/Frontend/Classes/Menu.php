@@ -1,5 +1,5 @@
 <?php
-namespace Modules\Front\Classes;
+namespace Modules\Frontend\Classes;
 
 use Limber;
 
@@ -13,7 +13,7 @@ class Menu
             return $menuItems;
         }
 
-        $menuModel = new Modules\Front\Model\MenuItem;
+        $menuModel = new Modules\Frontendend\Model\MenuItem;
         $menuItems = $menuModel->getItemsByMenuId($menuId);
 
         Limber\DI\Container::instance()->set('menuItems', $menuItems);

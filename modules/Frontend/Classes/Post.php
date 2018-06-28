@@ -1,5 +1,5 @@
 <?php
-namespace Modules\Front\Classes;
+namespace Modules\Frontend\Classes;
 
 use Modules;
 
@@ -7,7 +7,7 @@ class Post
 {
     public static function getPostsInIds(array $ids): array
     {
-        $postModel = new Modules\Front\Model\Post();
+        $postModel = new Modules\Frontend\Model\Post();
 
         return $postModel->getPostsInId($ids);
     }

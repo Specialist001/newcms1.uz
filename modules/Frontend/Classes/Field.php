@@ -1,7 +1,7 @@
 <?php
-namespace Modules\Front\Classes;
+namespace Modules\Frontend\Classes;
 
-use Modules\Front\Model\CustomField as CustomFieldModel;
+use Modules\Frontend\Model\CustomField as CustomFieldModel;
 
 class Field
 {

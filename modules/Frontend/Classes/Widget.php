@@ -1,5 +1,5 @@
 <?php
-namespace Modules\Front\Classes;
+namespace Modules\Frontend\Classes;
 
 class Widget
 {

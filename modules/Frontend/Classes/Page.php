@@ -1,25 +1,25 @@
 <?php
-namespace Modules\Front\Classes;
+namespace Modules\Frontend\Classes;
 
 use Limber;
 
 class Page
 {
     /**
-     * @var Flexi\Cms\Front\Model\Page
+     * @var Flexi\Cms\Frontend\Model\Page
      */
     protected static $page;
 
     /**
-     * @param Flexi\Cms\Front\Model\Page $page
+     * @param Flexi\Cms\Frontend\Model\Page $page
      */
-    public static function setPage(Modules\Front\Model\Page $page)
+    public static function setPage(Modules\Frontend\Model\Page $page)
     {
         static::$page = $page;
     }
 
     /**
-     * @return Flexi\Cms\Front\Model\Page
+     * @return Flexi\Cms\Frontend\Model\Page
      */
     public static function getPage()
     {

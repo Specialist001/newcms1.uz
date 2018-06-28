@@ -3,7 +3,7 @@ namespace Modules\SEOPack\Controller;
 
 use Limber\Config\Config;
 use Limber\Sitemap\Sitemap;
-use Modules\Admin\Model\Page as PageModel;
+use Modules\Backend\Model\Page as PageModel;
 
 class SitemapController extends \Controller
 {

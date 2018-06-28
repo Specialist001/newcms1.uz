@@ -1,9 +1,9 @@
 <?php
-namespace Modules\Front\Controller;
+namespace Modules\Frontend\Controller;
 
 use View;
 
-class HomeController extends FrontController
+class HomeController extends FrontendController
 {
     public function index()
     {

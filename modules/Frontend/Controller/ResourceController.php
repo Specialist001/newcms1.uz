@@ -1,11 +1,11 @@
 <?php
-namespace Modules\Front\Controller;
+namespace Modules\Frontend\Controller;
 
 use Limber\Http\Redirect;
 use Limber\Template\View;
-use Modules\Front\Model;
+use Modules\Frontend\Model;
 
-class ResourceController extends FrontController
+class ResourceController extends FrontendController
 {
     /**
      * @var Model\Resource

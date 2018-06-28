@@ -1,5 +1,5 @@
 <?php
-namespace Modules\Front\Model;
+namespace Modules\Frontend\Model;
 
 use Limber;
 use Limber\CustomField\Params;
