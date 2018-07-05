@@ -1,10 +1,12 @@
 <?php
+declare(strict_types=1);
 namespace Limber\Orm;
 
 use Limber\Database\Database;
+use Limber\Orm\Exception\ModelException;
 use Limber\Limber;
 
-class Model
+abstract class Model
 {
     protected static $table = '';
 
@@ -54,7 +56,21 @@ class Model
     public function save(): bool
     {
         // Get the model attributes.
-        $attributes = $this->attributes();
+        //$attributes = $this->attributes();
+
+        $attributes = [];
+
+        if (method_exists($this, 'columnMap')) {
+            $columnMap = $this->columnMap();
+
+            foreach ($columnMap as $column => $map) {
+                if (empty($this->$map)) continue;
+
+                $attributes[$column] = $this->$map;
+            }
+        } else {
+            throw new ModelException('Missing columnMap');
+        }
 
         // Remove guarded attributes.
         foreach ($this->guarded as $guarded) {
