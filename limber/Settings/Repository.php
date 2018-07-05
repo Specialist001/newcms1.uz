@@ -11,7 +11,7 @@ class Repository
             static::$stored[$section] = [];
         }
 
-        static::$stored[$section][$data->getAttribute('key_field')] = $data;
+        static::$stored[$section][$data->key_field] = $data;
     }
 
     public static function retrieve($section, $key)

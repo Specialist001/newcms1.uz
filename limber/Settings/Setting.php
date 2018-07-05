@@ -17,7 +17,7 @@ class Setting
         /** @var \Limber\Orm\Model $item */
         $item = static::item($key, $section);
 
-        return $item ? $item->getAttribute('value') : '';
+        return $item ? $item->value : '';
     }
 
     public static function get(string $section): bool

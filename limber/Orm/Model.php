@@ -80,23 +80,37 @@ abstract class Model
         }
 
         // Instantiate query.
-        $query  = static::query();
+        $query = static::query();
 
         // If we have an id then update the record.
-        if ($this->hasAttribute('id')) {
-            $query  = $query->where('id', '=', $this->getAttribute('id'));
+        if (method_exists($this, 'getId') && $this->getId('id')) {
+            $query  = $query->where('id', '=', $this->getId('id'));
             $saved  = $query->edit($attributes);
         } else {
             $saved  = $query->create($attributes);
 
             // If successfully created, add the insert id.
             if ($saved) {
-                $this->setAttribute('id', Database::insertId());
+                if (method_exists($this, 'setId')) {
+                    $this->setId(Database::insertId());
+                }
             }
         }
 
         // Return true if successfully saved.
         return $saved;
+    }
+
+    public static function findFirst(int $id)
+    {
+        $query = new Query(static::$table, get_called_class());
+
+        $result = $query
+            ->select()
+            ->where('id', '=', $id)
+            ->first();
+
+        return $result;
     }
 
     public static function all(): array
